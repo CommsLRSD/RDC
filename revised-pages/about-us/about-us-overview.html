@@ -4,26 +4,50 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About RDC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --max-width: 1100px; --radius: 14px; --accent: #6fa67a; --accent-strong: #3b7a46; --surface: #f3faf3; --line: #cfe4cf; }
+    :root {
+      --max-width: 1280px;
+      --radius: 14px;
+      --bg: #f7f9f8;
+      --text: #1f2933;
+      --accent: #2e7d32;
+      --accent-soft: #e8f4ea;
+      --line: #d8e1db;
+      --panel: #ffffff;
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; line-height: 1.65; }
-    h1, h2, h3 { color: var(--accent-strong); }
-    a { color: var(--accent-strong); }
-    .page { max-width: var(--max-width); margin: 0 auto; padding: 2rem; }
-    .panel { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.25rem; }
-    .team { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); }
-    .member { border: 1px solid var(--line); background: var(--surface); border-radius: 10px; padding: .75rem; text-align: center; }
-    .member img { width: 100%; max-width: 220px; height: 220px; object-fit: cover; border-radius: 10px; }
-    .hero { width: 100%; border-radius: 10px; }
+    body { margin: 0; line-height: 1.65; font-family: 'Poppins', sans-serif; color: var(--text); background: var(--bg); }
+    h1, h2, h3 { color: #17381f; margin-top: 0; }
+    a { color: var(--accent); }
+    .page { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
+    .panel { border: 1px solid var(--line); border-top: 4px solid var(--accent); background: var(--panel); border-radius: var(--radius); padding: 1.35rem; margin-bottom: 1.25rem; }
+    .land-note p { margin: 0 0 1rem; }
+    .land-note p:last-child { margin-bottom: 0; }
+    .team { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+    .member { border: 1px solid var(--line); border-radius: 10px; padding: .75rem; text-align: center; background: #fff; }
+    .member img { width: 100%; max-width: 230px; height: 230px; object-fit: cover; border-radius: 10px; }
+    .member p { margin: .6rem 0 0; font-size: .95rem; }
+    .badge { display: inline-block; background: var(--accent-soft); color: var(--accent); padding: .25rem .6rem; border-radius: 999px; font-size: .85rem; font-weight: 600; margin-bottom: .75rem; }
   </style>
 </head>
 <body>
   <div class="page">
     <h1>About René Deleurme Centre</h1>
 
-    <section class="panel">
-      <img class="hero" src="https://media.lrsd.net/media/Default/frl/0/LRSD%20Land%20Acknowledgement%202024-1.png" alt="Land acknowledgment">
+    <section class="panel land-note">
+      <span class="badge">Land Acknowledgement</span>
+      <p>The Louis Riel School Division (LRSD) brings together a community of schools on the traditional land of the Anishinaabeg, Ininewak, and Dakota. Our division is located on the National Homeland of the Red River Métis. We recognize that Manitoba is also the traditional land of the Anishininiwak and Dene.</p>
+      <p>We respect the treaties made on this land and acknowledge the harms and mistakes of the past and present. We dedicate ourselves to authentic alliances with Indigenous communities in a spirit of reconciliation and cooperation.</p>
+      <p>We recognize and honour Shoal Lake 40 First Nation, the source of Winnipeg’s life-sustaining drinking water, as well as the Treaty Territories that generate and provide the electricity that powers daily activity throughout the province and beyond.</p>
+      <p>The ongoing development of LRSD's land acknowledgement is guided by our Indigenous Council of Grandmothers and Grandfathers, and we thank them for their generosity and collaboration.</p>
+      <h3>La reconnaissance des terres de la DSLR</h3>
+      <p>La Division scolaire Louis-Riel (DSLR) réunit une communauté d'écoles sur les terres traditionnelles des Anishinaabeg, Ininewak et Dakota. Notre division est située sur la patrie nationale des Métis de la rivière Rouge. Nous reconnaissons que le Manitoba abrite également les terres traditionnelles des Anishininiwak et Dene.</p>
+      <p>Nous respectons les traités conclus sur ces terres et reconnaissons les préjudices et les erreurs du passé et du présent. Nous nous engageons à créer des alliances authentiques avec les communautés Autochtones dans un esprit de réconciliation et de collaboration.</p>
+      <p>Nous reconnaissons et honorons la Première nation Shoal Lake 40, source de l’eau potable vitale de Winnipeg, ainsi que les territoires des traités qui génèrent et fournissent l’électricité alimentant les activités quotidiennes dans toute la province et au-delà.</p>
+      <p>Le développement continu de la reconnaissance des terres de la DSLR est dirigé par notre conseil autochtone des grands-mères et des grands-pères, que nous remercions de sa générosité et de sa collaboration.</p>
       <p>The René Deleurme Centre (RDC) is a community learning centre in Louis Riel School Division. RDC includes community stakeholders such as newcomer settlement services, family outreach, daycare, adult literacy, and adult EAL programming. Programming is equity-based and responsive to community needs.</p>
     </section>
 
@@ -55,8 +79,23 @@
           <p><a href="mailto:allison.drummond@lrsd.net">allison.drummond@lrsd.net</a></p>
         </div>
         <div class="member">
+          <img src="https://media.lrsd.net/media/Default/frl/1762961357265.9195f969525.png" alt="RDC team member photo (name unavailable)">
+        </div>
+        <div class="member">
+          <img src="https://media.lrsd.net/media/Default/frl/1762961307514.ff9e2969523.png" alt="RDC team member photo (name unavailable)">
+        </div>
+        <div class="member">
+          <img src="https://media.lrsd.net/media/Default/frl/1762961264023.d99f4269521.png" alt="RDC team member photo (name unavailable)">
+        </div>
+        <div class="member">
+          <img src="https://media.lrsd.net/media/Default/frl/1762961282816.313e2069522.png" alt="RDC team member photo (name unavailable)">
+        </div>
+        <div class="member">
           <a href="mailto:tammy.bruce@lrsd.net"><img src="https://media.lrsd.net/media/Default/frl/0/2_20240613_204310_0001-3.jpg" alt="Tammy Bruce"></a>
           <p><a href="mailto:tammy.bruce@lrsd.net">tammy.bruce@lrsd.net</a></p>
+        </div>
+        <div class="member">
+          <img src="https://media.lrsd.net/media/Default/frl/1762961323224.f2165769524.png" alt="RDC team member photo (name unavailable)">
         </div>
       </div>
     </section>
