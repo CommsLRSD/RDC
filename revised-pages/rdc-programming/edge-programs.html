@@ -4,16 +4,26 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EDGE Programs</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --max-width: 1000px; --radius: 14px; --accent: #6fa67a; --accent-strong: #3b7a46; --surface: #f3faf3; --line: #cfe4cf; }
+    :root {
+      --max-width: 1280px;
+      --radius: 14px;
+      --bg: #f7f9f8;
+      --text: #1f2933;
+      --accent: #2e7d32;
+      --line: #d8e1db;
+      --panel: #ffffff;
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; line-height: 1.65; }
-    h1, h2, h3 { color: var(--accent-strong); }
-    a { color: var(--accent-strong); }
-    .page { max-width: var(--max-width); margin: 0 auto; padding: 2rem; }
+    body { margin: 0; line-height: 1.65; font-family: 'Poppins', sans-serif; color: var(--text); background: var(--bg); }
+    h1, h2, h3 { color: #17381f; margin-top: 0; }
+    a { color: var(--accent); }
+    .page { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
     .stack { display: grid; gap: 1.5rem; }
-    .panel { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 1.25rem; }
-    .hero-img { width: min(100%, 420px); height: auto; border-radius: 10px; }
+    .panel { border: 1px solid var(--line); border-top: 4px solid var(--accent); background: var(--panel); border-radius: var(--radius); padding: 1.25rem; }
     .split { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
   </style>
 </head>
@@ -41,7 +51,6 @@
         <li>Available part-time Monday to Friday</li>
       </ul>
       <p><strong>Contact:</strong><br>Toula Papagiannopoulos<br><a href="mailto:toula@edgeinc.ca">toula@edgeinc.ca</a><br>204-255-5390</p>
-      <img class="hero-img" src="https://media.lrsd.net/media/Default/frl/1763059551908.324bf769684.jpeg" alt="EDGE ESL program image">
     </section>
 
     <section class="panel split">
@@ -64,7 +73,6 @@
           <li>Strengthen job-readiness skills</li>
         </ul>
         <p><a href="https://www.edu.gov.mb.ca/all/learners/index.html" target="_blank" rel="noopener noreferrer">Learn more about adult learning in Manitoba</a></p>
-        <img class="hero-img" src="https://media.lrsd.net/media/Default/frl/1763059693819.02a69469685.png" alt="EDGE Literacy program image">
       </div>
     </section>
   </div>

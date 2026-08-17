@@ -4,16 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Settlement Program</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    :root { --max-width: 1100px; --radius: 14px; --accent: #6fa67a; --accent-strong: #3b7a46; --surface: #f3faf3; --line: #cfe4cf; }
+    :root {
+      --max-width: 1280px;
+      --radius: 14px;
+      --bg: #f7f9f8;
+      --text: #1f2933;
+      --accent: #2e7d32;
+      --line: #d8e1db;
+      --panel: #ffffff;
+    }
     * { box-sizing: border-box; }
-    body { margin: 0; line-height: 1.65; }
-    h1, h2, h3 { color: var(--accent-strong); }
-    a { color: var(--accent-strong); }
-    .page { max-width: var(--max-width); margin: 0 auto; padding: 2rem; }
-    .panel { border: 1px solid var(--line); background: var(--surface); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.25rem; }
+    body { margin: 0; line-height: 1.65; font-family: 'Poppins', sans-serif; color: var(--text); background: var(--bg); }
+    h1, h2, h3 { color: #17381f; margin-top: 0; }
+    a { color: var(--accent); }
+    .page { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
+    .panel { border: 1px solid var(--line); border-top: 4px solid var(--accent); background: var(--panel); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.25rem; }
     .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
-    .grid img { width: 100%; height: 220px; object-fit: cover; border-radius: 10px; }
+    .card { border: 1px solid var(--line); border-radius: 10px; padding: 1rem; background: #fff; }
   </style>
 </head>
 <body>
@@ -42,12 +53,18 @@
     </section>
 
     <section class="grid">
-      <img src="https://media.lrsd.net/media/Default/frl/1780678307674.5ab20086778.png" alt="Settlement poster 1">
-      <img src="https://media.lrsd.net/media/Default/frl/1779908022078.b7ac3b85807.png" alt="Settlement poster 2">
-      <img src="https://media.lrsd.net/media/Default/frl/1779826733586.4f715b85735.png" alt="Settlement poster 3">
-      <img src="https://media.lrsd.net/media/Default/frl/1779908002919.726dd185806.png" alt="Settlement poster 4">
-      <img src="https://media.lrsd.net/media/Default/frl/1781204754278.f1353a87231.png" alt="Settlement poster 5">
-      <img src="https://media.lrsd.net/media/Default/frl/1781204830295.69b03187233.png" alt="Settlement poster 6">
+      <article class="card">
+        <h3>Who can access support</h3>
+        <p>Services are designed for newcomer and recently arrived permanent residents seeking settlement guidance and community integration support.</p>
+      </article>
+      <article class="card">
+        <h3>How to connect</h3>
+        <p>Contact the team by email to request referrals, register for group programs, or ask about mentorship and language-specific services.</p>
+      </article>
+      <article class="card">
+        <h3>Program focus</h3>
+        <p>The program strengthens belonging, confidence, and access to essential services through practical, community-based supports.</p>
+      </article>
     </section>
   </div>
   <script>
