@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --max-width: 1280px;
+      --max-width: 1100px;
       --radius: 14px;
       --bg: #f7f9f8;
       --text: #1f2933;
@@ -23,25 +23,28 @@
     h1, h2, h3 { color: #17381f; margin-top: 0; }
     a { color: var(--accent); }
     .page { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
-    .panel { border: 1px solid var(--line); border-top: 4px solid var(--accent); background: var(--panel); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.25rem; }
+    .panel { border: 1px solid var(--line); background: var(--panel); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.25rem; }
+    .accent-top { border-top: 4px solid var(--accent); }
+    .accent-left { border-left: 4px solid var(--accent); }
     .cards { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
     .card { border: 1px solid var(--line); border-radius: 10px; padding: 1rem; background: #fff; }
     .button { display: inline-block; padding: .6rem 1rem; border: 1px solid var(--line); background: var(--accent-soft); border-radius: 8px; text-decoration: none; font-weight: 600; }
+    .soft-note { background: var(--accent-soft); border-radius: 10px; padding: .7rem .85rem; margin-bottom: .9rem; max-width: 430px; }
+    .photo { width: 100%; height: 185px; object-fit: cover; border-radius: 10px; margin-top: 1rem; }
   </style>
 </head>
 <body>
   <div class="page">
-    <h1>Volunteer at RDC</h1>
-    <p>This page combines Volunteer Registration and Volunteer Opportunities content.</p>
-
-    <section class="panel">
+    <section class="panel accent-left">
       <h2>Getting Started</h2>
+      <div class="soft-note">Volunteering at RDC supports food security, welcoming spaces, and practical skill-building.</div>
       <p>Tell us what volunteer opportunities interest you, and a staff member will contact you with next steps.</p>
       <p><a class="button" href="https://forms.office.com/r/EVVXV2PVU6" target="_blank" rel="noopener noreferrer">Register here</a></p>
       <p><strong>Contact:</strong> Chef Michael Erin — <a href="mailto:michael.erin@lrsd.net">michael.erin@lrsd.net</a> — 204-257-7308</p>
+      <img class="photo" src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%204.jpg" alt="Volunteer teamwork activity image">
     </section>
 
-    <section class="panel">
+    <section class="panel accent-top">
       <h2>Weekly Volunteer Schedule</h2>
       <div class="cards">
         <article class="card"><h3>Monday</h3><p>Morning: Welcome Area (1)<br>Afternoon: Clothing Closet (2)</p></article>
@@ -53,7 +56,7 @@
       <p>The number in parentheses shows how many volunteers are needed.</p>
     </section>
 
-    <section class="panel">
+    <section class="panel accent-left">
       <h2>Volunteer Opportunities</h2>
       <div class="cards">
         <article class="card"><h3>Fresh Food Box</h3><p>Every other Tuesday, 10:00 AM to 11:30 AM</p></article>

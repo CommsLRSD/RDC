@@ -9,12 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --max-width: 1280px;
+      --max-width: 1100px;
       --radius: 14px;
       --bg: #f7f9f8;
       --text: #1f2933;
       --accent: #2e7d32;
       --line: #d8e1db;
+      --accent-soft: #e8f4ea;
       --panel: #ffffff;
     }
     * { box-sizing: border-box; }
@@ -22,29 +23,33 @@
     h1, h2, h3 { color: #17381f; margin-top: 0; }
     a { color: var(--accent); }
     .page { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
-    .panel, .card { border: 1px solid var(--line); border-top: 4px solid var(--accent); background: var(--panel); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.25rem; }
+    .panel, .card { border: 1px solid var(--line); background: var(--panel); border-radius: var(--radius); padding: 1.25rem; margin-bottom: 1.25rem; }
+    .accent-top { border-top: 4px solid var(--accent); }
+    .accent-left { border-left: 4px solid var(--accent); }
     .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
     .card ul { margin-bottom: 0; }
+    .photo-strip { display: grid; gap: .8rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); margin-top: 1rem; }
+    .photo-strip img { width: 100%; height: 170px; object-fit: cover; border-radius: 10px; }
+    .soft-note { background: var(--accent-soft); border-radius: 10px; padding: .7rem .85rem; max-width: 420px; }
   </style>
 </head>
 <body>
   <div class="page">
-    <header>
-      <h1>LRSD Community Kitchen</h1>
-      <p>This page combines the LRSD Community Kitchen overview and Community Kitchen volunteering information.</p>
-    </header>
-
-    <section class="panel">
+    <section class="panel accent-left">
       <h2>About the Kitchen</h2>
       <p>The LRSD Community Kitchen is a hands-on, full-service commissary and community kitchen that provides meals for students in Louis Riel School Division and the surrounding community.</p>
       <p>The program supports people experiencing food insecurity while creating opportunities to build life and workplace skills.</p>
       <p><strong>Volunteer contact:</strong> Chef Michael Erin — <a href="mailto:michael.erin@lrsd.net">michael.erin@lrsd.net</a> — 204-257-7308</p>
+      <div class="photo-strip">
+        <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%208-2.jpeg" alt="Community kitchen activity image">
+        <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-1-1.jpeg" alt="Food preparation activity image">
+      </div>
     </section>
 
     <section>
       <h2>Volunteer Roles</h2>
       <div class="grid">
-        <article class="card">
+        <article class="card accent-top">
           <h3>Fresh Food Box</h3>
           <p><strong>Schedule:</strong> Every other Tuesday, 10:00 AM to 11:30 AM</p>
           <ul>
@@ -53,7 +58,7 @@
             <li>Break down and recycle boxes</li>
           </ul>
         </article>
-        <article class="card">
+        <article class="card accent-left">
           <h3>Food Depot</h3>
           <p><strong>Schedule:</strong> Thursdays, 10:45 AM to 12:15 PM</p>
           <ul>
@@ -62,7 +67,7 @@
             <li>Clean and reset space after distribution</li>
           </ul>
         </article>
-        <article class="card">
+        <article class="card accent-top">
           <h3>Welcome Area</h3>
           <p><strong>Suggested time:</strong> 10:30 AM to 11:00 AM</p>
           <ul>
@@ -71,7 +76,7 @@
             <li>Help create a welcoming environment</li>
           </ul>
         </article>
-        <article class="card">
+        <article class="card accent-left">
           <h3>Clothing Closet</h3>
           <p><strong>Schedule:</strong> Flexible / assigned</p>
           <ul>
@@ -81,6 +86,7 @@
           </ul>
         </article>
       </div>
+      <p class="soft-note"><strong>Note:</strong> schedules can shift based on meal production and distribution needs.</p>
     </section>
   </div>
   <script>
