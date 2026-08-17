@@ -24,10 +24,9 @@
     h1, h2, h3 { color: var(--primary-color); margin-top: 0; font-weight: 700; }
     a { color: var(--primary-color); }
     .page { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
-    .page-header { background: var(--light-blue); border-left: 4px solid var(--primary-color); border-radius: var(--radius); padding: 2rem 2rem 2rem 2.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-light); }
-    .page-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin: 0 0 .5rem; }
-    .page-subtitle { font-size: 1.05rem; color: var(--primary-color); opacity: .85; margin: 0; }
-    .program { border: var(--border); background: var(--white); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: var(--shadow-light); }
+    .page-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin: 0 0 .4rem; }
+    .page-subtitle { font-size: 1.05rem; color: var(--primary-color); opacity: .85; margin: 0 0 2rem; }
+    .panel { border: var(--border); background: var(--white); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: var(--shadow-light); }
     .accent-left { border-left: 4px solid var(--primary-color); }
     .accent-top { border-top: 4px solid var(--accent-color); }
     h2 { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: .4rem; margin-bottom: 1.1rem; }
@@ -39,43 +38,38 @@
 </head>
 <body>
   <div class="page">
-    <header class="page-header">
-      <h1 class="page-title">ASPIRE and MYConnect</h1>
-      <p class="page-subtitle">Summer and school-year programs supporting student learning and community connection</p>
-    </header>
-    <section class="program accent-left">
-      <h2>ASPIRE (Academic Summer Program Including Recreation and Education)</h2>
-      <p>ASPIRE is an equity-based summer program that helps students continue learning through engaging educational activities and camp-style experiences.</p>
-      <ul>
-        <li>Focuses on math, reading, writing, problem solving, and social development</li>
-        <li>Led by high-energy instructors in the Faculty of Education</li>
-        <li>No cost to participating families</li>
-      </ul>
-      <p>Registration begins in mid-May. Families should contact school administration for participation details and school eligibility.</p>
-      <div class="grid">
-        <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%206-1.jpg" alt="ASPIRE activity photo 1">
-        <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%204.jpg" alt="ASPIRE activity photo 2">
-        <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%208-2.jpeg" alt="ASPIRE activity photo 3">
-        <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-1-1.jpeg" alt="ASPIRE activity photo 4">
-      </div>
-    </section>
+    <h1 class="page-title">ASPIRE and MYConnect</h1>
+    <p class="page-subtitle">Summer and school-year programs supporting student learning and community connection</p>
 
-    <section class="program accent-top">
-      <div class="soft-note">Hands-on learning and relationship-building are central to both programs.</div>
-      <h2>MYConnect</h2>
-      <p>MYConnect provides project-based, hands-on learning that reinforces the Grade 7/8 curriculum while strengthening student confidence and community connection.</p>
-      <ul>
-        <li>Hosted in woodworking and nutrition lab spaces at RDC and Glenwood School</li>
-        <li>One half day per six-day school cycle</li>
-        <li>Learning includes numeracy, literacy, cooking, shopping, and community-based activities</li>
-      </ul>
-      <p>Schools identify eligible students. For more information contact Lee Foster at 204-257-7308 ext. 63361 or <a href="mailto:lee.foster@lrsd.net">lee.foster@lrsd.net</a>.</p>
-      <div class="grid">
-        <img src="https://media.lrsd.net/media/Default/frl/0/1670620334695.png" alt="MYConnect logo image">
-        <img src="https://media.lrsd.net/media/Default/frl/0/MyConnect-1.jpg" alt="MYConnect activity photo 1">
-        <img src="https://media.lrsd.net/media/Default/frl/0/MyConnect%202.jpg" alt="MYConnect activity photo 2">
-      </div>
-    </section>
+    <h2>ASPIRE (Academic Summer Program Including Recreation and Education)</h2>
+    <p>ASPIRE is an equity-based summer program that helps students continue learning through engaging educational activities and camp-style experiences.</p>
+    <ul>
+      <li>Focuses on math, reading, writing, problem solving, and social development</li>
+      <li>Led by high-energy instructors in the Faculty of Education</li>
+      <li>No cost to participating families</li>
+    </ul>
+    <p>Registration begins in mid-May. Families should contact school administration for participation details and school eligibility.</p>
+    <div class="grid" style="margin-bottom:2rem;">
+      <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%206-1.jpg" alt="ASPIRE activity photo 1">
+      <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%204.jpg" alt="ASPIRE activity photo 2">
+      <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%208-2.jpeg" alt="ASPIRE activity photo 3">
+      <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-1-1.jpeg" alt="ASPIRE activity photo 4">
+    </div>
+
+    <div class="soft-note">Hands-on learning and relationship-building are central to both programs.</div>
+    <h2>MYConnect</h2>
+    <p>MYConnect provides project-based, hands-on learning that reinforces the Grade 7/8 curriculum while strengthening student confidence and community connection.</p>
+    <ul>
+      <li>Hosted in woodworking and nutrition lab spaces at RDC and Glenwood School</li>
+      <li>One half day per six-day school cycle</li>
+      <li>Learning includes numeracy, literacy, cooking, shopping, and community-based activities</li>
+    </ul>
+    <p>Schools identify eligible students. For more information contact Lee Foster at 204-257-7308 ext. 63361 or <a href="mailto:lee.foster@lrsd.net">lee.foster@lrsd.net</a>.</p>
+    <div class="grid">
+      <img src="https://media.lrsd.net/media/Default/frl/0/1670620334695.png" alt="MYConnect logo image">
+      <img src="https://media.lrsd.net/media/Default/frl/0/MyConnect-1.jpg" alt="MYConnect activity photo 1">
+      <img src="https://media.lrsd.net/media/Default/frl/0/MyConnect%202.jpg" alt="MYConnect activity photo 2">
+    </div>
   </div>
   <script>
     // Reserved for page-builder compatibility.

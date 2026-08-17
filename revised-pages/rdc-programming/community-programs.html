@@ -24,18 +24,15 @@
     h1, h2, h3 { color: var(--primary-color); margin-top: 0; font-weight: 700; }
     a { color: var(--primary-color); }
     .page { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
-    .page-header { background: var(--light-blue); border-left: 4px solid var(--primary-color); border-radius: var(--radius); padding: 2rem 2rem 2rem 2.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-light); }
-    .page-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin: 0 0 .5rem; }
-    .page-subtitle { font-size: 1.05rem; color: var(--primary-color); opacity: .85; margin: 0; }
-    .section { margin-bottom: 2rem; }
-    .panel, .card { border: var(--border); background: var(--white); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow-light); }
-    .panel { margin-bottom: 1.25rem; }
+    .page-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin: 0 0 .4rem; }
+    .page-subtitle { font-size: 1.05rem; color: var(--primary-color); opacity: .85; margin: 0 0 2rem; }
+    .panel { border: var(--border); background: var(--white); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.25rem; box-shadow: var(--shadow-light); }
     .accent-top { border-top: 4px solid var(--accent-color); }
     .accent-left { border-left: 4px solid var(--primary-color); }
     h2 { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: .4rem; margin-bottom: 1.1rem; }
     h3 { font-size: 1.05rem; color: var(--primary-color); margin-bottom: .5rem; }
     .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1rem; }
-    .video { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); }
+    .video { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius); margin-bottom: 1rem; }
     .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
     .cta { display: inline-block; margin-top: .5rem; font-weight: 700; }
     .soft-note { background: var(--light-blue); border-left: 3px solid var(--primary-color); border-radius: 8px; padding: .75rem .9rem; margin-bottom: 1rem; max-width: 480px; }
@@ -45,47 +42,44 @@
 </head>
 <body>
   <div class="page">
-    <header class="page-header">
-      <h1 class="page-title">RDC Community Programs</h1>
-      <p class="page-subtitle">A welcoming hub for supports, services, learning, and community activities</p>
-    </header>
-    <section class="section panel accent-left">
-      <h2>Community Hub</h2>
-      <div class="soft-note">Programs and services are developed with community voice and changing needs in mind.</div>
-      <p>The RDC Community Hub is a welcoming space where community members can access supports, services, learning opportunities, and community activities.</p>
-      <div class="grid">
-        <div>
-          <h3>Programs and Services</h3>
-          <ul>
-            <li>Adult learning and skill-building opportunities</li>
-            <li>Community clinics (vision care, flu, tax, dental health, EIA, Service Manitoba, francophone services)</li>
-            <li>Training programs including First Aid and Food Handler Certification (when offered)</li>
-            <li>Indigenous cultural programming (Full Moon Ceremonies, Beading &amp; Breakfast, traditional teachings)</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Food Security Supports</h3>
-          <ul>
-            <li>Food Depot: free bread and potatoes every Thursday at noon</li>
-            <li>Fresh Food Box: fresh produce, milk, and eggs for $20</li>
-            <li>Emergency Food Hampers: available by call, email, or walk-in</li>
-          </ul>
-          <h3>Other Supports</h3>
-          <ul>
-            <li>Free coffee and tea</li>
-            <li>Phone, computer, Wi-Fi, and printing access</li>
-            <li>Clothing closet</li>
-          </ul>
-        </div>
-      </div>
-      <p><a class="cta" href="https://www.lrsd.net/rdc/page/9394/upcoming-programs-events" target="_blank" rel="noopener noreferrer">View current schedule of programs and events</a></p>
-      <div class="photos">
-        <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%206-1.jpg" alt="Community programming activity image">
-        <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%204.jpg" alt="Community learners image">
-      </div>
-    </section>
+    <h1 class="page-title">RDC Community Programs</h1>
+    <p class="page-subtitle">A welcoming hub for supports, services, learning, and community activities</p>
 
-    <section class="section card accent-top">
+    <h2>Community Hub</h2>
+    <div class="soft-note">Programs and services are developed with community voice and changing needs in mind.</div>
+    <p>The RDC Community Hub is a welcoming space where community members can access supports, services, learning opportunities, and community activities.</p>
+    <div class="grid">
+      <div>
+        <h3>Programs and Services</h3>
+        <ul>
+          <li>Adult learning and skill-building opportunities</li>
+          <li>Community clinics (vision care, flu, tax, dental health, EIA, Service Manitoba, francophone services)</li>
+          <li>Training programs including First Aid and Food Handler Certification (when offered)</li>
+          <li>Indigenous cultural programming (Full Moon Ceremonies, Beading &amp; Breakfast, traditional teachings)</li>
+        </ul>
+      </div>
+      <div>
+        <h3>Food Security Supports</h3>
+        <ul>
+          <li>Food Depot: free bread and potatoes every Thursday at noon</li>
+          <li>Fresh Food Box: fresh produce, milk, and eggs for $20</li>
+          <li>Emergency Food Hampers: available by call, email, or walk-in</li>
+        </ul>
+        <h3>Other Supports</h3>
+        <ul>
+          <li>Free coffee and tea</li>
+          <li>Phone, computer, Wi-Fi, and printing access</li>
+          <li>Clothing closet</li>
+        </ul>
+      </div>
+    </div>
+    <p><a class="cta" href="https://www.lrsd.net/rdc/page/9394/upcoming-programs-events" target="_blank" rel="noopener noreferrer">View current schedule of programs and events</a></p>
+    <div class="photos">
+      <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%206-1.jpg" alt="Community programming activity image">
+      <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%204.jpg" alt="Community learners image">
+    </div>
+
+    <section class="panel accent-top" style="margin-top:2rem;">
       <h2>Star People: Stitching Together Community</h2>
       <div class="video">
         <iframe src="https://www.youtube.com/embed/489mAKu3BgA" title="Star People: Stitching Together Community" loading="lazy" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" allowfullscreen></iframe>

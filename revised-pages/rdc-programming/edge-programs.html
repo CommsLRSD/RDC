@@ -24,11 +24,9 @@
     h1, h2, h3 { color: var(--primary-color); margin-top: 0; font-weight: 700; }
     a { color: var(--primary-color); }
     .page { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
-    .page-header { background: var(--light-blue); border-left: 4px solid var(--primary-color); border-radius: var(--radius); padding: 2rem 2rem 2rem 2.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-light); }
-    .page-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin: 0 0 .5rem; }
-    .page-subtitle { font-size: 1.05rem; color: var(--primary-color); opacity: .85; margin: 0; }
-    .stack { display: grid; gap: 1.5rem; }
-    .panel { border: var(--border); background: var(--white); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow-light); }
+    .page-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin: 0 0 .4rem; }
+    .page-subtitle { font-size: 1.05rem; color: var(--primary-color); opacity: .85; margin: 0 0 2rem; }
+    .panel { border: var(--border); background: var(--white); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.5rem; box-shadow: var(--shadow-light); }
     .accent-top { border-top: 4px solid var(--accent-color); }
     .accent-left { border-left: 4px solid var(--primary-color); }
     h2 { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: .4rem; margin-bottom: 1.1rem; }
@@ -40,33 +38,30 @@
 </head>
 <body>
   <div class="page">
-    <header class="page-header">
-      <h1 class="page-title">EDGE Programs</h1>
-      <p class="page-subtitle">Adult language learning and literacy programs supporting newcomers and community members</p>
-    </header>
-    <div class="stack">
-      <section class="panel accent-left">
-        <h2>EDGE ESL (LINC)</h2>
-        <div class="soft-note">Part-time scheduling supports adults balancing language learning with family and work commitments.</div>
-        <p>The part-time EDGE ESL/LINC program is funded by Immigration, Refugees and Citizenship Canada and helps newcomer adults improve listening, speaking, reading, and writing skills.</p>
-        <ul>
-          <li>Follows Canadian Language Benchmark and PBLA requirements</li>
-          <li>Designed for newcomer adults, including people with part-time/shift work</li>
-          <li>Care for Newcomer Children is available (ages 19 months to 5 years)</li>
-          <li>Runs with school calendar (mid-September to mid-June)</li>
-        </ul>
-        <h3>Eligibility</h3>
-        <ul>
-          <li>Newcomer to Canada</li>
-          <li>Permanent Resident</li>
-          <li>Residing in St. Vital or St. Boniface areas</li>
-          <li>Available part-time Monday to Friday</li>
-        </ul>
-        <p><strong>Contact:</strong><br>Toula Papagiannopoulos<br><a href="mailto:toula@edgeinc.ca">toula@edgeinc.ca</a><br>204-255-5390</p>
-        <img class="photo" src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%208-2.jpeg" alt="Adult learning classroom image">
-      </section>
+    <h1 class="page-title">EDGE Programs</h1>
+    <p class="page-subtitle">Adult language learning and literacy programs supporting newcomers and community members</p>
 
-      <section class="panel accent-top split">
+    <h2>EDGE ESL (LINC)</h2>
+    <div class="soft-note">Part-time scheduling supports adults balancing language learning with family and work commitments.</div>
+    <p>The part-time EDGE ESL/LINC program is funded by Immigration, Refugees and Citizenship Canada and helps newcomer adults improve listening, speaking, reading, and writing skills.</p>
+    <ul>
+      <li>Follows Canadian Language Benchmark and PBLA requirements</li>
+      <li>Designed for newcomer adults, including people with part-time/shift work</li>
+      <li>Care for Newcomer Children is available (ages 19 months to 5 years)</li>
+      <li>Runs with school calendar (mid-September to mid-June)</li>
+    </ul>
+    <h3>Eligibility</h3>
+    <ul>
+      <li>Newcomer to Canada</li>
+      <li>Permanent Resident</li>
+      <li>Residing in St. Vital or St. Boniface areas</li>
+      <li>Available part-time Monday to Friday</li>
+    </ul>
+    <p><strong>Contact:</strong><br>Toula Papagiannopoulos<br><a href="mailto:toula@edgeinc.ca">toula@edgeinc.ca</a><br>204-255-5390</p>
+    <img class="photo" src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%208-2.jpeg" alt="Adult learning classroom image">
+
+    <section class="panel accent-top" style="margin-top:2rem;">
+      <div class="split">
         <div>
           <h2>EDGE Literacy</h2>
           <p>EDGE Literacy is funded by Manitoba Education and Training (Adult Learning and Literacy) and supports adults in reading, writing, speaking, listening, and employability skill development.</p>
@@ -87,8 +82,8 @@
           </ul>
           <p><a href="https://www.edu.gov.mb.ca/all/learners/index.html" target="_blank" rel="noopener noreferrer">Learn more about adult learning in Manitoba</a></p>
         </div>
-      </section>
-    </div>
+      </div>
+    </section>
   </div>
   <script>
     // Reserved for page-builder compatibility.
