@@ -1,0 +1,180 @@
+<div class="lrsd-page-content">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap'); .lrsd-page-content {
+			--primary-color: #264e74; --accent-color: #b23427; --light-blue: #f5f7fa; --border-color: #ccc; --text-color: #222; --white: #fff; --max-width: 1000px; --shadow-light: 0 2px 6px rgba(34, 60, 80, 0.08); --shadow-medium: 0 8px 20px rgba(0, 0, 0, 0.14), 0 3px 6px rgba(0, 0, 0, 0.10); font-family: 'Noto Sans', Arial, sans-serif; font-size: 16px; font-weight: 400;/* Noto Sans Regular as body font */
+			color: var(--text-color); line-height: 1.7; text-align: left; box-sizing: border-box;
+		}
+		
+		.lrsd-page-content * {
+			box-sizing: border-box;
+		}
+		
+		.lrsd-page-content .page-container {
+			max-width: var(--max-width); margin: 0 0 0 2rem; padding: 2rem 2.5rem 2rem 3.5rem;/* Attractive larger left margin */
+			box-sizing: border-box; font-family: inherit; font-weight: inherit; font-size: inherit; line-height: inherit; color: inherit; text-align: inherit;
+		}
+		
+		.lrsd-page-content .page-header {
+			text-align: left; margin-bottom: 3rem; background: var(--light-blue); border-radius: 12px; padding: 2.5rem 2rem 2.5rem 3.5rem; box-shadow: var(--shadow-light); border-left: 4px solid var(--primary-color); font-family: inherit;
+		}
+		
+		.lrsd-page-content .page-title {
+			font-size: 2.5rem; font-weight: 700; color: var(--primary-color); margin: 0 0 1rem 0; font-family: inherit; text-align: left;
+		}
+		
+		.lrsd-page-content .page-subtitle {
+			font-size: 1.2rem; font-weight: 400; color: var(--primary-color); margin: 0; opacity: 0.8; text-align: left; font-family: inherit;
+		}
+		
+		.lrsd-page-content .cards-container {
+			display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 2rem; margin-bottom: 3rem; text-align: left;
+		}
+		
+		.lrsd-page-content .program-card {
+			position: relative; background: var(--white); border-radius: 12px; box-shadow: var(--shadow-light); overflow: hidden; transition: box-shadow .3s, transform .2s; border: 1px solid rgba(38, 78, 116, 0.1); text-decoration: none; color: inherit; display: block; text-align: left; font-family: inherit;
+		}
+		
+		.lrsd-page-content .program-card:hover {
+			box-shadow: var(--shadow-medium); transform: translateY(-4px);
+		}
+		
+		.lrsd-page-content .card-image-container {
+			position: relative; width: 100%; height: 300px; overflow: hidden; text-align: left;
+		}
+		
+		.lrsd-page-content .card-image {
+			width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s ease;
+		}
+		
+		.lrsd-page-content .program-card:hover .card-image {
+			transform: scale(1.05);
+		}
+		
+		.lrsd-page-content .card-overlay {
+			position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(255, 255, 255, 0.8); opacity: 0; display: flex; align-items: center; justify-content: center; padding-left: 2.5rem;/* Left alignment */
+			transition: opacity 0.3s ease;
+		}
+		
+		.lrsd-page-content .program-card:hover .card-overlay {
+			opacity: 1;
+		}
+		
+		.lrsd-page-content .overlay-text {
+			font-size: 2.5rem; font-weight: 700; color: var(--primary-color); text-align: left; font-family: inherit;
+		}
+		
+		.lrsd-page-content .overlay-logo {
+			max-width: 200px; max-height: 100px; width: auto; height: auto; object-fit: contain; transform: scale(0.85); display: block; margin-left: 0;
+		}
+		
+		.lrsd-page-content .card-content {
+			padding: 1.5rem; text-align: left; font-family: inherit;
+		}
+		
+		.lrsd-page-content .card-title {
+			font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin: 0; font-family: inherit; text-align: left;
+		}
+		
+		.lrsd-page-content .info-section {
+			background: var(--light-blue); border-radius: 12px; padding: 2.5rem 2rem 2.5rem 3.5rem; box-shadow: var(--shadow-light); border-left: 4px solid var(--primary-color); text-align: left; font-family: inherit;
+		}
+		
+		.lrsd-page-content .info-content h2 {
+			font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin: 0 0 1.5rem 0; font-family: inherit; text-align: left;
+		}
+		
+		.lrsd-page-content .info-content p {
+			font-size: 1.05rem; font-weight: 400; line-height: 1.7; margin-bottom: 1.2rem; color: var(--text-color); text-align: left; font-family: inherit;
+		}
+		
+		.lrsd-page-content .info-content p:last-child {
+			margin-bottom: 0;
+		}
+		
+		.lrsd-page-content .highlight {
+			font-weight: 700; color: var(--primary-color); font-family: inherit;
+		}
+		
+		@media (max-width: 768px) {
+			.lrsd-page-content .page-container {
+				margin: 0 0 0 1rem; padding: 1.5rem 1.2rem 1.5rem 1.5rem;
+			}
+			.lrsd-page-content .cards-container {
+				grid-template-columns: 1fr; gap: 1.5rem;
+			}
+			.lrsd-page-content .card-image-container {
+				height: 250px;
+			}
+			.lrsd-page-content .overlay-text {
+				font-size: 2rem;
+			}
+			.lrsd-page-content .info-section {
+				padding: 1.5rem;
+			}
+		}
+		
+		@media (max-width: 480px) {
+			.lrsd-page-content .page-container {
+				margin: 0 0 0 0.5rem; padding: 1rem 0.5rem 1rem 0.5rem;
+			}
+			.lrsd-page-content .page-title {
+				font-size: 1.8rem;
+			}
+			.lrsd-page-content .page-subtitle {
+				font-size: 1.1rem;
+			}
+			.lrsd-page-content .overlay-text {
+				font-size: 1.2rem;
+			}
+			.lrsd-page-content .overlay-logo {
+				max-width: 120px; max-height: 65px;
+			}
+			.lrsd-page-content .info-section {
+				padding: 1rem;
+			}
+		}
+
+	</style>
+	<div class="page-container">
+		<!-- Header Section (Add if desired)
+	<header class="page-header">
+		<h1 class="page-title">Before and After School Programs</h1>
+		<p class="page-subtitle">Explore Childcare and BLAST Supervision Options in LRSD</p>
+	</header> -->
+		<!-- Program Cards -->
+		<section class="cards-container">
+			<!-- Childcare Card -->
+			<a href="https://www.lrsd.net/page/1506/child-care" class="program-card">
+				<div class="card-image-container"><img src="https://media.lrsd.net/media/Default/medialib/istock-1542564273.0b4f4b62341.jpg" alt="Childcare Program" class="card-image fr-fil fr-dib">
+					<div class="card-overlay">
+						<div class="overlay-text" style="text-align: center;">Childcare</div></div></div>
+				<div class="card-content">
+
+					<h3 class="card-title" style="text-align: center;">Childcare</h3>
+				</div>
+			</a>
+			<!-- BLAST Program Card -->
+			<a href="https://www.lrsd.net/page/62353/blast-program" class="program-card">
+				<div class="card-image-container"><img src="https://media.lrsd.net/media/Default/medialib/istock-2160439321.bcb04162340.jpg" alt="BLAST Program" class="card-image fr-fil fr-dib">
+					<div class="card-overlay"><img src="https://media.lrsd.net/media/Default/medialib/blast-logo-2x.4d857062338.png" alt="BLAST Logo" class="overlay-logo fr-fic fr-dib"></div></div>
+				<div class="card-content">
+
+					<h3 class="card-title" style="text-align: center;">BLAST Program</h3>
+				</div>
+			</a></section>
+		<!-- Information Section -->
+		<section class="info-section">
+			<div class="info-content">
+
+				<h2>Understanding the difference between Childcare and the BLAST Program</h2>
+
+				<p><span class="highlight">Childcare and BLAST Program serve different needs</span> and are designed to complement, not compete with each other. Each program has distinct aims and operates under different frameworks to support families in our school division.</p>
+
+				<p><span class="highlight">The BLAST Program is not a licensed childcare program</span> and therefore is not eligible for government subsidies. This program is offered by the division on a cost-recovery basis, focusing on recreational activities and social connection for school-age children.</p>
+
+				<p><span class="highlight">$10 a day childcare is only available through licensed childcare providers.</span> If you are seeking subsidized care options, with a focus on play-based early learning and childcare, please explore licensed childcare programs offered by community partners, many of which qualify for government funding support.</p>
+
+				<p>We encourage families to review both options to determine which program best meets their specific needs, schedule, and budget requirements.</p>
+			</div>
+		</section>
+	</div></div>
