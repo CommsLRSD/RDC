@@ -24,10 +24,9 @@
     h1, h2, h3 { color: var(--primary-color); margin-top: 0; font-weight: 700; }
     a { color: var(--primary-color); }
     .page { max-width: var(--max-width); margin: 0 auto; padding: 2.5rem 1.5rem 3rem; }
-    .page-header { background: var(--light-blue); border-left: 4px solid var(--primary-color); border-radius: var(--radius); padding: 2rem 2rem 2rem 2.5rem; margin-bottom: 2rem; box-shadow: var(--shadow-light); }
-    .page-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin: 0 0 .5rem; }
-    .page-subtitle { font-size: 1.05rem; color: var(--primary-color); opacity: .85; margin: 0; }
-    .panel, .card { border: var(--border); background: var(--white); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.25rem; box-shadow: var(--shadow-light); }
+    .page-title { font-size: 2.2rem; font-weight: 700; color: var(--primary-color); margin: 0 0 .4rem; }
+    .page-subtitle { font-size: 1.05rem; color: var(--primary-color); opacity: .85; margin: 0 0 2rem; }
+    .card { border: var(--border); background: var(--white); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 1.25rem; box-shadow: var(--shadow-light); }
     .accent-top { border-top: 4px solid var(--accent-color); }
     .accent-left { border-left: 4px solid var(--primary-color); }
     h2 { font-size: 1.4rem; font-weight: 700; color: var(--primary-color); border-bottom: 2px solid var(--accent-color); padding-bottom: .4rem; margin-bottom: 1.1rem; }
@@ -41,63 +40,57 @@
 </head>
 <body>
   <div class="page">
-    <header class="page-header">
-      <h1 class="page-title">Community Kitchen</h1>
-      <p class="page-subtitle">Hands-on commissary kitchen supporting food security and skill-building in LRSD</p>
-    </header>
-    <section class="panel accent-left">
-      <h2>About the Kitchen</h2>
-      <p>The LRSD Community Kitchen is a hands-on, full-service commissary and community kitchen that provides meals for students in Louis Riel School Division and the surrounding community.</p>
-      <p>The program supports people experiencing food insecurity while creating opportunities to build life and workplace skills.</p>
-      <p><strong>Volunteer contact:</strong> Chef Michael Erin — <a href="mailto:michael.erin@lrsd.net">michael.erin@lrsd.net</a> — 204-257-7308</p>
-      <div class="photo-strip">
-        <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%208-2.jpeg" alt="Community kitchen activity image">
-        <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-1-1.jpeg" alt="Food preparation activity image">
-      </div>
-    </section>
+    <h1 class="page-title">Community Kitchen</h1>
+    <p class="page-subtitle">Hands-on commissary kitchen supporting food security and skill-building in LRSD</p>
 
-    <section>
-      <h2>Volunteer Roles</h2>
-      <div class="grid">
-        <article class="card accent-top">
-          <h3>Fresh Food Box</h3>
-          <p><strong>Schedule:</strong> Every other Tuesday, 10:00 AM to 11:30 AM</p>
-          <ul>
-            <li>Prepare produce bins and support fridge storage</li>
-            <li>Build up to 52 boxes</li>
-            <li>Break down and recycle boxes</li>
-          </ul>
-        </article>
-        <article class="card accent-left">
-          <h3>Food Depot</h3>
-          <p><strong>Schedule:</strong> Thursdays, 10:45 AM to 12:15 PM</p>
-          <ul>
-            <li>Set up distribution area and organize food</li>
-            <li>Support line flow and replenishment</li>
-            <li>Clean and reset space after distribution</li>
-          </ul>
-        </article>
-        <article class="card accent-top">
-          <h3>Welcome Area</h3>
-          <p><strong>Suggested time:</strong> 10:30 AM to 11:00 AM</p>
-          <ul>
-            <li>Maintain serving and coffee area</li>
-            <li>Support dishwashing and tidying</li>
-            <li>Help create a welcoming environment</li>
-          </ul>
-        </article>
-        <article class="card accent-left">
-          <h3>Clothing Closet</h3>
-          <p><strong>Schedule:</strong> Flexible / assigned</p>
-          <ul>
-            <li>Sort and check donated clothing</li>
-            <li>Organize bins and racks</li>
-            <li>Restore and clean volunteer area</li>
-          </ul>
-        </article>
-      </div>
-      <p class="soft-note"><strong>Note:</strong> schedules can shift based on meal production and distribution needs.</p>
-    </section>
+    <p>The LRSD Community Kitchen is a hands-on, full-service commissary and community kitchen that provides meals for students in Louis Riel School Division and the surrounding community.</p>
+    <p>The program supports people experiencing food insecurity while creating opportunities to build life and workplace skills.</p>
+    <p><strong>Volunteer contact:</strong> Chef Michael Erin — <a href="mailto:michael.erin@lrsd.net">michael.erin@lrsd.net</a> — 204-257-7308</p>
+    <div class="photo-strip">
+      <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%208-2.jpeg" alt="Community kitchen activity image">
+      <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-1-1.jpeg" alt="Food preparation activity image">
+    </div>
+
+    <h2 style="margin-top:2rem;">Volunteer Roles</h2>
+    <div class="grid">
+      <article class="card accent-top">
+        <h3>Fresh Food Box</h3>
+        <p><strong>Schedule:</strong> Every other Tuesday, 10:00 AM to 11:30 AM</p>
+        <ul>
+          <li>Prepare produce bins and support fridge storage</li>
+          <li>Build up to 52 boxes</li>
+          <li>Break down and recycle boxes</li>
+        </ul>
+      </article>
+      <article class="card accent-left">
+        <h3>Food Depot</h3>
+        <p><strong>Schedule:</strong> Thursdays, 10:45 AM to 12:15 PM</p>
+        <ul>
+          <li>Set up distribution area and organize food</li>
+          <li>Support line flow and replenishment</li>
+          <li>Clean and reset space after distribution</li>
+        </ul>
+      </article>
+      <article class="card accent-top">
+        <h3>Welcome Area</h3>
+        <p><strong>Suggested time:</strong> 10:30 AM to 11:00 AM</p>
+        <ul>
+          <li>Maintain serving and coffee area</li>
+          <li>Support dishwashing and tidying</li>
+          <li>Help create a welcoming environment</li>
+        </ul>
+      </article>
+      <article class="card accent-left">
+        <h3>Clothing Closet</h3>
+        <p><strong>Schedule:</strong> Flexible / assigned</p>
+        <ul>
+          <li>Sort and check donated clothing</li>
+          <li>Organize bins and racks</li>
+          <li>Restore and clean volunteer area</li>
+        </ul>
+      </article>
+    </div>
+    <p class="soft-note"><strong>Note:</strong> schedules can shift based on meal production and distribution needs.</p>
   </div>
   <script>
     // Reserved for page-builder compatibility.
