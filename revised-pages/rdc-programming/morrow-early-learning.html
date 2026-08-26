@@ -22,13 +22,12 @@
       --border: 1px solid var(--green-200);
       box-sizing: border-box;
       max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 2rem 1.25rem 3rem;
+      margin: 0;
+      padding: 2rem 2rem 3rem;
       font-family: 'Poppins', Arial, sans-serif;
       font-size: 16px;
       line-height: 1.7;
       color: var(--green-900);
-      background: var(--green-100);
     }
 
     .rdc-page *,
@@ -99,6 +98,13 @@
     .rdc-page .panel,
     .rdc-page .card { padding: 1.4rem; margin-bottom: 1.25rem; }
 
+    .rdc-page .section-card {
+      background: var(--green-100);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      margin-bottom: 1.5rem;
+    }
+
     .rdc-page .accent-top,
     .rdc-page .panel-accent-top { border-top: 4px solid var(--green-600); }
 
@@ -159,7 +165,6 @@
       border-radius: var(--radius-md);
       padding: .75rem .9rem;
       margin: .4rem 0 1rem;
-      max-width: 560px;
       color: var(--green-900);
     }
 
@@ -210,7 +215,7 @@
     .rdc-page .land-note p:last-child { margin-bottom: 0; }
 
     @media (max-width: 760px) {
-      .rdc-page { padding: 1.5rem 1rem 2.5rem; }
+      .rdc-page { padding: 1.5rem 1.25rem 2.5rem; }
       .rdc-page .panel,
       .rdc-page .card { padding: 1.1rem; }
       .rdc-page .page-subtitle { margin-bottom: 1.25rem; }
@@ -223,8 +228,10 @@
     <h1 class="page-title">Morrow Early Learning and Child Development</h1>
     <p class="page-subtitle">Language-rich, relationship-based early learning and child care at René Deleurme Centre</p>
 
-    <p>RDC is located on Treaty 1 Territory, the traditional lands of Anishinaabe, Ininewak, Cree, Oji-Cree, Dakota, and Dene Peoples, and in the homeland of the Métis Nation. We acknowledge the Treaties and commit to moving forward in reconciliation and partnership.</p>
-    <p>We also acknowledge Shoal Lake, Treaty 3 Territory, as the source of the water that sustains our lives.</p>
+    <div class="section-card">
+      <p>RDC is located on Treaty 1 Territory, the traditional lands of Anishinaabe, Ininewak, Cree, Oji-Cree, Dakota, and Dene Peoples, and in the homeland of the Métis Nation. We acknowledge the Treaties and commit to moving forward in reconciliation and partnership.</p>
+      <p>We also acknowledge Shoal Lake, Treaty 3 Territory, as the source of the water that sustains our lives.</p>
+    </div>
 
     <h2>Program Overview</h2>
     <div class="soft-note">The program emphasizes language-rich, relationship-based early learning experiences.</div>
