@@ -21,6 +21,8 @@
       --shadow-soft: 0 10px 24px rgba(26, 22, 19, 0.08), 0 4px 10px rgba(26, 22, 19, 0.05);
       --border: 1px solid #d8d0c8;
       --accent-line: #b6ada4;
+      --subtitle-line: #cfc7be;
+      --button-border: #8f857c;
     }
 
     * { box-sizing: border-box; }
@@ -76,7 +78,7 @@
       color: var(--ink-500);
       margin: 0 0 2rem;
       padding-bottom: .45rem;
-      border-bottom: 2px solid #cfc7be;
+      border-bottom: 2px solid var(--subtitle-line);
     }
 
     .panel,
@@ -173,7 +175,7 @@
     .button {
       display: inline-block;
       padding: .62rem 1.22rem;
-      border: 1px solid #8f857c;
+      border: 1px solid var(--button-border);
       background: var(--stone-100);
       border-radius: 9px;
       text-decoration: none;
