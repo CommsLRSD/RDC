@@ -34,7 +34,7 @@
       font-size: 16px;
       font-weight: 400;
       color: var(--ink-700);
-      background: linear-gradient(180deg, #faf6f2 0%, #f3eee8 100%);
+      background: #ffffff;
     }
 
     h1, h2, h3 {
@@ -58,7 +58,7 @@
     .page {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 2.2rem 1.35rem 3rem;
+      padding: 2.2rem 2.5rem 3rem;
     }
 
     .page-title {
@@ -88,6 +88,10 @@
       background: var(--white);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-soft);
+    }
+
+    .panel {
+      background: var(--stone-100);
     }
 
     .panel,
@@ -247,7 +251,7 @@
     .land-note p:last-child { margin-bottom: 0; }
 
     @media (max-width: 760px) {
-      .page { padding: 1.8rem 1rem 2.6rem; }
+      .page { padding: 1.8rem 1.5rem 2.6rem; }
       .panel,
       .card { padding: 1.2rem; }
       .page-subtitle { margin-bottom: 1.5rem; }
@@ -278,15 +282,17 @@
       <p>The number in parentheses shows how many volunteers are needed.</p>
     </section>
 
-    <h2>Volunteer Opportunities</h2>
-    <div class="cards">
-      <article class="card"><h3>Fresh Food Box</h3><p>Every other Tuesday, 10:00 AM to 11:30 AM</p></article>
-      <article class="card"><h3>Food Depot</h3><p>Thursday, 10:45 AM to 12:15 PM</p></article>
-      <article class="card"><h3>Welcome Area</h3><p>Requested time frame: 10:30 AM to 11:00 AM</p></article>
-      <article class="card"><h3>Clothing Closet</h3><p>Flexible / as assigned</p></article>
-      <article class="card"><h3>Kitchen</h3><p>Tuesday, Wednesday, and Thursday afternoons</p></article>
-    </div>
-    <p>These opportunities build workplace, customer service, food service, and organizational skills while supporting the community.</p>
+    <section class="panel accent-left" style="margin-top:1.5rem;">
+      <h2>Volunteer Opportunities</h2>
+      <div class="cards">
+        <article class="card"><h3>Fresh Food Box</h3><p>Every other Tuesday, 10:00 AM to 11:30 AM</p></article>
+        <article class="card"><h3>Food Depot</h3><p>Thursday, 10:45 AM to 12:15 PM</p></article>
+        <article class="card"><h3>Welcome Area</h3><p>Requested time frame: 10:30 AM to 11:00 AM</p></article>
+        <article class="card"><h3>Clothing Closet</h3><p>Flexible / as assigned</p></article>
+        <article class="card"><h3>Kitchen</h3><p>Tuesday, Wednesday, and Thursday afternoons</p></article>
+      </div>
+      <p>These opportunities build workplace, customer service, food service, and organizational skills while supporting the community.</p>
+    </section>
   </div>
   <script>
     // Reserved for page-builder compatibility.

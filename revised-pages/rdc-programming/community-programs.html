@@ -34,7 +34,7 @@
       font-size: 16px;
       font-weight: 400;
       color: var(--ink-700);
-      background: linear-gradient(180deg, #faf6f2 0%, #f3eee8 100%);
+      background: #ffffff;
     }
 
     h1, h2, h3 {
@@ -58,7 +58,7 @@
     .page {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 2.2rem 1.35rem 3rem;
+      padding: 2.2rem 2.5rem 3rem;
     }
 
     .page-title {
@@ -88,6 +88,10 @@
       background: var(--white);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-soft);
+    }
+
+    .panel {
+      background: var(--stone-100);
     }
 
     .panel,
@@ -247,7 +251,7 @@
     .land-note p:last-child { margin-bottom: 0; }
 
     @media (max-width: 760px) {
-      .page { padding: 1.8rem 1rem 2.6rem; }
+      .page { padding: 1.8rem 1.5rem 2.6rem; }
       .panel,
       .card { padding: 1.2rem; }
       .page-subtitle { margin-bottom: 1.5rem; }
@@ -260,41 +264,44 @@
     <h1 class="page-title">RDC Community Programs</h1>
     <p class="page-subtitle">A welcoming hub for supports, services, learning, and community activities</p>
 
-    <h2>Community Hub</h2>
-    <div class="soft-note">Programs and services are developed with community voice and changing needs in mind.</div>
-    <p>The RDC Community Hub is a welcoming space where community members can access supports, services, learning opportunities, and community activities.</p>
-    <div class="grid">
-      <div>
-        <h3>Programs and Services</h3>
-        <ul>
-          <li>Adult learning and skill-building opportunities</li>
-          <li>Community clinics (vision care, flu, tax, dental health, EIA, Service Manitoba, francophone services)</li>
-          <li>Training programs including First Aid and Food Handler Certification (when offered)</li>
-          <li>Indigenous cultural programming (Full Moon Ceremonies, Beading &amp; Breakfast, traditional teachings)</li>
-        </ul>
+    <section class="panel accent-top">
+      <h2>Community Hub</h2>
+      <div class="soft-note">Programs and services are developed with community voice and changing needs in mind.</div>
+      <p>The RDC Community Hub is a welcoming space where community members can access supports, services, learning opportunities, and community activities.</p>
+      <div class="grid">
+        <div>
+          <h3>Programs and Services</h3>
+          <ul>
+            <li>Adult learning and skill-building opportunities</li>
+            <li>Community clinics (vision care, flu, tax, dental health, EIA, Service Manitoba, francophone services)</li>
+            <li>Training programs including First Aid and Food Handler Certification (when offered)</li>
+            <li>Indigenous cultural programming (Full Moon Ceremonies, Beading &amp; Breakfast, traditional teachings)</li>
+          </ul>
+        </div>
+        <div>
+          <h3>Food Security Supports</h3>
+          <ul>
+            <li>Food Depot: free bread and potatoes every Thursday at noon</li>
+            <li>Fresh Food Box: fresh produce, milk, and eggs for $20</li>
+            <li>Emergency Food Hampers: available by call, email, or walk-in</li>
+          </ul>
+          <h3>Other Supports</h3>
+          <ul>
+            <li>Free coffee and tea</li>
+            <li>Phone, computer, Wi-Fi, and printing access</li>
+            <li>Clothing closet</li>
+          </ul>
+        </div>
       </div>
-      <div>
-        <h3>Food Security Supports</h3>
-        <ul>
-          <li>Food Depot: free bread and potatoes every Thursday at noon</li>
-          <li>Fresh Food Box: fresh produce, milk, and eggs for $20</li>
-          <li>Emergency Food Hampers: available by call, email, or walk-in</li>
-        </ul>
-        <h3>Other Supports</h3>
-        <ul>
-          <li>Free coffee and tea</li>
-          <li>Phone, computer, Wi-Fi, and printing access</li>
-          <li>Clothing closet</li>
-        </ul>
-      </div>
-    </div>
-    <p><a class="cta" href="https://www.lrsd.net/rdc/page/9394/upcoming-programs-events" target="_blank" rel="noopener noreferrer">View current schedule of programs and events</a></p>
-    <div class="photos">
+      <p><a class="cta" href="https://www.lrsd.net/rdc/page/9394/upcoming-programs-events" target="_blank" rel="noopener noreferrer">View current schedule of programs and events</a></p>
+    </section>
+
+    <div class="photos" style="margin-bottom:2rem;">
       <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%206-1.jpg" alt="Community programming activity image">
       <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%204.jpg" alt="Community learners image">
     </div>
 
-    <section class="panel accent-top" style="margin-top:2rem;">
+    <section class="panel accent-left">
       <h2>Star People: Stitching Together Community</h2>
       <div class="video">
         <iframe src="https://www.youtube.com/embed/489mAKu3BgA" title="Star People: Stitching Together Community" loading="lazy" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" allowfullscreen></iframe>

@@ -34,7 +34,7 @@
       font-size: 16px;
       font-weight: 400;
       color: var(--ink-700);
-      background: linear-gradient(180deg, #faf6f2 0%, #f3eee8 100%);
+      background: #ffffff;
     }
 
     h1, h2, h3 {
@@ -58,7 +58,7 @@
     .page {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 2.2rem 1.35rem 3rem;
+      padding: 2.2rem 2.5rem 3rem;
     }
 
     .page-title {
@@ -88,6 +88,10 @@
       background: var(--white);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-soft);
+    }
+
+    .panel {
+      background: var(--stone-100);
     }
 
     .panel,
@@ -247,7 +251,7 @@
     .land-note p:last-child { margin-bottom: 0; }
 
     @media (max-width: 760px) {
-      .page { padding: 1.8rem 1rem 2.6rem; }
+      .page { padding: 1.8rem 1.5rem 2.6rem; }
       .panel,
       .card { padding: 1.2rem; }
       .page-subtitle { margin-bottom: 1.5rem; }
@@ -260,18 +264,20 @@
     <h1 class="page-title">About RDC</h1>
     <p class="page-subtitle">René Deleurme Centre — Community Learning in Louis Riel School Division</p>
 
-    <div class="land-note">
-      <p>The Louis Riel School Division (LRSD) brings together a community of schools on the traditional land of the Anishinaabeg, Ininewak, and Dakota. Our division is located on the National Homeland of the Red River Métis. We recognize that Manitoba is also the traditional land of the Anishininiwak and Dene.</p>
-      <p>We respect the treaties made on this land and acknowledge the harms and mistakes of the past and present. We dedicate ourselves to authentic alliances with Indigenous communities in a spirit of reconciliation and cooperation.</p>
-      <p>We recognize and honour Shoal Lake 40 First Nation, the source of Winnipeg's life-sustaining drinking water, as well as the Treaty Territories that generate and provide the electricity that powers daily activity throughout the province and beyond.</p>
-      <p>The ongoing development of LRSD's land acknowledgement is guided by our Indigenous Council of Grandmothers and Grandfathers, and we thank them for their generosity and collaboration.</p>
-      <h3>La reconnaissance des terres de la DSLR</h3>
-      <p>La Division scolaire Louis-Riel (DSLR) réunit une communauté d'écoles sur les terres traditionnelles des Anishinaabeg, Ininewak et Dakota. Notre division est située sur la patrie nationale des Métis de la rivière Rouge. Nous reconnaissons que le Manitoba abrite également les terres traditionnelles des Anishininiwak et Dene.</p>
-      <p>Nous respectons les traités conclus sur ces terres et reconnaissons les préjudices et les erreurs du passé et du présent. Nous nous engageons à créer des alliances authentiques avec les communautés Autochtones dans un esprit de réconciliation et de collaboration.</p>
-      <p>Nous reconnaissons et honorons la Première nation Shoal Lake 40, source de l'eau potable vitale de Winnipeg, ainsi que les territoires des traités qui génèrent et fournissent l'électricité alimentant les activités quotidiennes dans toute la province et au-delà.</p>
-      <p>Le développement continu de la reconnaissance des terres de la DSLR est dirigé par notre conseil autochtone des grands-mères et des grands-pères, que nous remercions de sa générosité et de sa collaboration.</p>
-      <p>The René Deleurme Centre (RDC) is a community learning centre in Louis Riel School Division. RDC includes community stakeholders such as newcomer settlement services, family outreach, daycare, adult literacy, and adult EAL programming. Programming is equity-based and responsive to community needs.</p>
-    </div>
+    <section class="panel accent-left">
+      <div class="land-note">
+        <p>The Louis Riel School Division (LRSD) brings together a community of schools on the traditional land of the Anishinaabeg, Ininewak, and Dakota. Our division is located on the National Homeland of the Red River Métis. We recognize that Manitoba is also the traditional land of the Anishininiwak and Dene.</p>
+        <p>We respect the treaties made on this land and acknowledge the harms and mistakes of the past and present. We dedicate ourselves to authentic alliances with Indigenous communities in a spirit of reconciliation and cooperation.</p>
+        <p>We recognize and honour Shoal Lake 40 First Nation, the source of Winnipeg's life-sustaining drinking water, as well as the Treaty Territories that generate and provide the electricity that powers daily activity throughout the province and beyond.</p>
+        <p>The ongoing development of LRSD's land acknowledgement is guided by our Indigenous Council of Grandmothers and Grandfathers, and we thank them for their generosity and collaboration.</p>
+        <h3>La reconnaissance des terres de la DSLR</h3>
+        <p>La Division scolaire Louis-Riel (DSLR) réunit une communauté d'écoles sur les terres traditionnelles des Anishinaabeg, Ininewak et Dakota. Notre division est située sur la patrie nationale des Métis de la rivière Rouge. Nous reconnaissons que le Manitoba abrite également les terres traditionnelles des Anishininiwak et Dene.</p>
+        <p>Nous respectons les traités conclus sur ces terres et reconnaissons les préjudices et les erreurs du passé et du présent. Nous nous engageons à créer des alliances authentiques avec les communautés Autochtones dans un esprit de réconciliation et de collaboration.</p>
+        <p>Nous reconnaissons et honorons la Première nation Shoal Lake 40, source de l'eau potable vitale de Winnipeg, ainsi que les territoires des traités qui génèrent et fournissent l'électricité alimentant les activités quotidiennes dans toute la province et au-delà.</p>
+        <p>Le développement continu de la reconnaissance des terres de la DSLR est dirigé par notre conseil autochtone des grands-mères et des grands-pères, que nous remercions de sa générosité et de sa collaboration.</p>
+        <p>The René Deleurme Centre (RDC) is a community learning centre in Louis Riel School Division. RDC includes community stakeholders such as newcomer settlement services, family outreach, daycare, adult literacy, and adult EAL programming. Programming is equity-based and responsive to community needs.</p>
+      </div>
+    </section>
 
     <section class="panel panel-accent-top" style="margin-top:2rem;">
       <h2>Code of Conduct</h2>

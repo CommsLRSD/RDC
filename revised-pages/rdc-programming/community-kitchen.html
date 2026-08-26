@@ -34,7 +34,7 @@
       font-size: 16px;
       font-weight: 400;
       color: var(--ink-700);
-      background: linear-gradient(180deg, #faf6f2 0%, #f3eee8 100%);
+      background: #ffffff;
     }
 
     h1, h2, h3 {
@@ -58,7 +58,7 @@
     .page {
       max-width: var(--max-width);
       margin: 0 auto;
-      padding: 2.2rem 1.35rem 3rem;
+      padding: 2.2rem 2.5rem 3rem;
     }
 
     .page-title {
@@ -88,6 +88,10 @@
       background: var(--white);
       border-radius: var(--radius-lg);
       box-shadow: var(--shadow-soft);
+    }
+
+    .panel {
+      background: var(--stone-100);
     }
 
     .panel,
@@ -247,7 +251,7 @@
     .land-note p:last-child { margin-bottom: 0; }
 
     @media (max-width: 760px) {
-      .page { padding: 1.8rem 1rem 2.6rem; }
+      .page { padding: 1.8rem 1.5rem 2.6rem; }
       .panel,
       .card { padding: 1.2rem; }
       .page-subtitle { margin-bottom: 1.5rem; }
@@ -260,10 +264,13 @@
     <h1 class="page-title">Community Kitchen</h1>
     <p class="page-subtitle">Hands-on commissary kitchen supporting food security and skill-building in LRSD</p>
 
-    <p>The LRSD Community Kitchen is a hands-on, full-service commissary and community kitchen that provides meals for students in Louis Riel School Division and the surrounding community.</p>
-    <p>The program supports people experiencing food insecurity while creating opportunities to build life and workplace skills.</p>
-    <p><strong>Volunteer contact:</strong> Chef Michael Erin — <a href="mailto:michael.erin@lrsd.net">michael.erin@lrsd.net</a> — 204-257-7308</p>
-    <div class="photo-strip">
+    <section class="panel accent-top">
+      <p>The LRSD Community Kitchen is a hands-on, full-service commissary and community kitchen that provides meals for students in Louis Riel School Division and the surrounding community.</p>
+      <p>The program supports people experiencing food insecurity while creating opportunities to build life and workplace skills.</p>
+      <p><strong>Volunteer contact:</strong> Chef Michael Erin — <a href="mailto:michael.erin@lrsd.net">michael.erin@lrsd.net</a> — 204-257-7308</p>
+    </section>
+
+    <div class="photo-strip" style="margin-bottom:1.5rem;">
       <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%208-2.jpeg" alt="Community kitchen activity image">
       <img src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-1-1.jpeg" alt="Food preparation activity image">
     </div>
