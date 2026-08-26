@@ -8,227 +8,197 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --ink-900: #1f1c1a;
-      --ink-800: #2c2724;
-      --ink-700: #3b3531;
-      --ink-500: #6a625c;
-      --stone-100: #f4efea;
+    .rdc-page {
+      --green-900: #012619;
+      --green-600: #4EA664;
+      --green-400: #78BF9E;
+      --green-200: #A9D9C2;
+      --green-100: #E8E5DE;
       --white: #ffffff;
       --max-width: 1120px;
-      --radius-lg: 14px;
-      --radius-md: 11px;
-      --shadow-soft: 0 10px 24px rgba(26, 22, 19, 0.08), 0 4px 10px rgba(26, 22, 19, 0.05);
-      --border: 1px solid #d8d0c8;
-      --accent-line: #b6ada4;
-      --subtitle-line: #cfc7be;
-      --button-border: #8f857c;
-    }
-
-    * { box-sizing: border-box; }
-
-    body {
-      margin: 0;
-      line-height: 1.7;
+      --radius-lg: 12px;
+      --radius-md: 8px;
+      --shadow: 0 4px 16px rgba(1, 38, 25, 0.08);
+      --border: 1px solid var(--green-200);
+      box-sizing: border-box;
+      max-width: var(--max-width);
+      margin: 0 auto;
+      position: relative;
+      left: -80px;
+      padding: 2rem 2rem 3rem;
       font-family: 'Poppins', Arial, sans-serif;
       font-size: 16px;
-      font-weight: 400;
-      color: var(--ink-700);
-      background: linear-gradient(180deg, #faf6f2 0%, #f3eee8 100%);
+      line-height: 1.7;
+      color: var(--green-900);
     }
 
-    h1, h2, h3 {
+    .rdc-page *,
+    .rdc-page *::before,
+    .rdc-page *::after { box-sizing: border-box; }
+
+    .rdc-page h1,
+    .rdc-page h2,
+    .rdc-page h3 {
       margin-top: 0;
       font-family: 'Montserrat', Arial, sans-serif;
-      color: var(--ink-900);
+      color: var(--green-900);
       font-weight: 700;
-      letter-spacing: 0.01em;
     }
 
-    a {
-      color: var(--ink-800);
-      text-decoration-thickness: 1.5px;
+    .rdc-page a {
+      color: var(--green-900);
+      text-decoration-thickness: 1px;
       text-underline-offset: 2px;
     }
 
-    a:hover {
-      color: var(--ink-900);
-    }
+    .rdc-page a:hover { color: var(--green-600); }
 
-    .page {
-      max-width: var(--max-width);
-      margin: 0 auto;
-      padding: 2.2rem 1.35rem 3rem;
-    }
+    .rdc-page p,
+    .rdc-page li { color: var(--green-900); }
 
-    .page-title {
-      font-size: clamp(2rem, 4.6vw, 2.8rem);
+    .rdc-page .page-title {
+      font-size: clamp(1.8rem, 4vw, 2.6rem);
       font-weight: 700;
-      color: var(--ink-900);
-      margin: 0 0 .35rem;
+      margin: 0 0 .3rem;
       line-height: 1.1;
     }
 
-    .page-subtitle {
-      display: inline-block;
-      font-size: .95rem;
+    .rdc-page .page-subtitle {
+      display: block;
+      font-size: .85rem;
       text-transform: uppercase;
       letter-spacing: .08em;
       font-weight: 600;
-      color: var(--ink-500);
-      margin: 0 0 2rem;
-      padding-bottom: .45rem;
-      border-bottom: 2px solid var(--subtitle-line);
+      color: var(--green-400);
+      margin: 0 0 1.75rem;
+      padding-bottom: .4rem;
+      border-bottom: 2px solid var(--green-200);
     }
 
-    .panel,
-    .card,
-    .member {
-      border: var(--border);
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow-soft);
-    }
-
-    .panel,
-    .card {
-      padding: 1.45rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .accent-top,
-    .panel-accent-top {
-      border-top: 4px solid var(--ink-700);
-    }
-
-    .accent-left,
-    .panel-accent-left {
-      border-left: 4px solid var(--ink-700);
-    }
-
-    h2 {
-      font-size: 1.45rem;
-      color: var(--ink-900);
-      border-bottom: 3px solid var(--accent-line);
-      padding-bottom: .45rem;
-      margin-bottom: 1.1rem;
+    .rdc-page h2 {
+      font-size: 1.3rem;
+      border-bottom: 2px solid var(--green-400);
+      padding-bottom: .35rem;
+      margin-bottom: 1rem;
       display: inline-block;
     }
 
-    h3 {
-      font-size: 1.04rem;
-      color: var(--ink-800);
-      margin-bottom: .5rem;
+    .rdc-page h3 {
+      font-size: 1rem;
+      margin-bottom: .4rem;
     }
 
-    p,
-    li {
-      color: var(--ink-700);
+    .rdc-page .panel,
+    .rdc-page .card,
+    .rdc-page .member {
+      border: var(--border);
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
     }
 
-    .cards,
-    .grid,
-    .team,
-    .split,
-    .photo-row,
-    .photos,
-    .photo-strip {
-      display: grid;
-      gap: 1rem;
+    .rdc-page .panel,
+    .rdc-page .card { padding: 1.4rem; margin-bottom: 1.25rem; }
+
+    .rdc-page .section-card {
+      background: var(--green-100);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      margin-bottom: 1.5rem;
     }
 
-    .cards,
-    .grid,
-    .photos,
-    .photo-row,
-    .photo-strip {
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    }
+    .rdc-page .accent-top,
+    .rdc-page .panel-accent-top { border-top: 4px solid var(--green-600); }
 
-    .team {
-      grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-    }
+    .rdc-page .accent-left,
+    .rdc-page .panel-accent-left { border-left: 4px solid var(--green-600); }
 
-    .split {
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    }
+    .rdc-page .cards,
+    .rdc-page .grid,
+    .rdc-page .team,
+    .rdc-page .split,
+    .rdc-page .photo-row,
+    .rdc-page .photos,
+    .rdc-page .photo-strip { display: grid; gap: 1rem; }
 
-    .member {
-      padding: .8rem;
-      text-align: center;
-    }
+    .rdc-page .cards,
+    .rdc-page .grid,
+    .rdc-page .photos,
+    .rdc-page .photo-row,
+    .rdc-page .photo-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 
-    .member img {
+    .rdc-page .team { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+
+    .rdc-page .split { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+
+    .rdc-page .member { padding: .8rem; text-align: center; }
+
+    .rdc-page .member img {
       width: 100%;
       max-width: 230px;
       height: 230px;
       object-fit: cover;
       border-radius: var(--radius-md);
-      filter: saturate(.9) contrast(1.02);
     }
 
-    .member p {
-      margin: .65rem 0 0;
-      font-size: .89rem;
-    }
+    .rdc-page .member p { margin: .55rem 0 0; font-size: .875rem; }
 
-    .button {
+    .rdc-page .button {
       display: inline-block;
-      padding: .62rem 1.22rem;
-      border: 1px solid var(--button-border);
-      background: var(--stone-100);
-      border-radius: 9px;
+      padding: .6rem 1.2rem;
+      border: 2px solid var(--green-600);
+      background: var(--white);
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 700;
-      color: var(--ink-900);
-      transition: background .2s, color .2s, border-color .2s;
+      font-family: 'Poppins', Arial, sans-serif;
+      color: var(--green-900);
+      transition: background .2s, color .2s;
     }
 
-    .button:hover {
-      background: var(--ink-800);
-      border-color: var(--ink-800);
+    .rdc-page .button:hover {
+      background: var(--green-600);
       color: var(--white);
     }
 
-    .soft-note {
-      background: var(--stone-100);
-      border-left: 4px solid var(--ink-700);
+    .rdc-page .soft-note {
+      background: var(--green-200);
+      border-left: 4px solid var(--green-600);
       border-radius: var(--radius-md);
-      padding: .78rem .95rem;
+      padding: .75rem .9rem;
       margin: .4rem 0 1rem;
-      max-width: 560px;
-      color: var(--ink-700);
+      color: var(--green-900);
     }
 
-    .photo,
-    .grid img,
-    .photo-row img,
-    .photos img,
-    .photo-strip img {
+    .rdc-page .photo,
+    .rdc-page .grid img,
+    .rdc-page .photo-row img,
+    .rdc-page .photos img,
+    .rdc-page .photo-strip img {
       width: 100%;
       object-fit: cover;
       border-radius: var(--radius-md);
-      box-shadow: var(--shadow-soft);
+      box-shadow: var(--shadow);
     }
 
-    .photo { height: 190px; margin-top: 1rem; }
-    .grid img { height: 220px; }
-    .photo-row img,
-    .photos img,
-    .photo-strip img { height: 180px; }
+    .rdc-page .photo { height: 190px; margin-top: 1rem; }
+    .rdc-page .grid img { height: 220px; }
+    .rdc-page .photo-row img,
+    .rdc-page .photos img,
+    .rdc-page .photo-strip img { height: 180px; }
 
-    .video {
+    .rdc-page .video {
       position: relative;
       padding-bottom: 56.25%;
       height: 0;
       overflow: hidden;
       border-radius: var(--radius-lg);
       margin-bottom: 1rem;
-      box-shadow: var(--shadow-soft);
+      box-shadow: var(--shadow);
       border: var(--border);
     }
 
-    .video iframe {
+    .rdc-page .video iframe {
       position: absolute;
       inset: 0;
       width: 100%;
@@ -236,31 +206,31 @@
       border: 0;
     }
 
-    .cta {
+    .rdc-page .cta {
       display: inline-block;
       margin-top: .5rem;
       font-weight: 700;
-      color: var(--ink-800);
+      color: var(--green-900);
     }
 
-    .land-note p { margin: 0 0 1rem; }
-    .land-note p:last-child { margin-bottom: 0; }
+    .rdc-page .land-note p { margin: 0 0 1rem; }
+    .rdc-page .land-note p:last-child { margin-bottom: 0; }
 
     @media (max-width: 760px) {
-      .page { padding: 1.8rem 1rem 2.6rem; }
-      .panel,
-      .card { padding: 1.2rem; }
-      .page-subtitle { margin-bottom: 1.5rem; }
-      .member img { height: 210px; }
+      .rdc-page { padding: 1.5rem 1.25rem 2.5rem; }
+      .rdc-page .panel,
+      .rdc-page .card { padding: 1.1rem; }
+      .rdc-page .page-subtitle { margin-bottom: 1.25rem; }
+      .rdc-page .member img { height: 200px; }
     }
   </style>
 </head>
 <body>
-  <div class="page">
+  <div class="rdc-page">
     <h1 class="page-title">About RDC</h1>
     <p class="page-subtitle">René Deleurme Centre — Community Learning in Louis Riel School Division</p>
 
-    <div class="land-note">
+    <div class="section-card land-note">
       <p>The Louis Riel School Division (LRSD) brings together a community of schools on the traditional land of the Anishinaabeg, Ininewak, and Dakota. Our division is located on the National Homeland of the Red River Métis. We recognize that Manitoba is also the traditional land of the Anishininiwak and Dene.</p>
       <p>We respect the treaties made on this land and acknowledge the harms and mistakes of the past and present. We dedicate ourselves to authentic alliances with Indigenous communities in a spirit of reconciliation and cooperation.</p>
       <p>We recognize and honour Shoal Lake 40 First Nation, the source of Winnipeg's life-sustaining drinking water, as well as the Treaty Territories that generate and provide the electricity that powers daily activity throughout the province and beyond.</p>
