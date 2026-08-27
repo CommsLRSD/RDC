@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
+    body > p:first-of-type { display: none; }
+
     .rdc-page {
       --green-900: #012619;
       --green-600: #4EA664;
@@ -22,9 +24,9 @@
       --border: 1px solid var(--green-200);
       box-sizing: border-box;
       max-width: var(--max-width);
-      margin: 0 auto;
+      margin: 0;
       position: relative;
-      left: -80px;
+      left: 0;
       padding: 2rem 2rem 3rem;
       font-family: 'Poppins', Arial, sans-serif;
       font-size: 16px;
@@ -88,151 +90,69 @@
       margin-bottom: .4rem;
     }
 
-    .rdc-page .panel,
-    .rdc-page .card {
-      border: var(--border);
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-      padding: 1.4rem;
-      margin-bottom: 1.25rem;
-    }
-
-    .rdc-page .section-card {
-      background: var(--green-100);
-      border-radius: var(--radius-lg);
-      padding: 1.4rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .rdc-page .accent-top { border-top: 4px solid var(--green-600); }
-    .rdc-page .accent-left { border-left: 4px solid var(--green-600); }
-
-    .rdc-page .grid,
-    .rdc-page .split { display: grid; gap: 1rem; }
-
-    .rdc-page .grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .rdc-page .split { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
-
-    .rdc-page .button {
-      display: inline-block;
-      padding: .6rem 1.2rem;
-      border: 2px solid var(--green-600);
-      background: var(--white);
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      font-family: 'Poppins', Arial, sans-serif;
-      color: var(--green-900);
-      transition: background .2s, color .2s;
-    }
-
-    .rdc-page .button:hover {
-      background: var(--green-600);
-      color: var(--white);
-    }
-
-    .rdc-page .soft-note {
-      background: var(--green-200);
-      border-left: 4px solid var(--green-600);
-      border-radius: var(--radius-md);
-      padding: .75rem .9rem;
-      margin: .4rem 0 1rem;
-      color: var(--green-900);
-    }
-
     .rdc-page ul {
       margin: 0;
       padding-left: 1.2rem;
     }
 
-    .rdc-page .card p:last-child,
-    .rdc-page .panel p:last-child { margin-bottom: 0; }
-
     @media (max-width: 760px) {
       .rdc-page { padding: 1.5rem 1.25rem 2.5rem; }
-      .rdc-page .panel,
-      .rdc-page .card { padding: 1.1rem; }
       .rdc-page .page-subtitle { margin-bottom: 1.25rem; }
     }
   </style>
 </head>
 <body>
   <div class="rdc-page">
-    <h1 class="page-title">Upcoming Events</h1>
     <p class="page-subtitle">At-a-glance community and settlement programming at René Deleurme Centre</p>
 
-    <div class="soft-note">Check registration links for the latest details and contact RDC if pickup times change during school breaks.</div>
+    <p>Check registration links for the latest details and contact RDC if pickup times change during school breaks.</p>
 
-    <div class="grid">
-      <article class="card accent-top">
-        <h2>Breakfast &amp; Beading</h2>
-        <ul>
-          <li>Fridays, 9:00 a.m. to 11:00 a.m.</li>
-          <li>Starts Sept. 19 and runs during the school year</li>
-          <li>René Deleurme Centre, 511 St. Anne's Rd</li>
-          <li>Bring a beading project or come learn; no experience needed</li>
-          <li>Light breakfast provided</li>
-        </ul>
-        <p><a class="button" href="https://www.lrsd.net/rdc/rene-deleurme-centre-programming-find-out-what-s-going-on-in-2024.45164" target="_blank" rel="noopener noreferrer">Program updates</a></p>
-      </article>
+    <h2>Breakfast &amp; Beading</h2>
+    <p><strong>Date:</strong> Fridays (school year), starting Sept. 19</p>
+    <p><strong>Time:</strong> 9:00 a.m. to 11:00 a.m.</p>
+    <p><strong>Location:</strong> René Deleurme Centre, 511 St. Anne's Rd</p>
+    <p><strong>Details:</strong> Bring a beading project or come learn; no experience needed. Light breakfast provided.</p>
+    <p><strong>More info:</strong> <a href="https://www.lrsd.net/rdc/rene-deleurme-centre-programming-find-out-what-s-going-on-in-2024.45164" target="_blank" rel="noopener noreferrer">Program updates</a></p>
 
-      <article class="card accent-left">
-        <h2>English Conversation Circle</h2>
-        <ul>
-          <li>Connect Through Language</li>
-          <li>Aug. 7 to Sept. 25, Fridays, 10:00 a.m. to 11:30 a.m.</li>
-          <li>René Deleurme Centre, 511 St. Anne's Road</li>
-          <li>Practice conversational English in a welcoming group</li>
-          <li>Contact <a href="tel:12042577308">204-257-7308</a> ext. 2 or <a href="mailto:yana.zheleva@lrsd.net">yana.zheleva@lrsd.net</a></li>
-          <li>Funded by Immigration, Refugees and Citizenship Canada</li>
-        </ul>
-        <p><a class="button" href="https://www.lrsd.net/rdc/english-conversation-circle.38212" target="_blank" rel="noopener noreferrer">Register for English Conversation Circle</a></p>
-      </article>
+    <h2>English Conversation Circle</h2>
+    <p><strong>Date:</strong> Aug. 7 to Sept. 25 (Fridays)</p>
+    <p><strong>Time:</strong> 10:00 a.m. to 11:30 a.m.</p>
+    <p><strong>Location:</strong> René Deleurme Centre, 511 St. Anne's Road</p>
+    <p><strong>Details:</strong> Practice conversational English in a welcoming group.</p>
+    <p><strong>Contact:</strong> <a href="tel:12042577308">204-257-7308</a> ext. 2 or <a href="mailto:yana.zheleva@lrsd.net">yana.zheleva@lrsd.net</a></p>
+    <p><strong>Funding:</strong> Immigration, Refugees and Citizenship Canada</p>
+    <p><strong>Registration:</strong> <a href="https://www.lrsd.net/rdc/english-conversation-circle.38212" target="_blank" rel="noopener noreferrer">Register for English Conversation Circle</a></p>
 
-      <article class="card accent-top">
-        <h2><a href="https://www.lrsd.net/rdc/fresh-food-box.38211" target="_blank" rel="noopener noreferrer">Fresh Food Box</a></h2>
-        <ul>
-          <li>$20 per box, about $40 in value</li>
-          <li>Includes assorted fruit, vegetables, 2 L milk, and 1 dozen eggs; no substitutions</li>
-          <li>Sign up by 9:00 a.m. Tuesday the week before pickup; order each time</li>
-          <li>Limit 1 box per household; LRSD catchment families get priority</li>
-          <li>Pay by cash, debit, or credit card at pickup</li>
-          <li>Every second Tuesday: RDC, 511 St. Anne's Rd, 2:00 p.m. to 6:00 p.m.</li>
-          <li>Every second Tuesday: Nelson McIntyre Collegiate, 188 St. Mary's Rd, 3:00 p.m. to 6:00 p.m.</li>
-          <li>School breaks: earlier pickup times at RDC only</li>
-          <li>Questions: <a href="tel:12042577308">204-257-7308</a></li>
-        </ul>
-        <p><a class="button" href="https://www.lrsd.net/rdc/fresh-food-box.38211" target="_blank" rel="noopener noreferrer">Order a Fresh Food Box</a></p>
-      </article>
+    <h2>Fresh Food Box</h2>
+    <p><strong>Cost:</strong> $20 per box (about $40 value)</p>
+    <p><strong>Contents:</strong> Assorted fruit, vegetables, 2 L milk, and 1 dozen eggs (no substitutions)</p>
+    <p><strong>Order deadline:</strong> Sign up by 9:00 a.m. Tuesday the week before pickup; order each time</p>
+    <p><strong>Limits:</strong> 1 box per household; LRSD catchment families get priority</p>
+    <p><strong>Payment:</strong> Cash, debit, or credit card at pickup</p>
+    <p><strong>Pickup locations and time:</strong></p>
+    <ul>
+      <li>Every second Tuesday: RDC, 511 St. Anne's Rd, 2:00 p.m. to 6:00 p.m.</li>
+      <li>Every second Tuesday: Nelson McIntyre Collegiate, 188 St. Mary's Rd, 3:00 p.m. to 6:00 p.m.</li>
+      <li>School breaks: earlier pickup times at RDC only</li>
+    </ul>
+    <p><strong>Contact:</strong> <a href="tel:12042577308">204-257-7308</a></p>
+    <p><strong>Order:</strong> <a href="https://www.lrsd.net/rdc/fresh-food-box.38211" target="_blank" rel="noopener noreferrer">Order a Fresh Food Box</a></p>
 
-      <article class="card accent-left">
-        <h2>Circle of Security Parenting Program</h2>
-        <ul>
-          <li>Practical Tools for Caregiver Confidence and Mental Health</li>
-          <li>Aug. 6 to Sept. 24, Thursdays, 10:00 a.m. to 12:00 p.m.</li>
-          <li>René Deleurme Centre, 511 St. Anne's Road, Winnipeg</li>
-          <li>Theme: Empowering Caregivers</li>
-          <li>Childcare for ages 2 to 5 by registration only</li>
-          <li>Contact <a href="mailto:yana.zheleva@lrsd.net">yana.zheleva@lrsd.net</a></li>
-          <li>Funded by Immigration, Refugees and Citizenship Canada</li>
-        </ul>
-        <p><a class="button" href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=mLJRSUISnEmKPKIfhZH7iX65KoMTOr5Nkxh2A2ZuW6BUNDBSSEQxNUJWUEpUQzhGNkFOWkFQNDlZMC4u&amp;origin=QRCode" target="_blank" rel="noopener noreferrer">Register for Circle of Security</a></p>
-      </article>
-    </div>
+    <h2>Circle of Security Parenting Program</h2>
+    <p><strong>Date:</strong> Aug. 6 to Sept. 24 (Thursdays)</p>
+    <p><strong>Time:</strong> 10:00 a.m. to 12:00 p.m.</p>
+    <p><strong>Location:</strong> René Deleurme Centre, 511 St. Anne's Road, Winnipeg</p>
+    <p><strong>Theme:</strong> Empowering Caregivers</p>
+    <p><strong>Details:</strong> Practical tools for caregiver confidence and mental health</p>
+    <p><strong>Childcare:</strong> Ages 2 to 5 (registration required)</p>
+    <p><strong>Contact:</strong> <a href="mailto:yana.zheleva@lrsd.net">yana.zheleva@lrsd.net</a></p>
+    <p><strong>Funding:</strong> Immigration, Refugees and Citizenship Canada</p>
+    <p><strong>Registration:</strong> <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=mLJRSUISnEmKPKIfhZH7iX65KoMTOr5Nkxh2A2ZuW6BUNDBSSEQxNUJWUEpUQzhGNkFOWkFQNDlZMC4u&amp;origin=QRCode" target="_blank" rel="noopener noreferrer">Register for Circle of Security</a></p>
 
-    <section class="panel accent-top" style="margin-top:2rem;">
-      <h2>Need more details?</h2>
-      <div class="split">
-        <div>
-          <p><strong>General contact:</strong> <a href="tel:12042577308">204-257-7308</a></p>
-          <p><strong>Settlement contact:</strong> <a href="mailto:yana.zheleva@lrsd.net">yana.zheleva@lrsd.net</a></p>
-        </div>
-        <div>
-          <p><a class="button" href="https://www.lrsd.net/rdc/page/9394/upcoming-programs-events" target="_blank" rel="noopener noreferrer">View current schedule of programs and events</a></p>
-        </div>
-      </div>
-    </section>
+    <h2>Need more details?</h2>
+    <p><strong>General contact:</strong> <a href="tel:12042577308">204-257-7308</a></p>
+    <p><strong>Settlement contact:</strong> <a href="mailto:yana.zheleva@lrsd.net">yana.zheleva@lrsd.net</a></p>
+    <p><a href="https://www.lrsd.net/rdc/page/9394/upcoming-programs-events" target="_blank" rel="noopener noreferrer">View current schedule of programs and events</a></p>
   </div>
   <script>
     // Reserved for page-builder compatibility.
