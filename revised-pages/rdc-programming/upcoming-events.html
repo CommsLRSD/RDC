@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
+    body > p:first-of-type { display: none; }
+
     .rdc-page {
       --green-900: #012619;
       --green-600: #4EA664;
@@ -22,9 +24,9 @@
       --border: 1px solid var(--green-200);
       box-sizing: border-box;
       max-width: var(--max-width);
-      margin: 0 auto;
+      margin: 0;
       position: relative;
-      left: -80px;
+      left: 0;
       padding: 2rem 2rem 3rem;
       font-family: 'Poppins', Arial, sans-serif;
       font-size: 16px;
@@ -109,10 +111,7 @@
     .rdc-page .accent-left { border-left: 4px solid var(--green-600); }
 
     .rdc-page .grid,
-    .rdc-page .split { display: grid; gap: 1rem; }
-
-    .rdc-page .grid { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
-    .rdc-page .split { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .rdc-page .split { display: block; }
 
     .rdc-page .button {
       display: inline-block;
@@ -159,7 +158,6 @@
 </head>
 <body>
   <div class="rdc-page">
-    <h1 class="page-title">Upcoming Events</h1>
     <p class="page-subtitle">At-a-glance community and settlement programming at René Deleurme Centre</p>
 
     <div class="soft-note">Check registration links for the latest details and contact RDC if pickup times change during school breaks.</div>
