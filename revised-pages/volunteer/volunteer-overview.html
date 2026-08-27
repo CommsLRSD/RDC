@@ -19,7 +19,9 @@
         <p><a class="button" href="https://forms.office.com/r/EVVXV2PVU6" target="_blank" rel="noopener noreferrer">Register here</a></p>
         <p><strong>Contact:</strong> Chef Michael Erin — <a href="mailto:michael.erin@lrsd.net">michael.erin@lrsd.net</a> — <a href="tel:12042577308">204-257-7308</a></p>
       </div>
-      <img class="photo intro-photo" src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%204.jpg" alt="Volunteer teamwork activity image">
+      <div class="intro-photo-wrap">
+        <img class="photo intro-photo" src="https://media.lrsd.net/media/Default/frl/0/ASPIRE%202024%20-%204.jpg" alt="Volunteer teamwork activity image">
+      </div>
     </div>
 
     <h2>Weekly Volunteer Schedule</h2>
@@ -138,15 +140,29 @@
     .rdc-page .intro-copy p:first-child { margin-top: 0; }
     .rdc-page .intro-copy p:last-child { margin-bottom: 0; }
 
-    .rdc-page .photo {
-      display: block;
+    .rdc-page .intro-photo-wrap {
       width: 100%;
       max-width: 460px;
-      aspect-ratio: 4 / 3;
+      margin: 0 auto;
+      border-radius: 8px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .rdc-page .intro-photo-wrap::before {
+      content: "";
+      display: block;
+      padding-top: 75%;
+    }
+
+    .rdc-page .photo {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
       object-position: center;
-      border-radius: 8px;
-      margin: 0 auto;
     }
 
     @media (max-width: 760px) {
