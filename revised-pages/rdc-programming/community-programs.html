@@ -1,286 +1,242 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RDC Programming</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-  <style>
-    body > p:first-of-type { display: none; }
+<div class="rdc-font-links">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</div>
+<div class="rdc-page">
 
-    .rdc-page {
-      --green-900: #012619;
-      --green-600: #4EA664;
-      --green-400: #78BF9E;
-      --green-200: #A9D9C2;
-      --green-100: #E8E5DE;
-      --white: #ffffff;
-      --max-width: 1120px;
-      --program-card-height: 30rem;
-      --program-card-image-height: 13.75rem;
-      --radius-lg: 12px;
-      --radius-md: 8px;
-      --shadow: 0 4px 16px rgba(1, 38, 25, 0.08);
-      --border: 1px solid var(--green-200);
-      box-sizing: border-box;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      position: relative;
-      left: -80px;
-      padding: 1.25rem 2rem 3rem;
-      font-family: 'Poppins', Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--green-900);
-    }
+	<h1 class="page-title">Ren&eacute; Delurme Centre Programs</h1>
 
-    .rdc-page *,
-    .rdc-page *::before,
-    .rdc-page *::after { box-sizing: border-box; }
+	<p class="page-subtitle">Connecting people, building skills, supporting well-being</p>
+	<section class="panel accent-top" style="margin-top:2rem;">
 
-    .rdc-page h1,
-    .rdc-page h2,
-    .rdc-page h3 {
-      margin-top: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      color: var(--green-900);
-      font-weight: 700;
-    }
+		<h2>Star People: Stitching Together Community</h2>
+		<div class="video">
+			<iframe src="https://www.youtube.com/embed/489mAKu3BgA" title="Star People: Stitching Together Community" sandbox="allow-scripts allow-same-origin allow-presentation allow-popups" allowfullscreen=""><span class="fr-mk" style="display: none;">&nbsp;</span><span class="fr-mk" style="display: none;">&nbsp;</span><span class="fr-mk" style="display: none;">&nbsp;</span><span class="fr-mk" style="display: none;">&nbsp;</span><span class="fr-mk" style="display: none;">&nbsp;</span><span class="fr-mk" style="display: none;">&nbsp;</span><span class="fr-mk" style="display: none;">&nbsp;</span><span class="fr-mk" style="display: none;">&nbsp;</span></iframe>
+		</div>
 
-    .rdc-page a {
-      color: var(--green-600);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 2px;
-    }
+		<p><em>How a RDC and a Star Blanket created meaning and community...</em> click the video to watch.&nbsp;</p>
+	</section>
 
-    .rdc-page a:hover { color: var(--green-400); }
+	<h2>Overview</h2>
+	<div class="soft-note">Programs and services are developed with community voice and changing needs in mind.</div>
 
-    .rdc-page p,
-    .rdc-page li { color: var(--green-900); }
+	<p>The Ren&eacute; Deleurme Centre is a hub where community members can access supports, services, learning opportunities, community activities, and Community Kitchen supports.</p>
+	<div class="grid">
+		<div>
 
-    .rdc-page .page-title {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 700;
-      margin: 0 0 .3rem;
-      line-height: 1.1;
-    }
+			<h3>Programs and Services</h3>
 
-    .rdc-page .page-subtitle {
-      display: block;
-      font-size: .85rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-weight: 600;
-      color: var(--green-400);
-      margin: 0 0 1.75rem;
-      padding-bottom: .4rem;
-      border-bottom: 2px solid var(--green-200);
-    }
+			<ul>
+				<li>Adult learning and skill-building opportunities</li>
+				<li>Community clinics (vision care, flu, tax, dental health, EIA, Service Manitoba, francophone services)</li>
+				<li>Training programs including First Aid and Food Handler Certification (when offered)</li>
+				<li>Indigenous cultural programming (Full Moon Ceremonies, Beading &amp; Breakfast, traditional teachings)</li>
+				<li data-pasted="true"><a href="https://www.lrsd.net/rdc/aspire-program" target="_blank" rel="noopener noreferrer">ASPIRE</a>: summer learning and recreation opportunities for students</li>
+				<li><a href="https://www.lrsd.net/rdc/lrsd-settlement-program" target="_blank" rel="noopener noreferrer">Settlement Program</a>: newcomer support, referrals, and community connection</li>
+			</ul>
+		</div>
+		<div>
 
-    .rdc-page h2 {
-      font-size: 1.3rem;
-      border-bottom: 2px solid var(--green-400);
-      padding-bottom: .35rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
+			<h3>Food Security Supports</h3>
 
-    .rdc-page .card,
-    .rdc-page .member {
-      border: var(--border);
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-    }
+			<ul>
+				<li>Food Depot: free bread and potatoes every Thursday at noon</li>
+				<li><a href="https://www.lrsd.net/rdc/fresh-food-box.38211" target="_blank" rel="noopener noreferrer">Fresh Food Box</a>: fresh produce, milk, and eggs for $20</li>
+				<li>Emergency Food Hampers: available by call, email, or walk-in</li>
+				<li>Community Kitchen meals, food distribution, and volunteer opportunities</li>
+			</ul>
 
-    .rdc-page .card { padding: 1.4rem; }
+			<h3>Other Supports</h3>
 
-    .rdc-page .accent-top,
-    .rdc-page .panel-accent-top { border-top: 4px solid var(--green-600); }
+			<ul>
+				<li>Free coffee and tea</li>
+				<li>Phone, computer, Wi-Fi, and printing access</li>
+				<li>Clothing closet</li>
+			</ul>
+		</div></div>
 
-    .rdc-page .soft-note {
-      background: var(--green-200);
-      border-left: 4px solid var(--green-600);
-      border-radius: var(--radius-md);
-      padding: .75rem .9rem;
-      margin: .4rem 0 1.5rem;
-      color: var(--green-900);
-    }
+	<p><a class="button" href="https://www.lrsd.net/rdc/calendar">View Upcoming Programming and Events</a></p>
+</div>
+<style>
+		.fr-view .rdc-font-links {
+		display: none;
+	}
+	
+	.fr-view .rdc-page {
+		--green-900: #012619; --green-600: #4EA664; --green-400: #78BF9E; --green-200: #A9D9C2; --green-100: #F1EFEB; --white: #ffffff; --max-width: 1120px; --radius-lg: 12px; --radius-md: 8px; --shadow: 0 4px 16px rgba(1, 38, 25, 0.08); --border: 1px solid var(--green-200); box-sizing: border-box; max-width: var(--max-width); margin: 0 auto; position: relative; left: clamp(-80px, -8vw, 0px); padding: 1.25rem 2rem 3rem; font-family: 'Poppins', Arial, sans-serif; font-size: 16px; line-height: 1.7; color: var(--green-900);
+	}
+	
+	.fr-view .rdc-page *,
+	.fr-view .rdc-page *::before,
+	.fr-view .rdc-page *::after {
+		box-sizing: border-box;
+	}
+	
+	.fr-view .rdc-page h1,
+	.fr-view .rdc-page h2,
+	.fr-view .rdc-page h3 {
+		margin-top: 0; font-family: 'Montserrat', Arial, sans-serif; color: var(--green-900); font-weight: 700;
+	}
+	
+	.fr-view .rdc-page a {
+		color: var(--green-600); text-decoration-thickness: 1px; text-underline-offset: 2px;
+	}
+	
+	.fr-view .rdc-page a:hover {
+		color: var(--green-400);
+	}
+	
+	.fr-view .rdc-page p,
+	.fr-view .rdc-page li {
+		color: var(--green-900);
+	}
+	
+	.fr-view .rdc-page .page-title {
+		font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; margin: 0 0 .3rem; line-height: 1.1;
+	}
+	
+	.fr-view .rdc-page .page-subtitle {
+		display: block; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; color: var(--green-400); margin: 0 0 1.75rem; padding-bottom: .4rem; border-bottom: 2px solid var(--green-200);
+	}
+	
+	.fr-view .rdc-page h2 {
+		font-size: 1.3rem; border-bottom: 2px solid var(--green-400); padding-bottom: .35rem; margin-bottom: 1rem; display: inline-block;
+	}
+	
+	.fr-view .rdc-page h3 {
+		font-size: 1rem; margin-bottom: .4rem;
+	}
+	
+	.fr-view .rdc-page .panel,
+	.fr-view .rdc-page .card,
+	.fr-view .rdc-page .member {
+		border: var(--border); background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow);
+	}
+	
+	.fr-view .rdc-page .panel,
+	.fr-view .rdc-page .card {
+		padding: 1.4rem; margin-bottom: 1.25rem;
+	}
+	
+	.fr-view .rdc-page .section-card {
+		background: var(--green-100); border-radius: var(--radius-lg); padding: 1.4rem; margin-bottom: 1.5rem;
+	}
+	
+	.fr-view .rdc-page .accent-top,
+	.fr-view .rdc-page .panel-accent-top {
+		border-top: 4px solid var(--green-600);
+	}
+	
+	.fr-view .rdc-page .accent-left,
+	.fr-view .rdc-page .panel-accent-left {
+		border-left: 4px solid var(--green-600);
+	}
+	
+	.fr-view .rdc-page .cards,
+	.fr-view .rdc-page .grid,
+	.fr-view .rdc-page .team,
+	.fr-view .rdc-page .split,
+	.fr-view .rdc-page .photo-row,
+	.fr-view .rdc-page .photos,
+	.fr-view .rdc-page .photo-strip {
+		display: grid; gap: 1rem;
+	}
+	
+	.fr-view .rdc-page .cards,
+	.fr-view .rdc-page .grid,
+	.fr-view .rdc-page .photos,
+	.fr-view .rdc-page .photo-row,
+	.fr-view .rdc-page .photo-strip {
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	}
+	
+	.fr-view .rdc-page .team {
+		grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+	}
+	
+	.fr-view .rdc-page .split {
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	}
+	
+	.fr-view .rdc-page .member {
+		padding: .8rem; text-align: center;
+	}
+	
+	.fr-view .rdc-page .member img {
+		width: 100%; max-width: 230px; height: 230px; object-fit: cover; border-radius: var(--radius-md);
+	}
+	
+	.fr-view .rdc-page .member p {
+		margin: .55rem 0 0; font-size: .875rem;
+	}
+	
+	.fr-view .rdc-page .button {
+		display: inline-block; padding: .6rem 1.2rem; border: 2px solid var(--green-600); background: var(--white); border-radius: 8px; text-decoration: none; font-weight: 700; font-family: 'Poppins', Arial, sans-serif; color: var(--green-900); transition: background .2s, color .2s;
+	}
+	
+	.fr-view .rdc-page .button:hover {
+		background: var(--green-600); color: var(--white);
+	}
+	
+	.fr-view .rdc-page .soft-note {
+		background: var(--green-200); border-left: 4px solid var(--green-600); border-radius: var(--radius-md); padding: .75rem .9rem; margin: .4rem 0 1rem; color: var(--green-900);
+	}
+	
+	.fr-view .rdc-page .photo,
+	.fr-view .rdc-page .photo-row img,
+	.fr-view .rdc-page .photos img,
+	.fr-view .rdc-page .photo-strip img {
+		width: 100%; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow);
+	}
+	
+	.fr-view .rdc-page .photo {
+		height: 190px; margin-top: 1rem;
+	}
+	
+	.fr-view .rdc-page .photo-row img,
+	.fr-view .rdc-page .photos img,
+	.fr-view .rdc-page .photo-strip img {
+		height: 180px;
+	}
+	
+	.fr-view .rdc-page .video {
+		position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-lg); margin-bottom: 1rem; box-shadow: var(--shadow); border: var(--border);
+	}
+	
+	.fr-view .rdc-page .video iframe {
+		position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+	}
+	
+	.fr-view .rdc-page .cta {
+		display: inline-block; margin-top: .5rem; font-weight: 700; color: var(--green-900);
+	}
+	
+	.fr-view .rdc-page .land-note p {
+		margin: 0 0 1rem;
+	}
+	
+	.fr-view .rdc-page .land-note p:last-child {
+		margin-bottom: 0;
+	}
+	
+	@media (max-width: 760px) {
+		.fr-view .rdc-page {
+			left: 0; padding: 1rem 1.25rem 2.5rem;
+		}
+		.fr-view .rdc-page .panel,
+		.fr-view .rdc-page .card {
+			padding: 1.1rem;
+		}
+		.fr-view .rdc-page .page-subtitle {
+			margin-bottom: 1.25rem;
+		}
+		.fr-view .rdc-page .member img {
+			height: 200px;
+		}
 
-    .rdc-page .program-grid {
-      display: grid;
-      gap: 1rem;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-    }
+</style>
+<script>
+	// Reserved for page-builder compatibility.
 
-    .rdc-page .program-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 10px 24px rgba(1, 38, 25, 0.14);
-    }
-
-    .rdc-page .program-card {
-      min-height: var(--program-card-height);
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      transition: transform .2s ease, box-shadow .2s ease;
-    }
-
-    .rdc-page .card-image {
-      width: 100%;
-      height: var(--program-card-image-height);
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow);
-      object-fit: cover;
-      flex-shrink: 0;
-    }
-
-    .rdc-page .card-body {
-      display: flex;
-      flex: 1;
-      flex-direction: column;
-    }
-
-    .rdc-page .card-body h2 {
-      font-size: 1.1rem;
-      display: block;
-    }
-
-    .rdc-page .card-body p {
-      margin: 0 0 .75rem;
-    }
-
-    .rdc-page .button {
-      display: inline-block;
-      align-self: flex-start;
-      margin-top: auto;
-      padding: .6rem 1.2rem;
-      border: 2px solid var(--green-600);
-      background: var(--white);
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      font-family: 'Poppins', Arial, sans-serif;
-      color: var(--green-900);
-      transition: background .2s, color .2s;
-    }
-
-    .rdc-page .button:hover,
-    .rdc-page .button:focus-visible {
-      background: var(--green-600);
-      color: var(--white);
-    }
-
-    .rdc-page .button:focus-visible {
-      outline: 3px solid var(--green-400);
-      outline-offset: 2px;
-    }
-
-    @media (max-width: 980px) {
-      .rdc-page {
-        --program-card-height: 29rem;
-        --program-card-image-height: 13.5rem;
-      }
-
-      .rdc-page .program-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 760px) {
-      .rdc-page {
-        --program-card-height: 28rem;
-        --program-card-image-height: 13.125rem;
-        left: 0;
-        padding: 1rem 1.25rem 2.5rem;
-      }
-
-      .rdc-page .card {
-        padding: 1.1rem;
-      }
-
-      .rdc-page .page-subtitle {
-        margin-bottom: 1.25rem;
-      }
-    }
-
-    @media (max-width: 560px) {
-      .rdc-page .program-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-</head>
-<body>
-  <div class="rdc-page">
-    <h1 class="page-title">RDC Programming</h1>
-    <p class="page-subtitle">Explore programs, services, and supports available through René Deleurme Centre</p>
-
-    <div class="soft-note">Use the Visit page button on each card to open that program page.</div>
-
-    <div class="program-grid">
-      <article class="card accent-top program-card">
-        <img class="card-image" src="https://media.lrsd.net/media/Default/frl/untitled-design-1.a0a18689531.jpg" alt="Placeholder image for RDC Programs">
-        <div class="card-body">
-          <h2>RDC Programs</h2>
-          <p>Learn about the hub of community supports, services, learning opportunities, and wellness programming.</p>
-          <a class="button" href="https://www.lrsd.net/rdc/rdc-programs-1">Visit page</a>
-        </div>
-      </article>
-      <article class="card accent-top program-card">
-        <img class="card-image" src="https://media.lrsd.net/media/Default/frl/untitled-design-1.a0a18689531.jpg" alt="Placeholder image for Community Kitchen">
-        <div class="card-body">
-          <h2>Community Kitchen</h2>
-          <p>Access information about kitchen programming, food supports, and community-based opportunities.</p>
-          <a class="button" href="https://www.lrsd.net/rdc/community-kitchen">Visit page</a>
-        </div>
-      </article>
-      <article class="card accent-top program-card">
-        <img class="card-image" src="https://media.lrsd.net/media/Default/frl/untitled-design-1.a0a18689531.jpg" alt="Placeholder image for Settlement Program">
-        <div class="card-body">
-          <h2>Settlement Program</h2>
-          <p>Find newcomer supports, referrals, mentorship, and community integration information.</p>
-          <a class="button" href="https://www.lrsd.net/rdc/lrsd-settlement-program">Visit page</a>
-        </div>
-      </article>
-      <article class="card accent-top program-card">
-        <img class="card-image" src="https://media.lrsd.net/media/Default/frl/untitled-design-1.a0a18689531.jpg" alt="Placeholder image for ASPIRE">
-        <div class="card-body">
-          <h2>ASPIRE</h2>
-          <p>Explore equity-based summer learning and recreation opportunities for students.</p>
-          <a class="button" href="https://www.lrsd.net/rdc/aspire-program">Visit page</a>
-        </div>
-      </article>
-      <article class="card accent-top program-card">
-        <img class="card-image" src="https://media.lrsd.net/media/Default/frl/untitled-design-1.a0a18689531.jpg" alt="Placeholder image for MYConnect">
-        <div class="card-body">
-          <h2>MYConnect</h2>
-          <p>Discover hands-on, project-based learning that supports curriculum and student confidence.</p>
-          <a class="button" href="https://www.lrsd.net/rdc/myconnect">Visit page</a>
-        </div>
-      </article>
-      <article class="card accent-top program-card">
-        <img class="card-image" src="https://media.lrsd.net/media/Default/frl/untitled-design-1.a0a18689531.jpg" alt="Placeholder image for Childcare">
-        <div class="card-body">
-          <h2>Childcare</h2>
-          <p>Visit the childcare page for early learning and child development daycare details.</p>
-          <a class="button" href="https://www.lrsd.net/rdc/morrow-early-learning-and-child-development-daycare">Visit page</a>
-        </div>
-      </article>
-      <article class="card accent-top program-card">
-        <img class="card-image" src="https://media.lrsd.net/media/Default/frl/untitled-design-1.a0a18689531.jpg" alt="Placeholder image for EDGE Programs">
-        <div class="card-body">
-          <h2>EDGE Programs</h2>
-          <p>Read about adult language learning, literacy programming, and learner supports.</p>
-          <a class="button" href="https://www.lrsd.net/rdc/edge-esl">Visit page</a>
-        </div>
-      </article>
-    </div>
-  </div>
-  <script>
-    // Reserved for page-builder compatibility.
-  </script>
-</body>
-</html>
+</script>
