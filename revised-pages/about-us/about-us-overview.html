@@ -1,307 +1,318 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About RDC</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
-<body>
-  <div class="rdc-page">
-    <p class="page-subtitle">René Deleurme Centre — Community Learning in Louis Riel School Division</p>
+<p>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</p>
+<style>
+		.fr-view .rdc-page {
+		--green-900: #012619; --green-600: #4EA664; --green-400: #78BF9E; --green-200: #A9D9C2; --green-100: #E8E5DE; --white: #ffffff; --max-width: 1120px; --radius-lg: 12px; --radius-md: 8px; --shadow: 0 4px 16px rgba(1, 38, 25, 0.08); --border: 1px solid var(--green-200); box-sizing: border-box; max-width: var(--max-width); margin: 0 auto; position: relative; left: 0; padding: 2rem 2rem 3rem; font-family: 'Poppins', Arial, sans-serif; font-size: 16px; line-height: 1.7; color: var(--green-900);
+	}
+	
+	.fr-view .rdc-page *,
+	.fr-view .rdc-page *::before,
+	.fr-view .rdc-page *::after {
+		box-sizing: border-box;
+	}
+	
+	.fr-view .rdc-page h1,
+	.fr-view .rdc-page h2,
+	.fr-view .rdc-page h3 {
+		margin-top: 0; font-family: 'Montserrat', Arial, sans-serif; color: var(--green-900); font-weight: 700;
+	}
+	
+	.fr-view .rdc-page a {
+		color: var(--green-900); text-decoration-thickness: 1px; text-underline-offset: 2px;
+	}
+	
+	.fr-view .rdc-page a:hover {
+		color: var(--green-600);
+	}
+	
+	.fr-view .rdc-page p,
+	.fr-view .rdc-page li {
+		color: var(--green-900);
+	}
+	
+	.fr-view .rdc-page .page-title {
+		font-size: clamp(1.8rem, 4vw, 2.6rem); font-weight: 700; margin: 0 0 .3rem; line-height: 1.1;
+	}
+	
+	.fr-view .rdc-page .page-subtitle {
+		display: block; font-size: .85rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; color: var(--green-400); margin: 0 0 1.75rem; padding-bottom: .4rem; border-bottom: 2px solid var(--green-200);
+	}
+	
+	.fr-view .rdc-page h2 {
+		font-size: 1.3rem; border-bottom: 2px solid var(--green-400); padding-bottom: .35rem; margin-bottom: 1rem; display: inline-block;
+	}
+	
+	.fr-view .rdc-page h3 {
+		font-size: 1rem; margin-bottom: .4rem;
+	}
+	
+	.fr-view .rdc-page .panel,
+	.fr-view .rdc-page .card,
+	.fr-view .rdc-page .member {
+		border: var(--border); background: var(--white); border-radius: var(--radius-lg); box-shadow: var(--shadow);
+	}
+	
+	.fr-view .rdc-page .panel,
+	.fr-view .rdc-page .card {
+		padding: 1.4rem; margin-bottom: 1.25rem;
+	}
+	
+	.fr-view .rdc-page .section-card {
+		background: var(--green-100); border-radius: var(--radius-lg); padding: 1.4rem; margin-bottom: 1.5rem;
+	}
+	
+	.fr-view .rdc-page .accent-top,
+	.fr-view .rdc-page .panel-accent-top {
+		border-top: 4px solid var(--green-600);
+	}
+	
+	.fr-view .rdc-page .accent-left,
+	.fr-view .rdc-page .panel-accent-left {
+		border-left: 4px solid var(--green-600);
+	}
+	
+	.fr-view .rdc-page .cards,
+	.fr-view .rdc-page .grid,
+	.fr-view .rdc-page .team,
+	.fr-view .rdc-page .split,
+	.fr-view .rdc-page .photo-row,
+	.fr-view .rdc-page .photos,
+	.fr-view .rdc-page .photo-strip {
+		display: grid; gap: 1rem;
+	}
+	
+	.fr-view .rdc-page .cards,
+	.fr-view .rdc-page .grid,
+	.fr-view .rdc-page .photos,
+	.fr-view .rdc-page .photo-row,
+	.fr-view .rdc-page .photo-strip {
+		grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+	}
+	
+	.fr-view .rdc-page .team {
+		grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+	}
+	
+	.fr-view .rdc-page .split {
+		grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+	}
+	
+	.fr-view .rdc-page .member {
+		padding: .8rem; text-align: center;
+	}
+	
+	.fr-view .rdc-page .member img {
+		width: 100%; max-width: 230px; height: 230px; object-fit: cover; border-radius: var(--radius-md);
+	}
+	
+	.fr-view .rdc-page .member p {
+		margin: .55rem 0 0; font-size: .875rem;
+	}
+	
+	.fr-view .rdc-page .button {
+		display: inline-block; padding: .6rem 1.2rem; border: 2px solid var(--green-600); background: var(--white); border-radius: 8px; text-decoration: none; font-weight: 700; font-family: 'Poppins', Arial, sans-serif; color: var(--green-900); transition: background .2s, color .2s;
+	}
+	
+	.fr-view .rdc-page .button:hover {
+		background: var(--green-600); color: var(--white);
+	}
+	
+	.fr-view .rdc-page .soft-note {
+		background: var(--green-200); border-left: 4px solid var(--green-600); border-radius: var(--radius-md); padding: .75rem .9rem; margin: .4rem 0 1rem; color: var(--green-900);
+	}
+	
+	.fr-view .rdc-page .photo,
+	.fr-view .rdc-page .grid img,
+	.fr-view .rdc-page .photo-row img,
+	.fr-view .rdc-page .photos img,
+	.fr-view .rdc-page .photo-strip img {
+		width: 100%; object-fit: cover; border-radius: var(--radius-md); box-shadow: var(--shadow);
+	}
+	
+	.fr-view .rdc-page .photo {
+		height: 190px; margin-top: 1rem;
+	}
+	
+	.fr-view .rdc-page .grid img {
+		height: 220px;
+	}
+	
+	.fr-view .rdc-page .photo-row img,
+	.fr-view .rdc-page .photos img,
+	.fr-view .rdc-page .photo-strip img {
+		height: 180px;
+	}
+	
+	.fr-view .rdc-page .video {
+		position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-lg); margin-bottom: 1rem; box-shadow: var(--shadow); border: var(--border);
+	}
+	
+	.fr-view .rdc-page .video iframe {
+		position: absolute; inset: 0; width: 100%; height: 100%; border: 0;
+	}
+	
+	.fr-view .rdc-page .cta {
+		display: inline-block; margin-top: .5rem; font-weight: 700; color: var(--green-900);
+	}
+	
+	.fr-view .rdc-page .land-note p {
+		margin: 0 0 1rem;
+	}
+	
+	.fr-view .rdc-page .land-note p:last-child {
+		margin-bottom: 0;
+	}
+	
+	@media (max-width: 760px) {
+		.fr-view .rdc-page {
+			padding: 1.5rem 1.25rem 2.5rem;
+		}
+		.fr-view .rdc-page .panel,
+		.fr-view .rdc-page .card {
+			padding: 1.1rem;
+		}
+		.fr-view .rdc-page .page-subtitle {
+			margin-bottom: 1.25rem;
+		}
+		.fr-view .rdc-page .member img {
+			height: 200px;
+		}
 
-    <section class="panel panel-accent-top" style="margin-bottom:1.5rem;">
-      <h2>About the René Deleurme Centre</h2>
-      <p>The René Deleurme Centre (RDC) is a community learning centre within Louis Riel School Division. RDC serves as a welcoming hub where community members can access supports, services, learning opportunities, and community activities — all developed with community voice and changing needs in mind.</p>
-      <p>RDC brings together a wide range of community stakeholders, including newcomer settlement services, family outreach, daycare, adult literacy, and adult English as an Additional Language (EAL) programming. All programming is equity-based and responsive to the needs of the communities we serve.</p>
-      <p>Programs and services at RDC include adult learning and skill-building opportunities, community clinics (vision care, flu, tax, dental health, EIA, Service Manitoba, and francophone services), training programs such as First Aid and Food Handler Certification, and Indigenous cultural programming including Full Moon Ceremonies, Beading &amp; Breakfast, and traditional teachings.</p>
-      <p>RDC also provides food security supports — including a weekly Food Depot, <a href="https://www.lrsd.net/rdc/community-kitchen" target="_blank" rel="noopener noreferrer">Fresh Food Box</a>, and Emergency Food Hampers — as well as free coffee and tea, phone, computer, Wi-Fi and printing access, and a clothing closet.</p>
-    </section>
+</style>
+<div class="rdc-page">
 
-    <div class="section-card land-note">
-      <h2>Land Acknowledgment</h2>
-      <p>The Louis Riel School Division (LRSD) brings together a community of schools on the traditional land of the Anishinaabeg, Ininewak, and Dakota. Our division is located on the National Homeland of the Red River Métis. We recognize that Manitoba is also the traditional land of the Anishininiwak and Dene.</p>
-      <p>We respect the treaties made on this land and acknowledge the harms and mistakes of the past and present. We dedicate ourselves to authentic alliances with Indigenous communities in a spirit of reconciliation and cooperation.</p>
-      <p>We recognize and honour Shoal Lake 40 First Nation, the source of Winnipeg's life-sustaining drinking water, as well as the Treaty Territories that generate and provide the electricity that powers daily activity throughout the province and beyond.</p>
-      <p>The ongoing development of LRSD's land acknowledgement is guided by our Indigenous Council of Grandmothers and Grandfathers, and we thank them for their generosity and collaboration.</p>
-      <h3>La reconnaissance des terres de la DSLR</h3>
-      <p>La Division scolaire Louis-Riel (DSLR) réunit une communauté d'écoles sur les terres traditionnelles des Anishinaabeg, Ininewak et Dakota. Notre division est située sur la patrie nationale des Métis de la rivière Rouge. Nous reconnaissons que le Manitoba abrite également les terres traditionnelles des Anishininiwak et Dene.</p>
-      <p>Nous respectons les traités conclus sur ces terres et reconnaissons les préjudices et les erreurs du passé et du présent. Nous nous engageons à créer des alliances authentiques avec les communautés Autochtones dans un esprit de réconciliation et de collaboration.</p>
-      <p>Nous reconnaissons et honorons la Première nation Shoal Lake 40, source de l'eau potable vitale de Winnipeg, ainsi que les territoires des traités qui génèrent et fournissent l'électricité alimentant les activités quotidiennes dans toute la province et au-delà.</p>
-      <p>Le développement continu de la reconnaissance des terres de la DSLR est dirigé par notre conseil autochtone des grands-mères et des grands-pères, que nous remercions de sa générosité et de sa collaboration.</p>
-    </div>
+	<h1 class="page-title">About RDC</h1>
 
-    <section class="panel panel-accent-top" style="margin-top:2rem;">
-      <h2>Code of Conduct</h2>
-      <p>All staff, students, caregivers, community members, and occupants are expected to treat one another with respect and support the growth and learning of everyone who accesses RDC services.</p>
-      <ol>
-        <li>Respect and dignity</li>
-        <li>Commitment to learning and success</li>
-        <li>Integrity and honesty</li>
-        <li>Safety and well-being</li>
-        <li>Collaboration and teamwork</li>
-        <li>Confidentiality and privacy</li>
-        <li>Professionalism</li>
-        <li>Responsibility and accountability</li>
-      </ol>
-    </section>
+	<p class="page-subtitle">Ren&eacute; Deleurme Centre &mdash; Community Learning in Louis Riel School Division</p>
+	<section class="panel panel-accent-top" style="margin-bottom:1.5rem;">
 
-    <h2>Meet Our Team</h2>
-    <div class="soft-note"><strong>Community focus:</strong> RDC programming is designed to reduce barriers and support belonging for families and learners.</div>
-    <p>To contact a team member by email, select their photo.</p>
-    <div class="team">
-      <div class="member">
-        <a href="mailto:misty.belcourt@lrsd.net"><img src="https://media.lrsd.net/media/Default/frl/0/1_20240613_204310_0000-2.jpg" alt="Misty Belcourt"></a>
-        <p><a href="mailto:misty.belcourt@lrsd.net">misty.belcourt@lrsd.net</a></p>
-      </div>
-      <div class="member">
-        <a href="mailto:allison.drummond@lrsd.net"><img src="https://media.lrsd.net/media/Default/frl/0/2.jpg" alt="Allison Drummond"></a>
-        <p><a href="mailto:allison.drummond@lrsd.net">allison.drummond@lrsd.net</a></p>
-      </div>
-      <div class="member">
-        <img src="https://media.lrsd.net/media/Default/frl/1762961357265.9195f969525.png" alt="RDC team member photo (name unavailable)">
-      </div>
-      <div class="member">
-        <img src="https://media.lrsd.net/media/Default/frl/1762961307514.ff9e2969523.png" alt="RDC team member photo (name unavailable)">
-      </div>
-      <div class="member">
-        <img src="https://media.lrsd.net/media/Default/frl/1762961264023.d99f4269521.png" alt="RDC team member photo (name unavailable)">
-      </div>
-      <div class="member">
-        <img src="https://media.lrsd.net/media/Default/frl/1762961282816.313e2069522.png" alt="RDC team member photo (name unavailable)">
-      </div>
-      <div class="member">
-        <a href="mailto:tammy.bruce@lrsd.net"><img src="https://media.lrsd.net/media/Default/frl/0/2_20240613_204310_0001-3.jpg" alt="Tammy Bruce"></a>
-        <p><a href="mailto:tammy.bruce@lrsd.net">tammy.bruce@lrsd.net</a></p>
-      </div>
-      <div class="member">
-        <img src="https://media.lrsd.net/media/Default/frl/1762961323224.f2165769524.png" alt="RDC team member photo (name unavailable)">
-      </div>
-    </div>
-  </div>
-  <script>
-    // Reserved for page-builder compatibility.
-  </script>
-  <style>
-    body > p:first-of-type { display: none; }
+		<h2>About the Ren&eacute; Deleurme Centre</h2>
 
-    .rdc-page {
-      --green-900: #012619;
-      --green-600: #4EA664;
-      --green-400: #78BF9E;
-      --green-200: #A9D9C2;
-      --green-100: #E8E5DE;
-      --white: #ffffff;
-      --max-width: 1120px;
-      --radius-lg: 12px;
-      --radius-md: 8px;
-      --shadow: 0 4px 16px rgba(1, 38, 25, 0.08);
-      --border: 1px solid var(--green-200);
-      box-sizing: border-box;
-      max-width: var(--max-width);
-      margin: 0 auto;
-      position: relative;
-      left: 0;
-      padding: 1.25rem 2rem 3rem;
-      font-family: 'Poppins', Arial, sans-serif;
-      font-size: 16px;
-      line-height: 1.7;
-      color: var(--green-900);
-    }
+		<p style="box-sizing: border-box; color: rgb(1, 38, 25); font-family: Poppins, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;" data-pasted="true">The Ren&eacute; Deleurme Centre (RDC) is a community learning centre within Louis Riel School Division. RDC serves as a welcoming hub where community members can access supports, services, learning opportunities, and community activities &mdash; all developed with community voice and changing needs in mind.</p>
 
-    .rdc-page *,
-    .rdc-page *::before,
-    .rdc-page *::after { box-sizing: border-box; }
+		<p style="box-sizing: border-box; color: rgb(1, 38, 25); font-family: Poppins, Arial, sans-serif; font-size: 16px; font-style: normal; font-variant-ligatures: normal; font-variant-caps: normal; font-weight: 400; letter-spacing: normal; orphans: 2; text-align: left; text-indent: 0px; text-transform: none; widows: 2; word-spacing: 0px; -webkit-text-stroke-width: 0px; white-space: normal; text-decoration-thickness: initial; text-decoration-style: initial; text-decoration-color: initial;">RDC brings together a wide range of community stakeholders, including newcomer settlement services, family outreach, daycare, adult literacy, and adult English as an Additional Language (EAL) programming. All programming is equity-based and responsive to the needs of the communities we serve.</p>
 
-    .rdc-page h1,
-    .rdc-page h2,
-    .rdc-page h3 {
-      margin-top: 0;
-      font-family: 'Montserrat', Arial, sans-serif;
-      color: var(--green-900);
-      font-weight: 700;
-    }
+		<p>Programs and services at RDC include adult learning and skill-building opportunities, community clinics (vision care, flu, tax, dental health, EIA, Service Manitoba, and francophone services), training programs such as First Aid and Food Handler Certification, and Indigenous cultural programming including Full Moon Ceremonies, Beading &amp; Breakfast, and traditional teachings.</p>
 
-    .rdc-page a {
-      color: var(--green-600);
-      text-decoration-thickness: 1px;
-      text-underline-offset: 2px;
-    }
+		<p>RDC also provides food security supports &mdash; including a weekly Food Depot, Fresh Food Box, and Emergency Food Hampers &mdash; as well as free coffee and tea, phone, computer, Wi-Fi and printing access, and a clothing closet.</p>
+	</section>
+	<div class="section-card land-note">
 
-    .rdc-page a:hover { color: var(--green-400); }
+		<h2>Land Acknowledgment</h2>
 
-    .rdc-page p,
-    .rdc-page li { color: var(--green-900); }
+		<p>The Louis Riel School Division (LRSD) brings together a community of schools on the traditional land of the Anishinaabeg, Ininewak, and Dakota. Our division is located on the National Homeland of the Red River M&eacute;tis. We recognize that Manitoba is also the traditional land of the Anishininiwak and Dene.</p>
 
-    .rdc-page .page-title {
-      font-size: clamp(1.8rem, 4vw, 2.6rem);
-      font-weight: 700;
-      margin: 0 0 .3rem;
-      line-height: 1.1;
-    }
+		<p>We respect the treaties made on this land and acknowledge the harms and mistakes of the past and present. We dedicate ourselves to authentic alliances with Indigenous communities in a spirit of reconciliation and cooperation.</p>
 
-    .rdc-page .page-subtitle {
-      display: block;
-      font-size: .85rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      font-weight: 600;
-      color: var(--green-400);
-      margin: 0 0 1.75rem;
-      padding-bottom: .4rem;
-      border-bottom: 2px solid var(--green-200);
-    }
+		<p>We recognize and honour Shoal Lake 40 First Nation, the source of Winnipeg&#39;s life-sustaining drinking water, as well as the Treaty Territories that generate and provide the electricity that powers daily activity throughout the province and beyond.</p>
 
-    .rdc-page h2 {
-      font-size: 1.3rem;
-      border-bottom: 2px solid var(--green-400);
-      padding-bottom: .35rem;
-      margin-bottom: 1rem;
-      display: inline-block;
-    }
+		<p>The ongoing development of LRSD&#39;s land acknowledgement is guided by our Indigenous Council of Grandmothers and Grandfathers, and we thank them for their generosity and collaboration.</p>
 
-    .rdc-page h3 {
-      font-size: 1rem;
-      margin-bottom: .4rem;
-    }
+		<h3>La reconnaissance des terres de la DSLR</h3>
 
-    .rdc-page .panel,
-    .rdc-page .card,
-    .rdc-page .member {
-      border: var(--border);
-      background: var(--white);
-      border-radius: var(--radius-lg);
-      box-shadow: var(--shadow);
-    }
+		<p>La Division scolaire Louis-Riel (DSLR) r&eacute;unit une communaut&eacute; d&#39;&eacute;coles sur les terres traditionnelles des Anishinaabeg, Ininewak et Dakota. Notre division est situ&eacute;e sur la patrie nationale des M&eacute;tis de la rivi&egrave;re Rouge. Nous reconnaissons que le Manitoba abrite &eacute;galement les terres traditionnelles des Anishininiwak et Dene.</p>
 
-    .rdc-page .panel,
-    .rdc-page .card { padding: 1.4rem; margin-bottom: 1.25rem; }
+		<p>Nous respectons les trait&eacute;s conclus sur ces terres et reconnaissons les pr&eacute;judices et les erreurs du pass&eacute; et du pr&eacute;sent. Nous nous engageons &agrave; cr&eacute;er des alliances authentiques avec les communaut&eacute;s Autochtones dans un esprit de r&eacute;conciliation et de collaboration.</p>
 
-    .rdc-page .section-card {
-      background: var(--green-100);
-      border-radius: var(--radius-lg);
-      padding: 1.4rem;
-      margin-bottom: 1.5rem;
-    }
+		<p>Nous reconnaissons et honorons la Premi&egrave;re nation Shoal Lake 40, source de l&#39;eau potable vitale de Winnipeg, ainsi que les territoires des trait&eacute;s qui g&eacute;n&egrave;rent et fournissent l&#39;&eacute;lectricit&eacute; alimentant les activit&eacute;s quotidiennes dans toute la province et au-del&agrave;.</p>
 
-    .rdc-page .accent-top,
-    .rdc-page .panel-accent-top { border-top: 4px solid var(--green-600); }
+		<p>Le d&eacute;veloppement continu de la reconnaissance des terres de la DSLR est dirig&eacute; par notre conseil autochtone des grands-m&egrave;res et des grands-p&egrave;res, que nous remercions de sa g&eacute;n&eacute;rosit&eacute; et de sa collaboration.</p>
+	</div>
+	<section class="panel panel-accent-top" style="margin-top:2rem;">
 
-    .rdc-page .accent-left,
-    .rdc-page .panel-accent-left { border-left: 4px solid var(--green-600); }
+		<h2>Code of Conduct</h2>
 
-    .rdc-page .cards,
-    .rdc-page .grid,
-    .rdc-page .team,
-    .rdc-page .split,
-    .rdc-page .photo-row,
-    .rdc-page .photos,
-    .rdc-page .photo-strip { display: grid; gap: 1rem; }
+		<p>All staff, students, caregivers, community members, and occupants are expected to treat one another with respect and support the growth and learning of everyone who accesses RDC services.</p>
 
-    .rdc-page .cards,
-    .rdc-page .grid,
-    .rdc-page .photos,
-    .rdc-page .photo-row,
-    .rdc-page .photo-strip { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+		<ul>
+			<li>Respect and dignity
 
-    .rdc-page .team { grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); }
+				<ul>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;" data-pasted="true">Treat all individuals with respect and dignity, regardless of their background, beliefs, or circumstances.&nbsp;</li>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Use inclusive and non-discriminatory language in all communications.&nbsp;</li>
+				</ul>
+			</li>
+			<li>Commitment to learning and success
 
-    .rdc-page .split { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+				<ul>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;" data-pasted="true">Demonstrate a commitment to continuous learning and personal growth.&nbsp;</li>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Do your best in all activities and support others in achieving their goals.&nbsp;</li>
+				</ul>
+			</li>
+			<li>Integrity and honesty
 
-    .rdc-page .member { padding: .8rem; text-align: center; }
+				<ul>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;" data-pasted="true">Act with integrity and honesty in all interactions and decisions.&nbsp;</li>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Be transparent and accountable for your actions.</li>
+				</ul>
+			</li>
+			<li>Safety and well-being
 
-    .rdc-page .member img {
-      width: 100%;
-      max-width: 230px;
-      height: 230px;
-      object-fit: cover;
-      border-radius: var(--radius-md);
-    }
+				<ul>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;" data-pasted="true">Prioritize the safety and well-being of yourself and others.&nbsp;</li>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Follow all safety protocols and report any concerns promptly.&nbsp;</li>
+				</ul>
+			</li>
+			<li>Collaboration and teamwork
 
-    .rdc-page .member p { margin: .55rem 0 0; font-size: .875rem; }
+				<ul>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;" data-pasted="true">Foster a collaborative and supportive environment.&nbsp;</li>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Work together to achieve common goals and resolve conflicts constructively.&nbsp;</li>
+				</ul>
+			</li>
+			<li>Confidentiality and privacy
 
-    .rdc-page .button {
-      display: inline-block;
-      padding: .6rem 1.2rem;
-      border: 2px solid var(--green-600);
-      background: var(--white);
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: 700;
-      font-family: 'Poppins', Arial, sans-serif;
-      color: var(--green-900);
-      transition: background .2s, color .2s;
-    }
+				<ul>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;" data-pasted="true">Respect the confidentiality and privacy of all individuals.&nbsp;</li>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Handle sensitive information with care and discretion.&nbsp;</li>
+				</ul>
+			</li>
+			<li>Professionalism
 
-    .rdc-page .button:hover {
-      background: var(--green-600);
-      color: var(--white);
-    }
+				<ul>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;" data-pasted="true">Maintain a professional demeanor in all interactions.&nbsp;</li>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Uphold the standards and values of the Ren&eacute; Deleurme Center.&nbsp;</li>
+				</ul>
+			</li>
+			<li>Responsibility and accountability
 
-    .rdc-page .soft-note {
-      background: var(--green-200);
-      border-left: 4px solid var(--green-600);
-      border-radius: var(--radius-md);
-      padding: .75rem .9rem;
-      margin: .4rem 0 1rem;
-      color: var(--green-900);
-    }
+				<ul>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;" data-pasted="true">Take responsibility for your actions and their impact on others.&nbsp;</li>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Model respect for people in positional authority, and RDC&nbsp;</li>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Be accountable for fulfilling your roles and responsibilities.&nbsp;</li>
+					<li style="box-sizing: border-box; border: 0px solid; --tw-border-spacing-x: 0; --tw-border-spacing-y: 0; --tw-translate-x: 0; --tw-translate-y: 0; --tw-rotate: 0; --tw-skew-x: 0; --tw-skew-y: 0; --tw-scale-x: 1; --tw-scale-y: 1; --tw-pan-x: ; --tw-pan-y: ; --tw-pinch-zoom: ; --tw-scroll-snap-strictness: proximity; --tw-gradient-from-position: ; --tw-gradient-via-position: ; --tw-gradient-to-position: ; --tw-ordinal: ; --tw-slashed-zero: ; --tw-numeric-figure: ; --tw-numeric-spacing: ; --tw-numeric-fraction: ; --tw-ring-inset: ; --tw-ring-offset-width: 0px; --tw-ring-offset-color: #fff; --tw-ring-color: #3b82f680; --tw-ring-offset-shadow: 0 0 #0000; --tw-ring-shadow: 0 0 #0000; --tw-shadow: 0 0 #0000; --tw-shadow-colored: 0 0 #0000; --tw-blur: ; --tw-brightness: ; --tw-contrast: ; --tw-grayscale: ; --tw-hue-rotate: ; --tw-invert: ; --tw-saturate: ; --tw-sepia: ; --tw-drop-shadow: ; --tw-backdrop-blur: ; --tw-backdrop-brightness: ; --tw-backdrop-contrast: ; --tw-backdrop-grayscale: ; --tw-backdrop-hue-rotate: ; --tw-backdrop-invert: ; --tw-backdrop-opacity: ; --tw-backdrop-saturate: ; --tw-backdrop-sepia: ; --tw-contain-size: ; --tw-contain-layout: ; --tw-contain-paint: ; --tw-contain-style: ;">Model respect for RDC and divisional policies and implement required policy responses.&nbsp;</li>
+				</ul>
+			</li>
+		</ul>
+	</section>
 
-    .rdc-page .photo,
-    .rdc-page .grid img,
-    .rdc-page .photo-row img,
-    .rdc-page .photos img,
-    .rdc-page .photo-strip img {
-      width: 100%;
-      object-fit: cover;
-      border-radius: var(--radius-md);
-      box-shadow: var(--shadow);
-    }
+	<h2>Meet Our Team</h2>
+	<div class="soft-note"><strong>Community focus:</strong> RDC programming is designed to reduce barriers and support belonging for families and learners.</div>
+	<div class="team">
+		<div class="member">
+			<a href="mailto:misty.belcourt@lrsd.net"><img src="https://media.lrsd.net/media/Default/frl/0/1_20240613_204310_0000-2.jpg" alt="Misty Belcourt" class="fr-fil fr-dib"></a>
 
-    .rdc-page .photo { height: 190px; margin-top: 1rem; }
-    .rdc-page .grid img { height: 220px; }
-    .rdc-page .photo-row img,
-    .rdc-page .photos img,
-    .rdc-page .photo-strip img { height: 180px; }
+			<p><a href="mailto:misty.belcourt@lrsd.net">misty.belcourt@lrsd.net</a></p>
+		</div>
+		<div class="member">
+			<a href="mailto:allison.drummond@lrsd.net"><img src="https://media.lrsd.net/media/Default/frl/0/2.jpg" alt="Allison Drummond" class="fr-fil fr-dib"></a>
 
-    .rdc-page .video {
-      position: relative;
-      padding-bottom: 56.25%;
-      height: 0;
-      overflow: hidden;
-      border-radius: var(--radius-lg);
-      margin-bottom: 1rem;
-      box-shadow: var(--shadow);
-      border: var(--border);
-    }
+			<p><a href="mailto:allison.drummond@lrsd.net">allison.drummond@lrsd.net</a></p>
+		</div>
+		<div class="member"><img src="https://media.lrsd.net/media/Default/frl/1762961357265.9195f969525.png" alt="RDC team member photo (name unavailable)" class="fr-fil fr-dib"></div>
+		<div class="member"><img src="https://media.lrsd.net/media/Default/frl/1762961307514.ff9e2969523.png" alt="RDC team member photo (name unavailable)" class="fr-fil fr-dib"></div>
+		<div class="member"><img src="https://media.lrsd.net/media/Default/frl/1762961264023.d99f4269521.png" alt="RDC team member photo (name unavailable)" class="fr-fil fr-dib"></div>
+		<div class="member"><img src="https://media.lrsd.net/media/Default/frl/1762961282816.313e2069522.png" alt="RDC team member photo (name unavailable)" class="fr-fil fr-dib"></div>
+		<div class="member">
+			<a href="mailto:tammy.bruce@lrsd.net"><img src="https://media.lrsd.net/media/Default/frl/0/2_20240613_204310_0001-3.jpg" alt="Tammy Bruce" class="fr-fil fr-dib"></a>
 
-    .rdc-page .video iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: 0;
-    }
+			<p><a href="mailto:tammy.bruce@lrsd.net">tammy.bruce@lrsd.net</a></p>
+		</div>
+		<div class="member"><img src="https://media.lrsd.net/media/Default/frl/1762961323224.f2165769524.png" alt="RDC team member photo (name unavailable)" class="fr-fil fr-dib"></div></div></div>
+<script>
+	// Reserved for page-builder compatibility.
 
-    .rdc-page .cta {
-      display: inline-block;
-      margin-top: .5rem;
-      font-weight: 700;
-      color: var(--green-900);
-    }
-
-    .rdc-page .land-note p { margin: 0 0 1rem; }
-    .rdc-page .land-note p:last-child { margin-bottom: 0; }
-
-    @media (max-width: 760px) {
-      .rdc-page { left: 0; padding: 1rem 1.25rem 2.5rem; }
-      .rdc-page .panel,
-      .rdc-page .card { padding: 1.1rem; }
-      .rdc-page .page-subtitle { margin-bottom: 1.25rem; }
-      .rdc-page .member img { height: 200px; }
-    }
-  </style>
-</body>
-</html>
+</script>
