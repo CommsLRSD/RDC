@@ -127,6 +127,8 @@
 <script>
 	(function () {
 		var carousels = document.querySelectorAll('[data-poster-carousel]');
+		var resizeHandlers = [];
+		var resizeTimer;
 
 		Array.prototype.forEach.call(carousels, function (carousel) {
 			var section = carousel.closest ? carousel.closest('.poster-section') : carousel.parentNode;
@@ -139,7 +141,6 @@
 			var currentIndex = 0;
 			var dots = [];
 			var scrollTimer;
-			var resizeTimer;
 
 			if (!viewport || !track || !slides.length) {
 				return;
@@ -239,16 +240,24 @@
 				scrollTimer = window.setTimeout(syncIndexFromScroll, 120);
 			});
 
-			window.addEventListener('resize', function () {
-				window.clearTimeout(resizeTimer);
-				resizeTimer = window.setTimeout(function () {
-					scrollToSlide(currentIndex);
-				}, 150);
+			resizeHandlers.push(function () {
+				scrollToSlide(currentIndex);
 			});
 
 			updateButtons();
 			updateDots();
 		});
+
+		if (resizeHandlers.length) {
+			window.addEventListener('resize', function () {
+				window.clearTimeout(resizeTimer);
+				resizeTimer = window.setTimeout(function () {
+					resizeHandlers.forEach(function (handler) {
+						handler();
+					});
+				}, 150);
+			});
+		}
 	})();
 </script>
 
@@ -388,6 +397,11 @@
 	}
 
 	.fr-view .rdc-page .carousel-button:hover:not(:disabled) {
+		transform: translateY(-1px);
+		background: var(--green-600);
+	}
+
+	.fr-view .rdc-page .carousel-button:focus-visible:not(:disabled) {
 		transform: translateY(-1px);
 		background: var(--green-600);
 	}
