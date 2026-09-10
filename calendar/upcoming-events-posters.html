@@ -27,7 +27,7 @@
 	<section class="poster-section" aria-labelledby="poster-carousel-heading">
 		<div class="poster-section-header">
 			<p class="page-subtitle poster-subtitle">Upcoming Events</p>
-			<h2 id="poster-carousel-heading">Poster carousel</h2>
+			<h2 id="poster-carousel-heading">Upcoming event posters</h2>
 			<p>All posters are kept directly in the HTML below so the page builder can still show them before JavaScript runs.</p>
 		</div>
 
@@ -140,6 +140,7 @@
 		var currentIndex = 0;
 		var dots = [];
 		var scrollTimer;
+		var resizeTimer;
 
 		if (!viewport || !track || !slides.length) {
 			return;
@@ -225,7 +226,10 @@
 		});
 
 		window.addEventListener('resize', function () {
-			scrollToSlide(currentIndex);
+			window.clearTimeout(resizeTimer);
+			resizeTimer = window.setTimeout(function () {
+				scrollToSlide(currentIndex);
+			}, 150);
 		});
 
 		updateButtons();
