@@ -136,7 +136,7 @@
 		var slides = Array.prototype.slice.call(track.querySelectorAll('.poster-slide'));
 		var previousButton = carousel.querySelector('[data-carousel-previous]');
 		var nextButton = carousel.querySelector('[data-carousel-next]');
-		var dotsContainer = document.querySelector('[data-carousel-dots]');
+		var dotsContainer = carousel.parentNode.querySelector('[data-carousel-dots]');
 		var currentIndex = 0;
 		var dots = [];
 
@@ -232,12 +232,12 @@
 	})();
 </script>
 
-<p>
+<div class="rdc-font-links" aria-hidden="true">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-</p>
+</div>
 <style>
-	.fr-view body > p:first-of-type {
+	.fr-view .rdc-font-links {
 		display: none;
 	}
 
