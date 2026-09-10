@@ -38,7 +38,7 @@
 			3. Keep the image alt text and poster-title text in sync with the event name.
 		-->
 		<div class="poster-carousel" data-poster-carousel>
-			<div class="poster-viewport" data-carousel-viewport tabindex="0">
+			<div class="poster-viewport" data-carousel-viewport tabindex="0" aria-label="Upcoming event posters carousel">
 				<div class="poster-track" data-carousel-track>
 					<article class="poster-slide">
 						<a class="poster-card" href="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" target="_blank" rel="noopener noreferrer">
@@ -166,10 +166,10 @@
 			function updateDots() {
 				dots.forEach(function (dot, index) {
 					if (index === currentIndex) {
-						dot.setAttribute('aria-selected', 'true');
+						dot.setAttribute('aria-pressed', 'true');
 						dot.setAttribute('tabindex', '0');
 					} else {
-						dot.setAttribute('aria-selected', 'false');
+						dot.setAttribute('aria-pressed', 'false');
 						dot.setAttribute('tabindex', '-1');
 					}
 				});
@@ -227,7 +227,6 @@
 					var dot = document.createElement('button');
 					dot.type = 'button';
 					dot.className = 'carousel-dot';
-					dot.setAttribute('role', 'tab');
 					dot.setAttribute('aria-label', 'Show poster ' + (index + 1));
 					dot.addEventListener('click', function () {
 						scrollToSlide(index);
@@ -515,7 +514,7 @@
 		transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, border-radius 0.2s ease, width 0.2s ease;
 	}
 
-	.fr-view .rdc-page .carousel-dot[aria-selected='true'] {
+	.fr-view .rdc-page .carousel-dot[aria-pressed='true'] {
 		background: var(--green-600);
 		border-color: var(--green-900);
 		border-radius: 0.35rem;
