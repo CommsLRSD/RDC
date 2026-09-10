@@ -38,7 +38,7 @@
 			3. Keep the image alt text and poster-title text in sync with the event name.
 		-->
 		<div class="poster-carousel" data-poster-carousel>
-			<div class="poster-viewport" data-carousel-viewport>
+			<div class="poster-viewport" data-carousel-viewport tabindex="0">
 				<div class="poster-track" data-carousel-track>
 					<article class="poster-slide">
 						<a class="poster-card" href="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" target="_blank" rel="noopener noreferrer">
@@ -181,7 +181,7 @@
 				}
 
 				currentIndex = index;
-				left = slides[index].offsetLeft;
+				left = slides[index].offsetLeft - track.offsetLeft;
 				if (typeof viewport.scrollTo === 'function') {
 					try {
 						viewport.scrollTo({
