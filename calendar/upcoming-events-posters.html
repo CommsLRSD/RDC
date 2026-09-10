@@ -2,7 +2,7 @@
 	<p class="page-subtitle">Continuous Programming</p>
 
 	<h1 class="page-title">Fresh Food Box &amp; Posters</h1>
-	<p class="page-intro">Fresh Food Box details stay at the top, followed by a swipeable poster carousel for current programming.</p>
+	<p class="page-intro">Fresh Food Box details stay at the top. In the page builder, the posters stay in a simple table; once published, JavaScript turns the non-empty cells into a poster carousel.</p>
 
 	<section class="content-card">
 		<h2>Fresh Food Box</h2>
@@ -24,256 +24,301 @@
 		</ul>
 	</section>
 
-	<section class="poster-section" aria-labelledby="poster-carousel-heading">
+	<section class="poster-section" aria-labelledby="poster-table-heading" data-poster-gallery>
 		<div class="poster-section-header">
 			<p class="page-subtitle poster-subtitle">Upcoming Events</p>
-			<h2 id="poster-carousel-heading">Upcoming event posters</h2>
-			<p>All posters are kept directly in the HTML below so the page builder can still show them before JavaScript runs.</p>
+			<h2 id="poster-table-heading">Upcoming event posters</h2>
+			<p>Each table cell can hold one poster. Empty cells are fine in the page builder and are skipped automatically in the published carousel.</p>
 		</div>
 
 		<!--
 			POSTER MAINTENANCE
-			1. To replace a poster, update the matching <a href> and <img src> URL in that poster card.
-			2. To add a poster, duplicate one full <article class="poster-slide">...</article> block inside .poster-track.
-			3. Keep the image alt text and poster-title text in sync with the event name.
+			1. Replace a poster by updating the matching <a href> and <img src> URL in one table cell.
+			2. Add a poster by pasting another .poster-card inside an empty <td class="poster-cell"> or by adding another <td class="poster-cell"> to the table.
+			3. Empty cells are allowed and will be ignored by the published carousel.
+			4. Keep the image alt text and poster-title text in sync with the event name.
 		-->
-		<div class="poster-carousel" data-poster-carousel>
-			<div class="poster-viewport" data-carousel-viewport tabindex="0" aria-label="Upcoming event posters carousel">
-				<div class="poster-track" data-carousel-track>
-					<article class="poster-slide">
-						<a class="poster-card" href="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" target="_blank" rel="noopener noreferrer">
-							<img src="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" alt="Breakfast and Beading poster" loading="lazy">
-							<span class="poster-meta">
-								<span class="poster-title">Breakfast &amp; Beading</span>
-								<span class="poster-link">Open full poster</span>
-							</span>
-						</a>
-					</article>
-
-					<article class="poster-slide">
-						<a class="poster-card" href="https://media.lrsd.net/media/Default/frl/1780678074436.fd28ab86777.png" target="_blank" rel="noopener noreferrer">
-							<img src="https://media.lrsd.net/media/Default/frl/1780678074436.fd28ab86777.png" alt="English Conversation Circle poster" loading="lazy">
-							<span class="poster-meta">
-								<span class="poster-title">English Conversation Circle</span>
-								<span class="poster-link">Open full poster</span>
-							</span>
-						</a>
-					</article>
-
-					<article class="poster-slide">
-						<a class="poster-card" href="https://media.lrsd.net/media/Default/frl/1779826472021.b0457685729.png" target="_blank" rel="noopener noreferrer">
-							<img src="https://media.lrsd.net/media/Default/frl/1779826472021.b0457685729.png" alt="Circle of Security Parenting Program poster" loading="lazy">
-							<span class="poster-meta">
-								<span class="poster-title">Circle of Security Parenting Program</span>
-								<span class="poster-link">Open full poster</span>
-							</span>
-						</a>
-					</article>
-
-					<article class="poster-slide">
-						<a class="poster-card" href="https://media.lrsd.net/media/Default/medialib/female_fitness_outing.f7c60289728.png" target="_blank" rel="noopener noreferrer">
-							<img src="https://media.lrsd.net/media/Default/medialib/female_fitness_outing.f7c60289728.png" alt="Women's Fitness and Wellness Outing poster" loading="lazy">
-							<span class="poster-meta">
-								<span class="poster-title">Women&#39;s Fitness &amp; Wellness Outing</span>
-								<span class="poster-link">Open full poster</span>
-							</span>
-						</a>
-					</article>
-
-					<article class="poster-slide">
-						<a class="poster-card" href="https://media.lrsd.net/media/Default/medialib/ec_fall_2026.ad96ac89729.png" target="_blank" rel="noopener noreferrer">
-							<img src="https://media.lrsd.net/media/Default/medialib/ec_fall_2026.ad96ac89729.png" alt="English Conversation poster" loading="lazy">
-							<span class="poster-meta">
-								<span class="poster-title">English Conversation</span>
-								<span class="poster-link">Open full poster</span>
-							</span>
-						</a>
-					</article>
-
-					<article class="poster-slide">
-						<a class="poster-card" href="https://media.lrsd.net/media/Default/medialib/cos_parenting_poster_fall_2026.d5f2d289730.png" target="_blank" rel="noopener noreferrer">
-							<img src="https://media.lrsd.net/media/Default/medialib/cos_parenting_poster_fall_2026.d5f2d289730.png" alt="Circle of Security Parenting Program fall poster" loading="lazy">
-							<span class="poster-meta">
-								<span class="poster-title">Circle of Security Parenting Program (Fall)</span>
-								<span class="poster-link">Open full poster</span>
-							</span>
-						</a>
-					</article>
-
-					<article class="poster-slide">
-						<a class="poster-card" href="https://media.lrsd.net/media/Default/medialib/mental_health_stress_management.16960789727.png" target="_blank" rel="noopener noreferrer">
-							<img src="https://media.lrsd.net/media/Default/medialib/mental_health_stress_management.16960789727.png" alt="Mental Health Awareness and Stress Management Program poster" loading="lazy">
-							<span class="poster-meta">
-								<span class="poster-title">Mental Health Awareness &amp; Stress Management</span>
-								<span class="poster-link">Open full poster</span>
-							</span>
-						</a>
-					</article>
-				</div>
-			</div>
+		<div class="poster-table-wrap">
+			<table class="poster-table" data-poster-table>
+				<tbody>
+					<tr>
+						<td class="poster-cell">
+							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" target="_blank" rel="noopener noreferrer">
+								<img src="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" alt="Breakfast and Beading poster" loading="lazy">
+								<span class="poster-meta">
+									<span class="poster-title">Breakfast &amp; Beading</span>
+									<span class="poster-link">Open full poster</span>
+								</span>
+							</a>
+						</td>
+						<td class="poster-cell">
+							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/frl/1780678074436.fd28ab86777.png" target="_blank" rel="noopener noreferrer">
+								<img src="https://media.lrsd.net/media/Default/frl/1780678074436.fd28ab86777.png" alt="English Conversation Circle poster" loading="lazy">
+								<span class="poster-meta">
+									<span class="poster-title">English Conversation Circle</span>
+									<span class="poster-link">Open full poster</span>
+								</span>
+							</a>
+						</td>
+						<td class="poster-cell">
+							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/frl/1779826472021.b0457685729.png" target="_blank" rel="noopener noreferrer">
+								<img src="https://media.lrsd.net/media/Default/frl/1779826472021.b0457685729.png" alt="Circle of Security Parenting Program poster" loading="lazy">
+								<span class="poster-meta">
+									<span class="poster-title">Circle of Security Parenting Program</span>
+									<span class="poster-link">Open full poster</span>
+								</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="poster-cell">
+							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/medialib/female_fitness_outing.f7c60289728.png" target="_blank" rel="noopener noreferrer">
+								<img src="https://media.lrsd.net/media/Default/medialib/female_fitness_outing.f7c60289728.png" alt="Women's Fitness and Wellness Outing poster" loading="lazy">
+								<span class="poster-meta">
+									<span class="poster-title">Women&#39;s Fitness &amp; Wellness Outing</span>
+									<span class="poster-link">Open full poster</span>
+								</span>
+							</a>
+						</td>
+						<td class="poster-cell">
+							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/medialib/ec_fall_2026.ad96ac89729.png" target="_blank" rel="noopener noreferrer">
+								<img src="https://media.lrsd.net/media/Default/medialib/ec_fall_2026.ad96ac89729.png" alt="English Conversation poster" loading="lazy">
+								<span class="poster-meta">
+									<span class="poster-title">English Conversation</span>
+									<span class="poster-link">Open full poster</span>
+								</span>
+							</a>
+						</td>
+						<td class="poster-cell">
+							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/medialib/cos_parenting_poster_fall_2026.d5f2d289730.png" target="_blank" rel="noopener noreferrer">
+								<img src="https://media.lrsd.net/media/Default/medialib/cos_parenting_poster_fall_2026.d5f2d289730.png" alt="Circle of Security Parenting Program fall poster" loading="lazy">
+								<span class="poster-meta">
+									<span class="poster-title">Circle of Security Parenting Program (Fall)</span>
+									<span class="poster-link">Open full poster</span>
+								</span>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td class="poster-cell">
+							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/medialib/mental_health_stress_management.16960789727.png" target="_blank" rel="noopener noreferrer">
+								<img src="https://media.lrsd.net/media/Default/medialib/mental_health_stress_management.16960789727.png" alt="Mental Health Awareness and Stress Management Program poster" loading="lazy">
+								<span class="poster-meta">
+									<span class="poster-title">Mental Health Awareness &amp; Stress Management</span>
+									<span class="poster-link">Open full poster</span>
+								</span>
+							</a>
+						</td>
+						<td class="poster-cell poster-cell-empty"></td>
+						<td class="poster-cell poster-cell-empty"></td>
+					</tr>
+				</tbody>
+			</table>
 		</div>
 
-		<div class="carousel-dots" data-carousel-dots></div>
+		<div class="poster-carousel-host" data-carousel-host></div>
 	</section>
 </div>
 <script>
 	(function () {
-		function initCarousels() {
-			var carousels = document.querySelectorAll('[data-poster-carousel]');
-			var resizeHandlers = [];
-			var resizeTimer;
+		function buildCarousel(section) {
+			var table = section.querySelector('[data-poster-table]');
+			var host = section.querySelector('[data-carousel-host]');
+			var sourceCards;
+			var carousel;
+			var viewport;
+			var track;
+			var previousButton;
+			var nextButton;
+			var dotsContainer;
+			var slides = [];
+			var dots = [];
+			var currentIndex = 0;
+			var scrollTimer;
 
-			Array.prototype.forEach.call(carousels, function (carousel) {
-				var section = carousel.closest ? carousel.closest('.poster-section') : carousel.parentNode;
-				var viewport = carousel.querySelector('[data-carousel-viewport]');
-				var track = carousel.querySelector('[data-carousel-track]');
-				var slides = track ? Array.prototype.slice.call(track.querySelectorAll('.poster-slide')) : [];
-				var previousButton;
-				var nextButton;
-				var dotsContainer = section ? section.querySelector('[data-carousel-dots]') : null;
-				var currentIndex = 0;
-				var dots = [];
-				var scrollTimer;
+			if (!table || !host || section.getAttribute('data-carousel-ready') === 'true') {
+				return null;
+			}
 
-				if (!viewport || !track || !slides.length || carousel.getAttribute('data-carousel-ready') === 'true') {
+			sourceCards = Array.prototype.slice.call(table.querySelectorAll('.poster-card'));
+			sourceCards = sourceCards.filter(function (card) {
+				return !!card.getAttribute('href');
+			});
+
+			if (!sourceCards.length) {
+				return null;
+			}
+
+			section.setAttribute('data-carousel-ready', 'true');
+			carousel = document.createElement('div');
+			carousel.className = 'poster-carousel';
+			carousel.setAttribute('data-poster-carousel', 'true');
+
+			viewport = document.createElement('div');
+			viewport.className = 'poster-viewport';
+			viewport.setAttribute('tabindex', '0');
+			viewport.setAttribute('aria-label', 'Upcoming event posters carousel');
+
+			track = document.createElement('div');
+			track.className = 'poster-track';
+			viewport.appendChild(track);
+			carousel.appendChild(viewport);
+
+			function createButton(className, label, symbol) {
+				var button = document.createElement('button');
+				var icon = document.createElement('span');
+				button.type = 'button';
+				button.className = 'carousel-button ' + className;
+				button.setAttribute('aria-label', label);
+				icon.setAttribute('aria-hidden', 'true');
+				icon.innerHTML = symbol;
+				button.appendChild(icon);
+				carousel.appendChild(button);
+				return button;
+			}
+
+			previousButton = createButton('carousel-button-previous', 'Show previous poster', '&lsaquo;');
+			nextButton = createButton('carousel-button-next', 'Show next poster', '&rsaquo;');
+
+			dotsContainer = document.createElement('div');
+			dotsContainer.className = 'carousel-dots';
+			dotsContainer.setAttribute('role', 'group');
+			dotsContainer.setAttribute('aria-label', 'Poster navigation');
+
+			sourceCards.forEach(function (card, index) {
+				var slide = document.createElement('article');
+				var slideCard = card.cloneNode(true);
+				var dot = document.createElement('button');
+				slide.className = 'poster-slide';
+				slide.appendChild(slideCard);
+				track.appendChild(slide);
+				slides.push(slide);
+
+				dot.type = 'button';
+				dot.className = 'carousel-dot';
+				dot.setAttribute('aria-label', 'Show poster ' + (index + 1));
+				dot.addEventListener('click', function () {
+					scrollToSlide(index);
+				});
+				dotsContainer.appendChild(dot);
+				dots.push(dot);
+			});
+
+			host.appendChild(carousel);
+			host.appendChild(dotsContainer);
+			section.className += ' is-enhanced';
+
+			function updateButtons() {
+				previousButton.disabled = currentIndex === 0;
+				nextButton.disabled = currentIndex === slides.length - 1;
+			}
+
+			function updateDots() {
+				dots.forEach(function (dot, index) {
+					if (index === currentIndex) {
+						dot.setAttribute('aria-pressed', 'true');
+						dot.setAttribute('tabindex', '0');
+					} else {
+						dot.setAttribute('aria-pressed', 'false');
+						dot.setAttribute('tabindex', '-1');
+					}
+				});
+			}
+
+			function scrollToSlide(index) {
+				var left;
+
+				if (index < 0 || index >= slides.length) {
 					return;
 				}
 
-				carousel.setAttribute('data-carousel-ready', 'true');
-
-				function createButton(className, label, symbol) {
-					var button = document.createElement('button');
-					var icon = document.createElement('span');
-					button.type = 'button';
-					button.className = 'carousel-button ' + className;
-					button.setAttribute('aria-label', label);
-					icon.setAttribute('aria-hidden', 'true');
-					icon.innerHTML = symbol;
-					button.appendChild(icon);
-					carousel.appendChild(button);
-					return button;
-				}
-
-				previousButton = createButton('carousel-button-previous', 'Show previous poster', '&lsaquo;');
-				nextButton = createButton('carousel-button-next', 'Show next poster', '&rsaquo;');
-
-				function updateButtons() {
-					if (previousButton) {
-						previousButton.disabled = currentIndex === 0;
-					}
-					if (nextButton) {
-						nextButton.disabled = currentIndex === slides.length - 1;
-					}
-				}
-
-				function updateDots() {
-					dots.forEach(function (dot, index) {
-						if (index === currentIndex) {
-							dot.setAttribute('aria-pressed', 'true');
-							dot.setAttribute('tabindex', '0');
-						} else {
-							dot.setAttribute('aria-pressed', 'false');
-							dot.setAttribute('tabindex', '-1');
-						}
-					});
-				}
-
-				function scrollToSlide(index) {
-					var left;
-
-					if (index < 0 || index >= slides.length) {
-						return;
-					}
-
-					currentIndex = index;
-					left = slides[index].offsetLeft - track.offsetLeft;
-					if (typeof viewport.scrollTo === 'function') {
-						try {
-							viewport.scrollTo({
-								left: left,
-								behavior: 'smooth'
-							});
-						} catch (error) {
-							viewport.scrollLeft = left;
-						}
-					} else {
+				currentIndex = index;
+				left = slides[index].offsetLeft - track.offsetLeft;
+				if (typeof viewport.scrollTo === 'function') {
+					try {
+						viewport.scrollTo({
+							left: left,
+							behavior: 'smooth'
+						});
+					} catch (error) {
 						viewport.scrollLeft = left;
 					}
-					updateButtons();
-					updateDots();
+				} else {
+					viewport.scrollLeft = left;
 				}
-
-				function syncIndexFromScroll() {
-					var viewportCenter = viewport.scrollLeft + viewport.clientWidth / 2;
-					var closestIndex = 0;
-					var closestDistance = Infinity;
-
-					slides.forEach(function (slide, index) {
-						var slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-						var distance = Math.abs(slideCenter - viewportCenter);
-						if (distance < closestDistance) {
-							closestDistance = distance;
-							closestIndex = index;
-						}
-					});
-
-					currentIndex = closestIndex;
-					updateButtons();
-					updateDots();
-				}
-
-				if (dotsContainer) {
-					dotsContainer.setAttribute('role', 'group');
-					dotsContainer.setAttribute('aria-label', 'Poster navigation');
-
-					slides.forEach(function (slide, index) {
-						var dot = document.createElement('button');
-						dot.type = 'button';
-						dot.className = 'carousel-dot';
-						dot.setAttribute('aria-label', 'Show poster ' + (index + 1));
-						dot.addEventListener('click', function () {
-							scrollToSlide(index);
-						});
-						dotsContainer.appendChild(dot);
-						dots.push(dot);
-					});
-				}
-
-				if (previousButton) {
-					previousButton.addEventListener('click', function () {
-						scrollToSlide(currentIndex - 1);
-					});
-				}
-
-				if (nextButton) {
-					nextButton.addEventListener('click', function () {
-						scrollToSlide(currentIndex + 1);
-					});
-				}
-
-				viewport.addEventListener('scroll', function () {
-					window.clearTimeout(scrollTimer);
-					scrollTimer = window.setTimeout(syncIndexFromScroll, 120);
-				});
-
-				resizeHandlers.push(function () {
-					scrollToSlide(currentIndex);
-				});
 
 				updateButtons();
 				updateDots();
+			}
+
+			function syncIndexFromScroll() {
+				var viewportCenter = viewport.scrollLeft + viewport.clientWidth / 2;
+				var closestIndex = 0;
+				var closestDistance = Infinity;
+
+				slides.forEach(function (slide, index) {
+					var slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+					var distance = Math.abs(slideCenter - viewportCenter);
+					if (distance < closestDistance) {
+						closestDistance = distance;
+						closestIndex = index;
+					}
+				});
+
+				currentIndex = closestIndex;
+				updateButtons();
+				updateDots();
+			}
+
+			previousButton.addEventListener('click', function () {
+				scrollToSlide(currentIndex - 1);
 			});
 
-			if (resizeHandlers.length) {
-				window.addEventListener('resize', function () {
-					window.clearTimeout(resizeTimer);
-					resizeTimer = window.setTimeout(function () {
-						resizeHandlers.forEach(function (handler) {
-							handler();
-						});
-					}, 150);
-				});
+			nextButton.addEventListener('click', function () {
+				scrollToSlide(currentIndex + 1);
+			});
+
+			viewport.addEventListener('scroll', function () {
+				window.clearTimeout(scrollTimer);
+				scrollTimer = window.setTimeout(syncIndexFromScroll, 120);
+			});
+
+			updateButtons();
+			updateDots();
+
+			return {
+				refresh: function () {
+					scrollToSlide(currentIndex);
+				}
+			};
+		}
+
+		function initCarousels() {
+			var galleries = document.querySelectorAll('[data-poster-gallery]');
+			var instances = [];
+			var resizeTimer;
+			var index;
+			var instance;
+
+			for (index = 0; index < galleries.length; index += 1) {
+				instance = buildCarousel(galleries[index]);
+				if (instance) {
+					instances.push(instance);
+				}
 			}
+
+			if (!instances.length) {
+				return;
+			}
+
+			window.addEventListener('resize', function () {
+				window.clearTimeout(resizeTimer);
+				resizeTimer = window.setTimeout(function () {
+					instances.forEach(function (carouselInstance) {
+						carouselInstance.refresh();
+					});
+				}, 150);
+			});
 		}
 
 		if (document.readyState === 'loading') {
@@ -286,8 +331,9 @@
 		}
 	})();
 </script>
-
 <style>
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap');
+
 	.fr-view .rdc-page {
 		--green-900: #012619;
 		--green-600: #4EA664;
@@ -296,15 +342,17 @@
 		--green-100: #E8E5DE;
 		--white: #ffffff;
 		--max-width: 1120px;
-		--radius-lg: 22px;
-		--radius-md: 14px;
-		--shadow: 0 22px 50px rgba(1, 38, 25, 0.08);
-		--border: 1px solid rgba(120, 191, 158, 0.4);
+		--radius-lg: 18px;
+		--radius-md: 10px;
+		--shadow: 0 10px 30px rgba(1, 38, 25, 0.08);
+		--border: 1px solid var(--green-200);
 		box-sizing: border-box;
 		max-width: var(--max-width);
 		margin: 0 auto;
+		position: relative;
+		left: 0;
 		padding: 0 2rem 3rem;
-		font-family: "Segoe UI", Arial, sans-serif;
+		font-family: 'Poppins', Arial, sans-serif;
 		font-size: 16px;
 		line-height: 1.7;
 		color: var(--green-900);
@@ -320,7 +368,7 @@
 	.fr-view .rdc-page h2,
 	.fr-view .rdc-page h3 {
 		margin-top: 0;
-		font-family: "Arial Narrow", Arial, sans-serif;
+		font-family: 'Montserrat', Arial, sans-serif;
 		color: var(--green-900);
 		font-weight: 700;
 	}
@@ -349,13 +397,13 @@
 
 	.fr-view .rdc-page .page-subtitle {
 		display: block;
-		font-size: .85rem;
+		font-size: 0.85rem;
 		text-transform: uppercase;
-		letter-spacing: .08em;
+		letter-spacing: 0.08em;
 		font-weight: 600;
 		color: var(--green-400);
 		margin: 0 0 1rem;
-		padding-bottom: .4rem;
+		padding-bottom: 0.4rem;
 		border-bottom: 2px solid var(--green-200);
 	}
 
@@ -364,13 +412,13 @@
 	}
 
 	.fr-view .rdc-page .page-intro {
-		max-width: 44rem;
+		max-width: 48rem;
 		margin: 0 0 2rem;
 	}
 
 	.fr-view .rdc-page .content-card,
 	.fr-view .rdc-page .poster-section {
-		background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(232, 229, 222, 0.9));
+		background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(232, 229, 222, 0.92));
 		border: var(--border);
 		border-radius: var(--radius-lg);
 		box-shadow: var(--shadow);
@@ -381,7 +429,7 @@
 	.fr-view .rdc-page h2 {
 		font-size: 1.35rem;
 		border-bottom: 2px solid var(--green-400);
-		padding-bottom: .35rem;
+		padding-bottom: 0.35rem;
 		margin-bottom: 1rem;
 		display: inline-block;
 	}
@@ -399,48 +447,72 @@
 		margin: 0 0 1.5rem;
 	}
 
+	.fr-view .rdc-page .poster-table {
+		width: 100%;
+		border-collapse: separate;
+		border-spacing: 1rem;
+		table-layout: fixed;
+	}
+
+	.fr-view .rdc-page .poster-cell {
+		vertical-align: top;
+		padding: 0;
+	}
+
+	.fr-view .rdc-page .poster-cell-empty {
+		background: rgba(169, 217, 194, 0.18);
+		border: 1px dashed var(--green-200);
+		border-radius: var(--radius-md);
+		min-height: 8rem;
+	}
+
+	.fr-view .rdc-page .poster-card {
+		display: block;
+		background: var(--white);
+		border-radius: var(--radius-lg);
+		overflow: hidden;
+		border: var(--border);
+		box-shadow: 0 16px 36px rgba(1, 38, 25, 0.12);
+		text-decoration: none;
+	}
+
+	.fr-view .rdc-page .poster-card img {
+		display: block;
+		width: 100%;
+		height: clamp(17rem, 30vw, 24rem);
+		object-fit: contain;
+		background: linear-gradient(180deg, rgba(232, 229, 222, 0.55), rgba(255, 255, 255, 1));
+	}
+
+	.fr-view .rdc-page .poster-meta {
+		display: flex;
+		justify-content: space-between;
+		gap: 1rem;
+		align-items: center;
+		padding: 1rem 1.15rem 1.15rem;
+	}
+
+	.fr-view .rdc-page .poster-title {
+		font-family: 'Montserrat', Arial, sans-serif;
+		font-weight: 700;
+		color: var(--green-900);
+	}
+
+	.fr-view .rdc-page .poster-link {
+		font-weight: 600;
+		white-space: nowrap;
+	}
+
+	.fr-view .rdc-page .poster-section.is-enhanced .poster-table-wrap {
+		display: none;
+	}
+
 	.fr-view .rdc-page .poster-carousel {
 		display: grid;
 		grid-template-columns: auto minmax(0, 1fr) auto;
-		grid-template-areas: "previous viewport next";
+		grid-template-areas: 'previous viewport next';
 		gap: 1rem;
 		align-items: center;
-	}
-
-	.fr-view .rdc-page .carousel-button {
-		appearance: none;
-		border: 2px solid var(--green-200);
-		width: 3rem;
-		height: 3rem;
-		border-radius: 999px;
-		background: var(--green-900);
-		color: var(--white);
-		font-size: 2rem;
-		line-height: 1;
-		cursor: pointer;
-		box-shadow: 0 10px 24px rgba(1, 38, 25, 0.2);
-		transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
-	}
-
-	.fr-view .rdc-page .carousel-button:hover:not(:disabled) {
-		transform: translateY(-1px);
-		background: var(--green-600);
-	}
-
-	.fr-view .rdc-page .carousel-button:focus-visible:not(:disabled) {
-		transform: translateY(-1px);
-		background: var(--green-600);
-	}
-
-	.fr-view .rdc-page .carousel-button:focus-visible,
-	.fr-view .rdc-page .carousel-dot:focus-visible {
-		outline: 3px solid var(--green-200);
-		outline-offset: 3px;
-	}
-
-	.fr-view .rdc-page .carousel-button:disabled {
-		opacity: 0.4;
-		cursor: default;
 	}
 
 	.fr-view .rdc-page .poster-viewport {
@@ -458,6 +530,26 @@
 		gap: 1.25rem;
 	}
 
+	.fr-view .rdc-page .poster-slide {
+		flex: 0 0 min(34rem, 100%);
+		scroll-snap-align: center;
+	}
+
+	.fr-view .rdc-page .carousel-button {
+		appearance: none;
+		border: 2px solid var(--green-200);
+		width: 3rem;
+		height: 3rem;
+		border-radius: 999px;
+		background: var(--green-900);
+		color: var(--white);
+		font-size: 2rem;
+		line-height: 1;
+		cursor: pointer;
+		box-shadow: 0 10px 24px rgba(1, 38, 25, 0.2);
+		transition: transform 0.2s ease, opacity 0.2s ease, background 0.2s ease;
+	}
+
 	.fr-view .rdc-page .carousel-button-previous {
 		grid-area: previous;
 	}
@@ -466,46 +558,22 @@
 		grid-area: next;
 	}
 
-	.fr-view .rdc-page .poster-slide {
-		flex: 0 0 min(34rem, 100%);
-		scroll-snap-align: center;
+	.fr-view .rdc-page .carousel-button:hover:not(:disabled),
+	.fr-view .rdc-page .carousel-button:focus-visible:not(:disabled) {
+		transform: translateY(-1px);
+		background: var(--green-600);
 	}
 
-	.fr-view .rdc-page .poster-card {
-		display: block;
-		background: var(--white);
-		border-radius: var(--radius-lg);
-		overflow: hidden;
-		border: var(--border);
-		box-shadow: 0 16px 36px rgba(1, 38, 25, 0.12);
-		text-decoration: none;
+	.fr-view .rdc-page .carousel-button:focus-visible,
+	.fr-view .rdc-page .carousel-dot:focus-visible,
+	.fr-view .rdc-page .poster-viewport:focus-visible {
+		outline: 3px solid var(--green-200);
+		outline-offset: 3px;
 	}
 
-	.fr-view .rdc-page .poster-card img {
-		display: block;
-		width: 100%;
-		height: clamp(24rem, 62vw, 40rem);
-		object-fit: contain;
-		background: linear-gradient(180deg, rgba(232, 229, 222, 0.55), rgba(255, 255, 255, 1));
-	}
-
-	.fr-view .rdc-page .poster-meta {
-		display: flex;
-		justify-content: space-between;
-		gap: 1rem;
-		align-items: center;
-		padding: 1rem 1.15rem 1.15rem;
-	}
-
-	.fr-view .rdc-page .poster-title {
-		font-family: "Arial Narrow", Arial, sans-serif;
-		font-weight: 700;
-		color: var(--green-900);
-	}
-
-	.fr-view .rdc-page .poster-link {
-		font-weight: 600;
-		white-space: nowrap;
+	.fr-view .rdc-page .carousel-button:disabled {
+		opacity: 0.4;
+		cursor: default;
 	}
 
 	.fr-view .rdc-page .carousel-dots {
@@ -535,6 +603,17 @@
 		transform: scale(1.15);
 	}
 
+	@media (max-width: 900px) {
+		.fr-view .rdc-page .poster-table {
+			border-spacing: 0.75rem;
+		}
+
+		.fr-view .rdc-page .poster-meta {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
+
 	@media (max-width: 760px) {
 		.fr-view .rdc-page {
 			padding: 0 1.25rem 2.5rem;
@@ -545,11 +624,19 @@
 			padding: 1.25rem;
 		}
 
+		.fr-view .rdc-page .poster-table-wrap {
+			overflow-x: auto;
+		}
+
+		.fr-view .rdc-page .poster-table {
+			min-width: 42rem;
+		}
+
 		.fr-view .rdc-page .poster-carousel {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
 			grid-template-areas:
-				"viewport viewport"
-				"previous next";
+				'viewport viewport'
+				'previous next';
 			align-items: stretch;
 		}
 
@@ -557,19 +644,10 @@
 			flex-basis: 88%;
 		}
 
-		.fr-view .rdc-page .poster-viewport {
-			grid-column: auto;
-		}
-
 		.fr-view .rdc-page .carousel-button {
 			width: 100%;
 			height: 2.75rem;
 			font-size: 1.6rem;
-		}
-
-		.fr-view .rdc-page .poster-meta {
-			flex-direction: column;
-			align-items: flex-start;
 		}
 	}
 </style>
