@@ -111,14 +111,6 @@
 					</article>
 				</div>
 			</div>
-
-			<button class="carousel-button carousel-button-previous" type="button" data-carousel-previous aria-label="Show previous poster">
-				<span aria-hidden="true">&lsaquo;</span>
-			</button>
-
-			<button class="carousel-button carousel-button-next" type="button" data-carousel-next aria-label="Show next poster">
-				<span aria-hidden="true">&rsaquo;</span>
-			</button>
 		</div>
 
 		<nav class="carousel-dots" data-carousel-dots aria-label="Poster navigation"></nav>
@@ -135,8 +127,8 @@
 			var viewport = carousel.querySelector('[data-carousel-viewport]');
 			var track = carousel.querySelector('[data-carousel-track]');
 			var slides = track ? Array.prototype.slice.call(track.querySelectorAll('.poster-slide')) : [];
-			var previousButton = carousel.querySelector('[data-carousel-previous]');
-			var nextButton = carousel.querySelector('[data-carousel-next]');
+			var previousButton;
+			var nextButton;
 			var dotsContainer = section ? section.querySelector('[data-carousel-dots]') : null;
 			var currentIndex = 0;
 			var dots = [];
@@ -145,6 +137,22 @@
 			if (!viewport || !track || !slides.length) {
 				return;
 			}
+
+			function createButton(className, label, symbol) {
+				var button = document.createElement('button');
+				var icon = document.createElement('span');
+				button.type = 'button';
+				button.className = 'carousel-button ' + className;
+				button.setAttribute('aria-label', label);
+				icon.setAttribute('aria-hidden', 'true');
+				icon.innerHTML = symbol;
+				button.appendChild(icon);
+				carousel.appendChild(button);
+				return button;
+			}
+
+			previousButton = createButton('carousel-button-previous', 'Show previous poster', '&lsaquo;');
+			nextButton = createButton('carousel-button-next', 'Show next poster', '&rsaquo;');
 
 			function updateButtons() {
 				if (previousButton) {
