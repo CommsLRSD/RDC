@@ -2,9 +2,9 @@
 	<p class="page-subtitle">Continuous Programming</p>
 
 	<h1 class="page-title">Fresh Food Box &amp; Posters</h1>
-	<p class="page-intro">Fresh Food Box details stay at the top. In the page builder, the posters stay in a simple table; once published, JavaScript turns the non-empty image cells into a simple carousel.</p>
+	<p class="page-intro">Fresh Food Box details stay at the top. In the page builder, each event uses a two-column table row; once published, JavaScript turns each populated row into a carousel slide.</p>
 
-	<section class="content-card">
+	<section class="fresh-food-section">
 		<h2>Fresh Food Box</h2>
 		<ul>
 			<li><strong>Cost:</strong>&nbsp;$20 per box (about $40 value)</li>
@@ -28,24 +28,26 @@
 		<div class="poster-section-header">
 			<p class="page-subtitle poster-subtitle">Upcoming Events</p>
 			<h2 id="poster-table-heading">Upcoming event posters</h2>
-			<p>Each cell can hold one image, optionally wrapped in a link, with event details written in bullets underneath. When published, JavaScript turns those bullets into the info panel beside the poster.</p>
+			<p>Use one table row per event: image on the left, bulleted event details on the right. When published, JavaScript turns each row into one carousel slide.</p>
 		</div>
 
 		<!--
 			POSTER MAINTENANCE
-			1. Put one plain image in each table cell. The image may be wrapped in a link if you want the poster clickable.
-			2. Under the image, add a bullet list for the event name, date, time, and location.
-			3. To add more posters, add another row or cell to the table and place an image in it.
-			4. Empty cells are allowed and will be ignored by the published carousel.
+			1. Use one row per event, with the image in the left cell and the bulleted event details in the right cell.
+			2. The image may be wrapped in a link if you want the poster clickable.
+			3. To add more posters, add another row to the table.
+			4. Empty rows or cells without an image are allowed and will be ignored by the published carousel.
 		-->
 		<div class="poster-table-wrap">
 			<table class="poster-table" data-poster-table>
 				<tbody>
 					<tr>
-						<td>
+						<td class="poster-image-cell">
 							<a href="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" alt="Breakfast and Beading poster" loading="lazy">
 							</a>
+						</td>
+						<td class="poster-info-cell">
 							<ul>
 								<li><strong>Event:</strong> Breakfast &amp; Beading</li>
 								<li><strong>Date:</strong> Fridays (school year), starting Sept. 19</li>
@@ -53,10 +55,14 @@
 								<li><strong>Location:</strong> Ren&eacute; Deleurme Centre, 511 St. Anne&#39;s Rd</li>
 							</ul>
 						</td>
-						<td>
+					</tr>
+					<tr>
+						<td class="poster-image-cell">
 							<a href="https://media.lrsd.net/media/Default/frl/1780678074436.fd28ab86777.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/frl/1780678074436.fd28ab86777.png" alt="English Conversation Circle poster" loading="lazy">
 							</a>
+						</td>
+						<td class="poster-info-cell">
 							<ul>
 								<li><strong>Event:</strong> English Conversation Circle</li>
 								<li><strong>Date:</strong> Aug. 7 to Sept. 25 (Fridays)</li>
@@ -64,10 +70,14 @@
 								<li><strong>Location:</strong> Ren&eacute; Deleurme Centre, 511 St. Anne&#39;s Road</li>
 							</ul>
 						</td>
-						<td>
+					</tr>
+					<tr>
+						<td class="poster-image-cell">
 							<a href="https://media.lrsd.net/media/Default/frl/1779826472021.b0457685729.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/frl/1779826472021.b0457685729.png" alt="Circle of Security Parenting Program poster" loading="lazy">
 							</a>
+						</td>
+						<td class="poster-info-cell">
 							<ul>
 								<li><strong>Event:</strong> Circle of Security Parenting Program</li>
 								<li><strong>Date:</strong> Aug. 6 to Sept. 24 (Thursdays)</li>
@@ -77,10 +87,12 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<td class="poster-image-cell">
 							<a href="https://media.lrsd.net/media/Default/medialib/female_fitness_outing.f7c60289728.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/medialib/female_fitness_outing.f7c60289728.png" alt="Women's Fitness and Wellness Outing poster" loading="lazy">
 							</a>
+						</td>
+						<td class="poster-info-cell">
 							<ul>
 								<li><strong>Event:</strong> Women&#39;s Fitness &amp; Wellness Outing</li>
 								<li><strong>Date:</strong> Sept. 11 (Friday)</li>
@@ -88,10 +100,14 @@
 								<li><strong>Location:</strong> Ren&eacute; Deleurme Centre, 511 St. Anne&#39;s Road, Winnipeg</li>
 							</ul>
 						</td>
-						<td>
+					</tr>
+					<tr>
+						<td class="poster-image-cell">
 							<a href="https://media.lrsd.net/media/Default/medialib/ec_fall_2026.ad96ac89729.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/medialib/ec_fall_2026.ad96ac89729.png" alt="English Conversation poster" loading="lazy">
 							</a>
+						</td>
+						<td class="poster-info-cell">
 							<ul>
 								<li><strong>Event:</strong> English Conversation</li>
 								<li><strong>Date:</strong> Oct. 9 to Nov. 27 (Fridays)</li>
@@ -99,10 +115,14 @@
 								<li><strong>Location:</strong> Ren&eacute; Deleurme Centre, 511 St. Anne&#39;s Road, Winnipeg</li>
 							</ul>
 						</td>
-						<td>
+					</tr>
+					<tr>
+						<td class="poster-image-cell">
 							<a href="https://media.lrsd.net/media/Default/medialib/cos_parenting_poster_fall_2026.d5f2d289730.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/medialib/cos_parenting_poster_fall_2026.d5f2d289730.png" alt="Circle of Security Parenting Program fall poster" loading="lazy">
 							</a>
+						</td>
+						<td class="poster-info-cell">
 							<ul>
 								<li><strong>Event:</strong> Circle of Security Parenting Program</li>
 								<li><strong>Date:</strong> Oct. 9 to Nov. 27 (Fridays)</li>
@@ -112,10 +132,12 @@
 						</td>
 					</tr>
 					<tr>
-						<td>
+						<td class="poster-image-cell">
 							<a href="https://media.lrsd.net/media/Default/medialib/mental_health_stress_management.16960789727.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/medialib/mental_health_stress_management.16960789727.png" alt="Mental Health Awareness and Stress Management Program poster" loading="lazy">
 							</a>
+						</td>
+						<td class="poster-info-cell">
 							<ul>
 								<li><strong>Event:</strong> Mental Health Awareness &amp; Stress Management Program</li>
 								<li><strong>Date:</strong> Oct. 14 to Dec. 9 (Wednesdays)</li>
@@ -123,8 +145,6 @@
 								<li><strong>Location:</strong> Ren&eacute; Deleurme Centre, 511 St. Anne&#39;s Road, Winnipeg</li>
 							</ul>
 						</td>
-						<td></td>
-						<td></td>
 					</tr>
 				</tbody>
 			</table>
@@ -137,21 +157,8 @@
 	(function () {
 		function getInfoContent(cell) {
 			var clone = cell.cloneNode(true);
-			var images = clone.querySelectorAll('img');
-			var links = clone.querySelectorAll('a');
 			var fragment = document.createDocumentFragment();
 			var nodes;
-			var index;
-
-			for (index = images.length - 1; index >= 0; index -= 1) {
-				images[index].parentNode.removeChild(images[index]);
-			}
-
-			for (index = links.length - 1; index >= 0; index -= 1) {
-				if (!links[index].textContent.replace(/\s+/g, '')) {
-					links[index].parentNode.removeChild(links[index]);
-				}
-			}
 
 			nodes = Array.prototype.slice.call(clone.childNodes);
 			nodes.forEach(function (node) {
@@ -202,7 +209,7 @@
 		function buildCarousel(section) {
 			var table = section.querySelector('[data-poster-table]');
 			var host = section.querySelector('[data-carousel-host]');
-			var sourceCells;
+			var sourceRows;
 			var carousel;
 			var viewport;
 			var track;
@@ -218,12 +225,12 @@
 				return null;
 			}
 
-			sourceCells = Array.prototype.slice.call(table.querySelectorAll('td, th'));
-			sourceCells = sourceCells.filter(function (cell) {
-				return !!cell.querySelector('img');
+			sourceRows = Array.prototype.slice.call(table.querySelectorAll('tr'));
+			sourceRows = sourceRows.filter(function (row) {
+				return !!row.querySelector('img');
 			});
 
-			if (!sourceCells.length) {
+			if (!sourceRows.length) {
 				return null;
 			}
 
@@ -259,18 +266,25 @@
 			dotsContainer.setAttribute('role', 'group');
 			dotsContainer.setAttribute('aria-label', 'Poster navigation');
 
-			sourceCells.forEach(function (cell, index) {
-				var image = cell.querySelector('img');
+			sourceRows.forEach(function (row, index) {
+				var cells = row.querySelectorAll('td, th');
+				var imageCell = cells[0];
+				var infoCell = cells[1];
+				var image = imageCell ? imageCell.querySelector('img') : null;
 				var slide = document.createElement('article');
 				var slideLayout = document.createElement('div');
 				var slideDetails = document.createElement('div');
-				var infoContent = getInfoContent(cell);
+				var infoContent = infoCell ? getInfoContent(infoCell) : null;
 				var dot = document.createElement('button');
+
+				if (!image) {
+					return;
+				}
 
 				slide.className = 'poster-slide';
 				slideLayout.className = 'poster-slide-layout';
 				slideDetails.className = 'poster-details';
-				slideLayout.appendChild(createSlideMedia(cell, image));
+				slideLayout.appendChild(createSlideMedia(imageCell, image));
 
 				if (infoContent) {
 					slideDetails.appendChild(infoContent);
@@ -504,7 +518,6 @@
 		margin: 0 0 2rem;
 	}
 
-	.fr-view .rdc-page .content-card,
 	.fr-view .rdc-page .poster-section {
 		background: linear-gradient(180deg, rgba(255, 255, 255, 0.98), rgba(232, 229, 222, 0.92));
 		border: var(--border);
@@ -512,6 +525,10 @@
 		box-shadow: var(--shadow);
 		padding: 1.75rem;
 		margin-bottom: 2rem;
+	}
+
+	.fr-view .rdc-page .fresh-food-section {
+		margin-bottom: 2.25rem;
 	}
 
 	.fr-view .rdc-page h2 {
@@ -544,7 +561,15 @@
 
 	.fr-view .rdc-page .poster-table td {
 		vertical-align: top;
-		padding: 0;
+		padding: 0 0 1rem;
+	}
+
+	.fr-view .rdc-page .poster-table .poster-image-cell {
+		width: 42%;
+	}
+
+	.fr-view .rdc-page .poster-table .poster-info-cell {
+		width: 58%;
 	}
 
 	.fr-view .rdc-page .poster-table img {
@@ -553,11 +578,8 @@
 		height: auto;
 	}
 
-	.fr-view .rdc-page .poster-table td p,
-	.fr-view .rdc-page .poster-table td div,
-	.fr-view .rdc-page .poster-table td span,
 	.fr-view .rdc-page .poster-table td ul {
-		margin-top: 0.5rem;
+		margin-top: 0;
 	}
 
 	.fr-view .rdc-page .poster-table td ul {
@@ -588,11 +610,12 @@
 
 	.fr-view .rdc-page .poster-track {
 		display: flex;
-		gap: 1.25rem;
+		gap: 0;
 	}
 
 	.fr-view .rdc-page .poster-slide {
-		flex: 0 0 min(34rem, 100%);
+		flex: 0 0 100%;
+		max-width: 100%;
 		margin: 0;
 		scroll-snap-align: center;
 	}
@@ -617,13 +640,12 @@
 	.fr-view .rdc-page .poster-slide img {
 		display: block;
 		width: 100%;
-		height: clamp(24rem, 62vw, 40rem);
-		object-fit: contain;
-		background: linear-gradient(180deg, rgba(232, 229, 222, 0.55), rgba(255, 255, 255, 1));
+		height: auto;
+		background: transparent;
 	}
 
 	.fr-view .rdc-page .poster-details {
-		align-self: center;
+		align-self: start;
 	}
 
 	.fr-view .rdc-page .poster-details > *:first-child {
@@ -722,7 +744,6 @@
 			padding: 0 1.25rem 2.5rem;
 		}
 
-		.fr-view .rdc-page .content-card,
 		.fr-view .rdc-page .poster-section {
 			padding: 1.25rem;
 		}
@@ -732,7 +753,7 @@
 		}
 
 		.fr-view .rdc-page .poster-table {
-			min-width: 42rem;
+			min-width: 36rem;
 		}
 
 		.fr-view .rdc-page .poster-carousel {
@@ -744,7 +765,7 @@
 		}
 
 		.fr-view .rdc-page .poster-slide {
-			flex-basis: 88%;
+			flex-basis: 100%;
 		}
 
 		.fr-view .rdc-page .poster-slide-layout {
