@@ -121,7 +121,7 @@
 			</button>
 		</div>
 
-		<div class="carousel-dots" data-carousel-dots aria-label="Poster navigation"></div>
+		<nav class="carousel-dots" data-carousel-dots aria-label="Poster navigation"></nav>
 	</section>
 </div>
 <script>
@@ -443,17 +443,20 @@
 
 	.fr-view .rdc-page .carousel-dot {
 		appearance: none;
-		border: 0;
+		border: 2px solid transparent;
 		width: 0.8rem;
 		height: 0.8rem;
 		border-radius: 999px;
 		background: rgba(1, 38, 25, 0.2);
 		cursor: pointer;
-		transition: transform 0.2s ease, background 0.2s ease;
+		transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, border-radius 0.2s ease, width 0.2s ease;
 	}
 
 	.fr-view .rdc-page .carousel-dot[aria-current='true'] {
 		background: var(--green-600);
+		border-color: var(--green-900);
+		border-radius: 0.35rem;
+		width: 1.25rem;
 		transform: scale(1.15);
 	}
 
