@@ -38,10 +38,6 @@
 			3. Keep the image alt text and poster-title text in sync with the event name.
 		-->
 		<div class="poster-carousel" data-poster-carousel>
-			<button class="carousel-button" type="button" data-carousel-previous aria-label="Show previous poster">
-				<span aria-hidden="true">&lsaquo;</span>
-			</button>
-
 			<div class="poster-viewport" data-carousel-viewport>
 				<div class="poster-track" data-carousel-track>
 					<article class="poster-slide">
@@ -116,7 +112,11 @@
 				</div>
 			</div>
 
-			<button class="carousel-button" type="button" data-carousel-next aria-label="Show next poster">
+			<button class="carousel-button carousel-button-previous" type="button" data-carousel-previous aria-label="Show previous poster">
+				<span aria-hidden="true">&lsaquo;</span>
+			</button>
+
+			<button class="carousel-button carousel-button-next" type="button" data-carousel-next aria-label="Show next poster">
 				<span aria-hidden="true">&rsaquo;</span>
 			</button>
 		</div>
@@ -367,6 +367,7 @@
 	.fr-view .rdc-page .poster-carousel {
 		display: grid;
 		grid-template-columns: auto minmax(0, 1fr) auto;
+		grid-template-areas: "previous viewport next";
 		gap: 1rem;
 		align-items: center;
 	}
@@ -403,6 +404,7 @@
 	}
 
 	.fr-view .rdc-page .poster-viewport {
+		grid-area: viewport;
 		overflow-x: auto;
 		scroll-snap-type: x proximity;
 		scroll-behavior: smooth;
@@ -414,6 +416,14 @@
 	.fr-view .rdc-page .poster-track {
 		display: flex;
 		gap: 1.25rem;
+	}
+
+	.fr-view .rdc-page .carousel-button-previous {
+		grid-area: previous;
+	}
+
+	.fr-view .rdc-page .carousel-button-next {
+		grid-area: next;
 	}
 
 	.fr-view .rdc-page .poster-slide {
@@ -497,6 +507,9 @@
 
 		.fr-view .rdc-page .poster-carousel {
 			grid-template-columns: repeat(2, minmax(0, 1fr));
+			grid-template-areas:
+				"viewport viewport"
+				"previous next";
 			align-items: stretch;
 		}
 
@@ -505,8 +518,7 @@
 		}
 
 		.fr-view .rdc-page .poster-viewport {
-			grid-column: 1 / -1;
-			order: -1;
+			grid-column: auto;
 		}
 
 		.fr-view .rdc-page .carousel-button {
