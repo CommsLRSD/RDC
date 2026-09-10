@@ -365,6 +365,7 @@
 				var slide = document.createElement('article');
 				var slideLayout = document.createElement('div');
 				var slideDetails = document.createElement('div');
+				var slideDetailsInner = document.createElement('div');
 				var infoContent = infoCell ? getInfoContent(infoCell) : null;
 				var dot = document.createElement('button');
 
@@ -376,11 +377,13 @@
 				slide.className = 'poster-slide';
 				slideLayout.className = 'poster-slide-layout';
 				slideDetails.className = 'poster-details';
+				slideDetailsInner.className = 'poster-details-inner';
 				slideLayout.appendChild(createSlideMedia(imageCell, image));
 
 				if (infoContent)
 				{
-					slideDetails.appendChild(infoContent);
+					slideDetailsInner.appendChild(infoContent);
+					slideDetails.appendChild(slideDetailsInner);
 					slideLayout.appendChild(slideDetails);
 				}
 
@@ -718,10 +721,14 @@
 	}
 	
 	.fr-view .rdc-page .poster-details {
-		align-self: stretch; display: flex; flex-direction: column; justify-content: center; min-width: 0;
+		align-self: center; min-width: 0;
 	}
-	
-	.fr-view .rdc-page .poster-details > *:first-child {
+
+	.fr-view .rdc-page .poster-details-inner {
+		display: flex; flex-direction: column; justify-content: center; width: 100%;
+	}
+
+	.fr-view .rdc-page .poster-details-inner > *:first-child {
 		margin-top: 0;
 	}
 	
