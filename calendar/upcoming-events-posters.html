@@ -139,6 +139,7 @@
 		var dotsContainer = carousel.parentNode.querySelector('[data-carousel-dots]');
 		var currentIndex = 0;
 		var dots = [];
+		var scrollTimer;
 
 		if (!viewport || !track || !slides.length) {
 			return;
@@ -219,8 +220,8 @@
 		}
 
 		viewport.addEventListener('scroll', function () {
-			window.clearTimeout(viewport._posterScrollTimer);
-			viewport._posterScrollTimer = window.setTimeout(syncIndexFromScroll, 120);
+			window.clearTimeout(scrollTimer);
+			scrollTimer = window.setTimeout(syncIndexFromScroll, 120);
 		});
 
 		window.addEventListener('resize', function () {
@@ -232,15 +233,7 @@
 	})();
 </script>
 
-<div class="rdc-font-links" aria-hidden="true">
-	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-</div>
 <style>
-	.fr-view .rdc-font-links {
-		display: none;
-	}
-
 	.fr-view .rdc-page {
 		--green-900: #012619;
 		--green-600: #4EA664;
@@ -257,7 +250,7 @@
 		max-width: var(--max-width);
 		margin: 0 auto;
 		padding: 0 2rem 3rem;
-		font-family: 'Poppins', Arial, sans-serif;
+		font-family: "Segoe UI", Arial, sans-serif;
 		font-size: 16px;
 		line-height: 1.7;
 		color: var(--green-900);
@@ -273,7 +266,7 @@
 	.fr-view .rdc-page h2,
 	.fr-view .rdc-page h3 {
 		margin-top: 0;
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: "Arial Narrow", Arial, sans-serif;
 		color: var(--green-900);
 		font-weight: 700;
 	}
@@ -430,7 +423,7 @@
 	}
 
 	.fr-view .rdc-page .poster-title {
-		font-family: 'Montserrat', Arial, sans-serif;
+		font-family: "Arial Narrow", Arial, sans-serif;
 		font-weight: 700;
 		color: var(--green-900);
 	}
