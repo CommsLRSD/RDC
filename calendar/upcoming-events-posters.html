@@ -113,7 +113,7 @@
 			</div>
 		</div>
 
-		<nav class="carousel-dots" data-carousel-dots aria-label="Poster navigation"></nav>
+		<div class="carousel-dots" data-carousel-dots></div>
 	</section>
 </div>
 <script>
@@ -166,9 +166,11 @@
 			function updateDots() {
 				dots.forEach(function (dot, index) {
 					if (index === currentIndex) {
-						dot.setAttribute('aria-current', 'true');
+						dot.setAttribute('aria-selected', 'true');
+						dot.setAttribute('tabindex', '0');
 					} else {
-						dot.removeAttribute('aria-current');
+						dot.setAttribute('aria-selected', 'false');
+						dot.setAttribute('tabindex', '-1');
 					}
 				});
 			}
@@ -218,10 +220,14 @@
 			}
 
 			if (dotsContainer) {
+				dotsContainer.setAttribute('role', 'tablist');
+				dotsContainer.setAttribute('aria-label', 'Poster navigation');
+
 				slides.forEach(function (slide, index) {
 					var dot = document.createElement('button');
 					dot.type = 'button';
 					dot.className = 'carousel-dot';
+					dot.setAttribute('role', 'tab');
 					dot.setAttribute('aria-label', 'Show poster ' + (index + 1));
 					dot.addEventListener('click', function () {
 						scrollToSlide(index);
@@ -509,7 +515,7 @@
 		transition: transform 0.2s ease, background 0.2s ease, border-color 0.2s ease, border-radius 0.2s ease, width 0.2s ease;
 	}
 
-	.fr-view .rdc-page .carousel-dot[aria-current='true'] {
+	.fr-view .rdc-page .carousel-dot[aria-selected='true'] {
 		background: var(--green-600);
 		border-color: var(--green-900);
 		border-radius: 0.35rem;
