@@ -118,158 +118,168 @@
 </div>
 <script>
 	(function () {
-		var carousels = document.querySelectorAll('[data-poster-carousel]');
-		var resizeHandlers = [];
-		var resizeTimer;
+		function initCarousels() {
+			var carousels = document.querySelectorAll('[data-poster-carousel]');
+			var resizeHandlers = [];
+			var resizeTimer;
 
-		Array.prototype.forEach.call(carousels, function (carousel) {
-			var section = carousel.closest ? carousel.closest('.poster-section') : carousel.parentNode;
-			var viewport = carousel.querySelector('[data-carousel-viewport]');
-			var track = carousel.querySelector('[data-carousel-track]');
-			var slides = track ? Array.prototype.slice.call(track.querySelectorAll('.poster-slide')) : [];
-			var previousButton;
-			var nextButton;
-			var dotsContainer = section ? section.querySelector('[data-carousel-dots]') : null;
-			var currentIndex = 0;
-			var dots = [];
-			var scrollTimer;
+			Array.prototype.forEach.call(carousels, function (carousel) {
+				var section = carousel.closest ? carousel.closest('.poster-section') : carousel.parentNode;
+				var viewport = carousel.querySelector('[data-carousel-viewport]');
+				var track = carousel.querySelector('[data-carousel-track]');
+				var slides = track ? Array.prototype.slice.call(track.querySelectorAll('.poster-slide')) : [];
+				var previousButton;
+				var nextButton;
+				var dotsContainer = section ? section.querySelector('[data-carousel-dots]') : null;
+				var currentIndex = 0;
+				var dots = [];
+				var scrollTimer;
 
-			if (!viewport || !track || !slides.length) {
-				return;
-			}
-
-			function createButton(className, label, symbol) {
-				var button = document.createElement('button');
-				var icon = document.createElement('span');
-				button.type = 'button';
-				button.className = 'carousel-button ' + className;
-				button.setAttribute('aria-label', label);
-				icon.setAttribute('aria-hidden', 'true');
-				icon.innerHTML = symbol;
-				button.appendChild(icon);
-				carousel.appendChild(button);
-				return button;
-			}
-
-			previousButton = createButton('carousel-button-previous', 'Show previous poster', '&lsaquo;');
-			nextButton = createButton('carousel-button-next', 'Show next poster', '&rsaquo;');
-
-			function updateButtons() {
-				if (previousButton) {
-					previousButton.disabled = currentIndex === 0;
-				}
-				if (nextButton) {
-					nextButton.disabled = currentIndex === slides.length - 1;
-				}
-			}
-
-			function updateDots() {
-				dots.forEach(function (dot, index) {
-					if (index === currentIndex) {
-						dot.setAttribute('aria-pressed', 'true');
-						dot.setAttribute('tabindex', '0');
-					} else {
-						dot.setAttribute('aria-pressed', 'false');
-						dot.setAttribute('tabindex', '-1');
-					}
-				});
-			}
-
-			function scrollToSlide(index) {
-				var left;
-
-				if (index < 0 || index >= slides.length) {
+				if (!viewport || !track || !slides.length || carousel.getAttribute('data-carousel-ready') === 'true') {
 					return;
 				}
 
-				currentIndex = index;
-				left = slides[index].offsetLeft - track.offsetLeft;
-				if (typeof viewport.scrollTo === 'function') {
-					try {
-						viewport.scrollTo({
-							left: left,
-							behavior: 'smooth'
-						});
-					} catch (error) {
+				carousel.setAttribute('data-carousel-ready', 'true');
+
+				function createButton(className, label, symbol) {
+					var button = document.createElement('button');
+					var icon = document.createElement('span');
+					button.type = 'button';
+					button.className = 'carousel-button ' + className;
+					button.setAttribute('aria-label', label);
+					icon.setAttribute('aria-hidden', 'true');
+					icon.innerHTML = symbol;
+					button.appendChild(icon);
+					carousel.appendChild(button);
+					return button;
+				}
+
+				previousButton = createButton('carousel-button-previous', 'Show previous poster', '&lsaquo;');
+				nextButton = createButton('carousel-button-next', 'Show next poster', '&rsaquo;');
+
+				function updateButtons() {
+					if (previousButton) {
+						previousButton.disabled = currentIndex === 0;
+					}
+					if (nextButton) {
+						nextButton.disabled = currentIndex === slides.length - 1;
+					}
+				}
+
+				function updateDots() {
+					dots.forEach(function (dot, index) {
+						if (index === currentIndex) {
+							dot.setAttribute('aria-pressed', 'true');
+							dot.setAttribute('tabindex', '0');
+						} else {
+							dot.setAttribute('aria-pressed', 'false');
+							dot.setAttribute('tabindex', '-1');
+						}
+					});
+				}
+
+				function scrollToSlide(index) {
+					var left;
+
+					if (index < 0 || index >= slides.length) {
+						return;
+					}
+
+					currentIndex = index;
+					left = slides[index].offsetLeft - track.offsetLeft;
+					if (typeof viewport.scrollTo === 'function') {
+						try {
+							viewport.scrollTo({
+								left: left,
+								behavior: 'smooth'
+							});
+						} catch (error) {
+							viewport.scrollLeft = left;
+						}
+					} else {
 						viewport.scrollLeft = left;
 					}
-				} else {
-					viewport.scrollLeft = left;
+					updateButtons();
+					updateDots();
 				}
+
+				function syncIndexFromScroll() {
+					var viewportCenter = viewport.scrollLeft + viewport.clientWidth / 2;
+					var closestIndex = 0;
+					var closestDistance = Infinity;
+
+					slides.forEach(function (slide, index) {
+						var slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
+						var distance = Math.abs(slideCenter - viewportCenter);
+						if (distance < closestDistance) {
+							closestDistance = distance;
+							closestIndex = index;
+						}
+					});
+
+					currentIndex = closestIndex;
+					updateButtons();
+					updateDots();
+				}
+
+				if (dotsContainer) {
+					dotsContainer.setAttribute('role', 'group');
+					dotsContainer.setAttribute('aria-label', 'Poster navigation');
+
+					slides.forEach(function (slide, index) {
+						var dot = document.createElement('button');
+						dot.type = 'button';
+						dot.className = 'carousel-dot';
+						dot.setAttribute('aria-label', 'Show poster ' + (index + 1));
+						dot.addEventListener('click', function () {
+							scrollToSlide(index);
+						});
+						dotsContainer.appendChild(dot);
+						dots.push(dot);
+					});
+				}
+
+				if (previousButton) {
+					previousButton.addEventListener('click', function () {
+						scrollToSlide(currentIndex - 1);
+					});
+				}
+
+				if (nextButton) {
+					nextButton.addEventListener('click', function () {
+						scrollToSlide(currentIndex + 1);
+					});
+				}
+
+				viewport.addEventListener('scroll', function () {
+					window.clearTimeout(scrollTimer);
+					scrollTimer = window.setTimeout(syncIndexFromScroll, 120);
+				});
+
+				resizeHandlers.push(function () {
+					scrollToSlide(currentIndex);
+				});
+
 				updateButtons();
 				updateDots();
-			}
-
-			function syncIndexFromScroll() {
-				var viewportCenter = viewport.scrollLeft + viewport.clientWidth / 2;
-				var closestIndex = 0;
-				var closestDistance = Infinity;
-
-				slides.forEach(function (slide, index) {
-					var slideCenter = slide.offsetLeft + slide.offsetWidth / 2;
-					var distance = Math.abs(slideCenter - viewportCenter);
-					if (distance < closestDistance) {
-						closestDistance = distance;
-						closestIndex = index;
-					}
-				});
-
-				currentIndex = closestIndex;
-				updateButtons();
-				updateDots();
-			}
-
-			if (dotsContainer) {
-				dotsContainer.setAttribute('role', 'tablist');
-				dotsContainer.setAttribute('aria-label', 'Poster navigation');
-
-				slides.forEach(function (slide, index) {
-					var dot = document.createElement('button');
-					dot.type = 'button';
-					dot.className = 'carousel-dot';
-					dot.setAttribute('aria-label', 'Show poster ' + (index + 1));
-					dot.addEventListener('click', function () {
-						scrollToSlide(index);
-					});
-					dotsContainer.appendChild(dot);
-					dots.push(dot);
-				});
-			}
-
-			if (previousButton) {
-				previousButton.addEventListener('click', function () {
-					scrollToSlide(currentIndex - 1);
-				});
-			}
-
-			if (nextButton) {
-				nextButton.addEventListener('click', function () {
-					scrollToSlide(currentIndex + 1);
-				});
-			}
-
-			viewport.addEventListener('scroll', function () {
-				window.clearTimeout(scrollTimer);
-				scrollTimer = window.setTimeout(syncIndexFromScroll, 120);
 			});
 
-			resizeHandlers.push(function () {
-				scrollToSlide(currentIndex);
-			});
+			if (resizeHandlers.length) {
+				window.addEventListener('resize', function () {
+					window.clearTimeout(resizeTimer);
+					resizeTimer = window.setTimeout(function () {
+						resizeHandlers.forEach(function (handler) {
+							handler();
+						});
+					}, 150);
+				});
+			}
+		}
 
-			updateButtons();
-			updateDots();
-		});
-
-		if (resizeHandlers.length) {
-			window.addEventListener('resize', function () {
-				window.clearTimeout(resizeTimer);
-				resizeTimer = window.setTimeout(function () {
-					resizeHandlers.forEach(function (handler) {
-						handler();
-					});
-				}, 150);
-			});
+		if (document.readyState === 'loading') {
+			document.addEventListener('DOMContentLoaded', initCarousels, { once: true });
+		} else {
+			window.setTimeout(initCarousels, 0);
 		}
 	})();
 </script>
