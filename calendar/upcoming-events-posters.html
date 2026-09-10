@@ -2,7 +2,7 @@
 	<p class="page-subtitle">Continuous Programming</p>
 
 	<h1 class="page-title">Fresh Food Box &amp; Posters</h1>
-	<p class="page-intro">Fresh Food Box details stay at the top. In the page builder, the posters stay in a simple table; once published, JavaScript turns the non-empty cells into a poster carousel.</p>
+	<p class="page-intro">Fresh Food Box details stay at the top. In the page builder, the posters stay in a simple table; once published, JavaScript turns the non-empty image cells into a simple carousel.</p>
 
 	<section class="content-card">
 		<h2>Fresh Food Box</h2>
@@ -28,89 +28,61 @@
 		<div class="poster-section-header">
 			<p class="page-subtitle poster-subtitle">Upcoming Events</p>
 			<h2 id="poster-table-heading">Upcoming event posters</h2>
-			<p>Each table cell can hold one poster. Empty cells are fine in the page builder and are skipped automatically in the published carousel.</p>
+			<p>Each cell can hold one image, optionally wrapped in a link. Any plain text in the same cell becomes a small caption after the page is published.</p>
 		</div>
 
 		<!--
 			POSTER MAINTENANCE
-			1. Replace a poster by updating the matching <a href> and <img src> URL in one table cell.
-			2. Add a poster by pasting another .poster-card inside an empty <td class="poster-cell"> or by adding another <td class="poster-cell"> to the table.
+			1. Put one plain image in each table cell. The image may be wrapped in a link if you want the poster clickable.
+			2. To add more posters, add another row or cell to the table and place an image in it.
 			3. Empty cells are allowed and will be ignored by the published carousel.
-			4. Keep the image alt text and poster-title text in sync with the event name.
+			4. If you add plain text in the same cell, it will appear as a small caption under that poster in the published carousel.
 		-->
 		<div class="poster-table-wrap">
 			<table class="poster-table" data-poster-table>
 				<tbody>
 					<tr>
-						<td class="poster-cell">
-							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" target="_blank" rel="noopener noreferrer">
+						<td>
+							<a href="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/medialib/breakfast-beading-26_27.8c2d0090460.jpg" alt="Breakfast and Beading poster" loading="lazy">
-								<span class="poster-meta">
-									<span class="poster-title">Breakfast &amp; Beading</span>
-									<span class="poster-link">Open full poster</span>
-								</span>
 							</a>
 						</td>
-						<td class="poster-cell">
-							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/frl/1780678074436.fd28ab86777.png" target="_blank" rel="noopener noreferrer">
+						<td>
+							<a href="https://media.lrsd.net/media/Default/frl/1780678074436.fd28ab86777.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/frl/1780678074436.fd28ab86777.png" alt="English Conversation Circle poster" loading="lazy">
-								<span class="poster-meta">
-									<span class="poster-title">English Conversation Circle</span>
-									<span class="poster-link">Open full poster</span>
-								</span>
 							</a>
 						</td>
-						<td class="poster-cell">
-							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/frl/1779826472021.b0457685729.png" target="_blank" rel="noopener noreferrer">
+						<td>
+							<a href="https://media.lrsd.net/media/Default/frl/1779826472021.b0457685729.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/frl/1779826472021.b0457685729.png" alt="Circle of Security Parenting Program poster" loading="lazy">
-								<span class="poster-meta">
-									<span class="poster-title">Circle of Security Parenting Program</span>
-									<span class="poster-link">Open full poster</span>
-								</span>
 							</a>
 						</td>
 					</tr>
 					<tr>
-						<td class="poster-cell">
-							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/medialib/female_fitness_outing.f7c60289728.png" target="_blank" rel="noopener noreferrer">
+						<td>
+							<a href="https://media.lrsd.net/media/Default/medialib/female_fitness_outing.f7c60289728.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/medialib/female_fitness_outing.f7c60289728.png" alt="Women's Fitness and Wellness Outing poster" loading="lazy">
-								<span class="poster-meta">
-									<span class="poster-title">Women&#39;s Fitness &amp; Wellness Outing</span>
-									<span class="poster-link">Open full poster</span>
-								</span>
 							</a>
 						</td>
-						<td class="poster-cell">
-							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/medialib/ec_fall_2026.ad96ac89729.png" target="_blank" rel="noopener noreferrer">
+						<td>
+							<a href="https://media.lrsd.net/media/Default/medialib/ec_fall_2026.ad96ac89729.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/medialib/ec_fall_2026.ad96ac89729.png" alt="English Conversation poster" loading="lazy">
-								<span class="poster-meta">
-									<span class="poster-title">English Conversation</span>
-									<span class="poster-link">Open full poster</span>
-								</span>
 							</a>
 						</td>
-						<td class="poster-cell">
-							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/medialib/cos_parenting_poster_fall_2026.d5f2d289730.png" target="_blank" rel="noopener noreferrer">
+						<td>
+							<a href="https://media.lrsd.net/media/Default/medialib/cos_parenting_poster_fall_2026.d5f2d289730.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/medialib/cos_parenting_poster_fall_2026.d5f2d289730.png" alt="Circle of Security Parenting Program fall poster" loading="lazy">
-								<span class="poster-meta">
-									<span class="poster-title">Circle of Security Parenting Program (Fall)</span>
-									<span class="poster-link">Open full poster</span>
-								</span>
 							</a>
 						</td>
 					</tr>
 					<tr>
-						<td class="poster-cell">
-							<a class="poster-card poster-table-card" href="https://media.lrsd.net/media/Default/medialib/mental_health_stress_management.16960789727.png" target="_blank" rel="noopener noreferrer">
+						<td>
+							<a href="https://media.lrsd.net/media/Default/medialib/mental_health_stress_management.16960789727.png" target="_blank" rel="noopener noreferrer">
 								<img src="https://media.lrsd.net/media/Default/medialib/mental_health_stress_management.16960789727.png" alt="Mental Health Awareness and Stress Management Program poster" loading="lazy">
-								<span class="poster-meta">
-									<span class="poster-title">Mental Health Awareness &amp; Stress Management</span>
-									<span class="poster-link">Open full poster</span>
-								</span>
 							</a>
 						</td>
-						<td class="poster-cell poster-cell-empty"></td>
-						<td class="poster-cell poster-cell-empty"></td>
+						<td></td>
+						<td></td>
 					</tr>
 				</tbody>
 			</table>
@@ -121,10 +93,47 @@
 </div>
 <script>
 	(function () {
+		function getCaptionText(cell) {
+			var clone = cell.cloneNode(true);
+			var images = clone.querySelectorAll('img');
+			var index;
+			var text;
+
+			for (index = images.length - 1; index >= 0; index -= 1) {
+				images[index].parentNode.removeChild(images[index]);
+			}
+
+			text = clone.textContent || clone.innerText || '';
+			return text.replace(/\s+/g, ' ').replace(/^\s+|\s+$/g, '');
+		}
+
+		function createSlideMedia(cell, image) {
+			var linkedImage = image.parentNode && image.parentNode.tagName && image.parentNode.tagName.toLowerCase() === 'a' ? image.parentNode : null;
+			var clonedImage = image.cloneNode(true);
+			var media;
+
+			if (linkedImage) {
+				media = document.createElement('a');
+				media.href = linkedImage.getAttribute('href') || '';
+				if (linkedImage.getAttribute('target')) {
+					media.setAttribute('target', linkedImage.getAttribute('target'));
+				}
+				if (linkedImage.getAttribute('rel')) {
+					media.setAttribute('rel', linkedImage.getAttribute('rel'));
+				}
+				media.appendChild(clonedImage);
+				return media;
+			}
+
+			media = document.createElement('div');
+			media.appendChild(clonedImage);
+			return media;
+		}
+
 		function buildCarousel(section) {
 			var table = section.querySelector('[data-poster-table]');
 			var host = section.querySelector('[data-carousel-host]');
-			var sourceCards;
+			var sourceCells;
 			var carousel;
 			var viewport;
 			var track;
@@ -140,25 +149,22 @@
 				return null;
 			}
 
-			sourceCards = Array.prototype.slice.call(table.querySelectorAll('.poster-card'));
-			sourceCards = sourceCards.filter(function (card) {
-				return !!card.getAttribute('href');
+			sourceCells = Array.prototype.slice.call(table.querySelectorAll('td, th'));
+			sourceCells = sourceCells.filter(function (cell) {
+				return !!cell.querySelector('img');
 			});
 
-			if (!sourceCards.length) {
+			if (!sourceCells.length) {
 				return null;
 			}
 
 			section.setAttribute('data-carousel-ready', 'true');
 			carousel = document.createElement('div');
 			carousel.className = 'poster-carousel';
-			carousel.setAttribute('data-poster-carousel', 'true');
-
 			viewport = document.createElement('div');
 			viewport.className = 'poster-viewport';
 			viewport.setAttribute('tabindex', '0');
 			viewport.setAttribute('aria-label', 'Upcoming event posters carousel');
-
 			track = document.createElement('div');
 			track.className = 'poster-track';
 			viewport.appendChild(track);
@@ -179,24 +185,34 @@
 
 			previousButton = createButton('carousel-button-previous', 'Show previous poster', '&lsaquo;');
 			nextButton = createButton('carousel-button-next', 'Show next poster', '&rsaquo;');
-
 			dotsContainer = document.createElement('div');
 			dotsContainer.className = 'carousel-dots';
 			dotsContainer.setAttribute('role', 'group');
 			dotsContainer.setAttribute('aria-label', 'Poster navigation');
 
-			sourceCards.forEach(function (card, index) {
-				var slide = document.createElement('article');
-				var slideCard = card.cloneNode(true);
+			sourceCells.forEach(function (cell, index) {
+				var image = cell.querySelector('img');
+				var slide = document.createElement('figure');
+				var captionText = getCaptionText(cell);
+				var caption;
 				var dot = document.createElement('button');
+
 				slide.className = 'poster-slide';
-				slide.appendChild(slideCard);
+				slide.appendChild(createSlideMedia(cell, image));
+
+				if (captionText) {
+					caption = document.createElement('figcaption');
+					caption.className = 'poster-caption';
+					caption.textContent = captionText;
+					slide.appendChild(caption);
+				}
+
 				track.appendChild(slide);
 				slides.push(slide);
 
 				dot.type = 'button';
 				dot.className = 'carousel-dot';
-				dot.setAttribute('aria-label', 'Show poster ' + (index + 1));
+				dot.setAttribute('aria-label', (image.getAttribute('alt') || 'Show poster') + ' ' + (index + 1));
 				dot.addEventListener('click', function () {
 					scrollToSlide(index);
 				});
@@ -246,7 +262,6 @@
 				} else {
 					viewport.scrollLeft = left;
 				}
-
 				updateButtons();
 				updateDots();
 			}
@@ -384,7 +399,8 @@
 	}
 
 	.fr-view .rdc-page p,
-	.fr-view .rdc-page li {
+	.fr-view .rdc-page li,
+	.fr-view .rdc-page td {
 		color: var(--green-900);
 	}
 
@@ -454,53 +470,21 @@
 		table-layout: fixed;
 	}
 
-	.fr-view .rdc-page .poster-cell {
+	.fr-view .rdc-page .poster-table td {
 		vertical-align: top;
 		padding: 0;
 	}
 
-	.fr-view .rdc-page .poster-cell-empty {
-		background: rgba(169, 217, 194, 0.18);
-		border: 1px dashed var(--green-200);
-		border-radius: var(--radius-md);
-		min-height: 8rem;
-	}
-
-	.fr-view .rdc-page .poster-card {
-		display: block;
-		background: var(--white);
-		border-radius: var(--radius-lg);
-		overflow: hidden;
-		border: var(--border);
-		box-shadow: 0 16px 36px rgba(1, 38, 25, 0.12);
-		text-decoration: none;
-	}
-
-	.fr-view .rdc-page .poster-card img {
+	.fr-view .rdc-page .poster-table img {
 		display: block;
 		width: 100%;
-		height: clamp(17rem, 30vw, 24rem);
-		object-fit: contain;
-		background: linear-gradient(180deg, rgba(232, 229, 222, 0.55), rgba(255, 255, 255, 1));
+		height: auto;
 	}
 
-	.fr-view .rdc-page .poster-meta {
-		display: flex;
-		justify-content: space-between;
-		gap: 1rem;
-		align-items: center;
-		padding: 1rem 1.15rem 1.15rem;
-	}
-
-	.fr-view .rdc-page .poster-title {
-		font-family: 'Montserrat', Arial, sans-serif;
-		font-weight: 700;
-		color: var(--green-900);
-	}
-
-	.fr-view .rdc-page .poster-link {
-		font-weight: 600;
-		white-space: nowrap;
+	.fr-view .rdc-page .poster-table td p,
+	.fr-view .rdc-page .poster-table td div,
+	.fr-view .rdc-page .poster-table td span {
+		margin-top: 0.5rem;
 	}
 
 	.fr-view .rdc-page .poster-section.is-enhanced .poster-table-wrap {
@@ -532,7 +516,32 @@
 
 	.fr-view .rdc-page .poster-slide {
 		flex: 0 0 min(34rem, 100%);
+		margin: 0;
 		scroll-snap-align: center;
+	}
+
+	.fr-view .rdc-page .poster-slide > a,
+	.fr-view .rdc-page .poster-slide > div {
+		display: block;
+		background: var(--white);
+		border: var(--border);
+		border-radius: var(--radius-md);
+		overflow: hidden;
+		box-shadow: 0 16px 36px rgba(1, 38, 25, 0.12);
+	}
+
+	.fr-view .rdc-page .poster-slide img {
+		display: block;
+		width: 100%;
+		height: clamp(24rem, 62vw, 40rem);
+		object-fit: contain;
+		background: linear-gradient(180deg, rgba(232, 229, 222, 0.55), rgba(255, 255, 255, 1));
+	}
+
+	.fr-view .rdc-page .poster-caption {
+		margin-top: 0.85rem;
+		padding: 0 0.35rem;
+		font-size: 0.95rem;
 	}
 
 	.fr-view .rdc-page .carousel-button {
@@ -606,11 +615,6 @@
 	@media (max-width: 900px) {
 		.fr-view .rdc-page .poster-table {
 			border-spacing: 0.75rem;
-		}
-
-		.fr-view .rdc-page .poster-meta {
-			flex-direction: column;
-			align-items: flex-start;
 		}
 	}
 
