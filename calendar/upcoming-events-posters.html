@@ -277,7 +277,10 @@
 		}
 
 		if (document.readyState === 'loading') {
-			document.addEventListener('DOMContentLoaded', initCarousels, { once: true });
+			document.addEventListener('DOMContentLoaded', function handleCarouselReady() {
+				document.removeEventListener('DOMContentLoaded', handleCarouselReady);
+				initCarousels();
+			});
 		} else {
 			window.setTimeout(initCarousels, 0);
 		}
@@ -406,7 +409,7 @@
 
 	.fr-view .rdc-page .carousel-button {
 		appearance: none;
-		border: 0;
+		border: 2px solid var(--green-200);
 		width: 3rem;
 		height: 3rem;
 		border-radius: 999px;
